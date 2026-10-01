@@ -1,6 +1,6 @@
 # [US-06] Seed Senior (30 Temas Clave) y Suite E2E Final
 
-- **Estado:** In Progress
+- **Estado:** Done
 - **Rama:** `feature/US-06-seed-and-e2e-final`
 - **Fecha de Inicio:** 2026-09-30
 - **Fecha de Cierre:** 2026-09-30
@@ -24,7 +24,7 @@ Completar la documentación final del proyecto en `docs/USER_GUIDE.md` y `docs/A
 - [x] AC-6: Actualización de documentación:
   - `docs/USER_GUIDE.md`: Instrucciones de arranque rápido (`npm run seed`, `npm run dev`), protocolo diario de 20 minutos y uso de voz.
   - `docs/ARCHITECTURE.md`: Catálogo completo de endpoints, diagrama Mermaid de arquitectura y confirmación de cobertura.
-- [ ] AC-7: Merge `--no-ff` a `dev` y actualización de `.antigravity/heartbeat.md` marcando el backlog 100% completado.
+- [x] AC-7: Merge `--no-ff` a `dev` y actualización de `.antigravity/heartbeat.md` marcando el backlog 100% completado.
 
 ## 3. Subgrafo Afectado (Identificado con Graphify)
 
