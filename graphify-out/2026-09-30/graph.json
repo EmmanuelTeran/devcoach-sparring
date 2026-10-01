@@ -52,18 +52,6 @@
       "source_location": "L9"
     },
     {
-      "id": "server_src_utils_srscalculator_calculatenextreview",
-      "label": "calculateNextReview()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "calculatenextreview()",
-      "source_file": "server/src/utils/srsCalculator.js",
-      "source_location": "L10"
-    },
-    {
       "id": "antigravity_graph",
       "label": "graph.md",
       "_origin": "ast",
@@ -546,6 +534,50 @@
       "source_location": "L1"
     },
     {
+      "id": "server_package_devdependencies",
+      "label": "devDependencies",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "devdependencies",
+      "source_file": "server/package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "server_package_devdependencies_mongodb_memory_server",
+      "label": "mongodb-memory-server",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "mongodb-memory-server",
+      "source_file": "server/package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "server_package_devdependencies_supertest",
+      "label": "supertest",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "supertest",
+      "source_file": "server/package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "server_package_devdependencies_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "vitest",
+      "source_file": "server/package.json",
+      "source_location": "L20"
+    },
+    {
       "id": "server_package_name",
       "label": "name",
       "_origin": "ast",
@@ -609,7 +641,7 @@
       "file_type": "code",
       "norm_label": "app",
       "source_file": "server/src/app.js",
-      "source_location": "L6"
+      "source_location": "L5"
     },
     {
       "id": "server_src_db",
@@ -621,50 +653,6 @@
       "norm_label": "db.js",
       "source_file": "server/src/db.js",
       "source_location": "L1"
-    },
-    {
-      "id": "server_src_models_topic",
-      "label": "Topic.js",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "topic.js",
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_models_topic_reviewhistoryschema",
-      "label": "reviewHistorySchema",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "reviewhistoryschema",
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L3"
-    },
-    {
-      "id": "server_src_models_topic_topic",
-      "label": "Topic",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "topic",
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L72"
-    },
-    {
-      "id": "server_src_models_topic_topicschema",
-      "label": "topicSchema",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "topicschema",
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L27"
     },
     {
       "id": "server_src_routes_health",
@@ -689,28 +677,6 @@
       "source_location": "L4"
     },
     {
-      "id": "server_src_routes_topics",
-      "label": "topics.js",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "topics.js",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_routes_topics_topicsrouter",
-      "label": "topicsRouter",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "topicsrouter",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L5"
-    },
-    {
       "id": "server_src_server",
       "label": "server.js",
       "_origin": "ast",
@@ -722,17 +688,6 @@
       "source_location": "L1"
     },
     {
-      "id": "server_src_utils_srscalculator",
-      "label": "srsCalculator.js",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "srscalculator.js",
-      "source_file": "server/src/utils/srsCalculator.js",
-      "source_location": "L1"
-    },
-    {
       "id": "server_tests_health_test",
       "label": "health.test.js",
       "_origin": "ast",
@@ -741,28 +696,6 @@
       "file_type": "code",
       "norm_label": "health.test.js",
       "source_file": "server/tests/health.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_tests_srscalculator_test",
-      "label": "srsCalculator.test.js",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "srscalculator.test.js",
-      "source_file": "server/tests/srsCalculator.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_tests_topics_test",
-      "label": "topics.test.js",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "server/package.json",
-      "file_type": "code",
-      "norm_label": "topics.test.js",
-      "source_file": "server/tests/topics.test.js",
       "source_location": "L1"
     },
     {
@@ -1180,54 +1113,6 @@
       "source_location": "L85"
     },
     {
-      "id": "docs_user_guide_6_1_l\u00f3gica_de_calificaci\u00f3n_y_estados",
-      "label": "6.1 L\u00f3gica de Calificaci\u00f3n y Estados",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6.1 logica de calificacion y estados",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L106"
-    },
-    {
-      "id": "docs_user_guide_6_2_pruebas_manuales_con_curl",
-      "label": "6.2 Pruebas Manuales con cURL",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6.2 pruebas manuales con curl",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L118"
-    },
-    {
-      "id": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
-      "label": "6. Motor SRS y Flujo de Repaso Espaciado (SM-2 Adaptado)",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6. motor srs y flujo de repaso espaciado (sm-2 adaptado)",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L102"
-    },
-    {
-      "id": "docs_user_guide_consultar_temas_pendientes_de_repaso",
-      "label": "Consultar Temas Pendientes de Repaso",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "consultar temas pendientes de repaso",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L120"
-    },
-    {
       "id": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
       "label": "Gu\u00eda de Usuario: DevCoach Sparring",
       "_origin": "ast",
@@ -1238,18 +1123,6 @@
       "norm_label": "guia de usuario: devcoach sparring",
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L1"
-    },
-    {
-      "id": "docs_user_guide_registrar_una_revisi\u00f3n_de_tema",
-      "label": "Registrar una Revisi\u00f3n de Tema",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "registrar una revision de tema",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L127"
     },
     {
       "id": "tickets_us_01_scaffolding_and_tests",
@@ -1560,124 +1433,64 @@
       "source_location": "L7"
     },
     {
-      "id": "docs_architecture_2_1_get_api_health",
-      "label": "2.1 `GET /api/health`",
+      "id": "docs_architecture_2_contratos_de_api_endpoints_iniciales",
+      "label": "2. Contratos de API (Endpoints Iniciales)",
       "_origin": "ast",
       "community": 19,
       "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2.1 `get /api/health`",
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L44"
-    },
-    {
-      "id": "docs_architecture_2_2_get_api_topics_due",
-      "label": "2.2 `GET /api/topics/due`",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.2 `get /api/topics/due`",
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L59"
-    },
-    {
-      "id": "docs_architecture_2_3_post_api_topics_review",
-      "label": "2.3 `POST /api/topics/review`",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2.3 `post /api/topics/review`",
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L74"
-    },
-    {
-      "id": "docs_architecture_2_contratos_de_api",
-      "label": "2. Contratos de API",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. contratos de api",
+      "norm_label": "2. contratos de api (endpoints iniciales)",
       "source_file": "docs/ARCHITECTURE.md",
       "source_location": "L42"
     },
     {
-      "id": "docs_architecture_3_modelo_de_datos_mongoose_schemas",
-      "label": "3. Modelo de Datos (Mongoose Schemas)",
+      "id": "docs_architecture_3_1_flujo_de_arranque_y_healthcheck",
+      "label": "3.1 Flujo de Arranque y Healthcheck",
       "_origin": "ast",
       "community": 19,
       "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3. modelo de datos (mongoose schemas)",
+      "norm_label": "3.1 flujo de arranque y healthcheck",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L102"
+      "source_location": "L63"
     },
     {
-      "id": "docs_architecture_4_1_m\u00e1quina_de_estados_del_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "label": "4.1 M\u00e1quina de Estados del Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
+      "id": "docs_architecture_3_2_harness_de_testing_y_e2e_playwright",
+      "label": "3.2 Harness de Testing y E2E Playwright",
       "_origin": "ast",
       "community": 19,
       "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.1 maquina de estados del motor algoritmico srs (sm-2 adaptado)",
+      "norm_label": "3.2 harness de testing y e2e playwright",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L132"
+      "source_location": "L87"
     },
     {
-      "id": "docs_architecture_4_2_flujo_de_arranque_y_healthcheck",
-      "label": "4.2 Flujo de Arranque y Healthcheck",
+      "id": "docs_architecture_3_diagramas_de_flujo_y_arquitectura",
+      "label": "3. Diagramas de Flujo y Arquitectura",
       "_origin": "ast",
       "community": 19,
       "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.2 flujo de arranque y healthcheck",
+      "norm_label": "3. diagramas de flujo y arquitectura",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L164"
+      "source_location": "L61"
     },
     {
-      "id": "docs_architecture_4_3_harness_de_testing_y_e2e_playwright",
-      "label": "4.3 Harness de Testing y E2E Playwright",
+      "id": "docs_architecture_4_evoluci\u00f3n_hacia_las_siguientes_historias",
+      "label": "4. Evoluci\u00f3n Hacia las Siguientes Historias",
       "_origin": "ast",
       "community": 19,
       "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.3 harness de testing y e2e playwright",
+      "norm_label": "4. evolucion hacia las siguientes historias",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L188"
-    },
-    {
-      "id": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "label": "4. Diagramas de Flujo y Arquitectura",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. diagramas de flujo y arquitectura",
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L130"
-    },
-    {
-      "id": "docs_architecture_5_evoluci\u00f3n_hacia_las_siguientes_historias",
-      "label": "5. Evoluci\u00f3n Hacia las Siguientes Historias",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. evolucion hacia las siguientes historias",
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L211"
+      "source_location": "L110"
     },
     {
       "id": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
@@ -1704,40 +1517,16 @@
       "source_location": "L52"
     },
     {
-      "id": "docs_architecture_c\u00f3digos_de_respuesta_67",
-      "label": "C\u00f3digos de Respuesta",
+      "id": "docs_architecture_get_api_health",
+      "label": "`GET /api/health`",
       "_origin": "ast",
       "community": 19,
       "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "codigos de respuesta",
+      "norm_label": "`get /api/health`",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L67"
-    },
-    {
-      "id": "docs_architecture_c\u00f3digos_de_respuesta_91",
-      "label": "C\u00f3digos de Respuesta",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "codigos de respuesta",
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L91"
-    },
-    {
-      "id": "docs_architecture_modelo_topic_server_src_models_topic_js",
-      "label": "Modelo `Topic` (`server/src/models/Topic.js`)",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "modelo `topic` (`server/src/models/topic.js`)",
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L104"
+      "source_location": "L44"
     },
     {
       "id": "antigravity_context",
@@ -1898,158 +1687,6 @@
       "norm_label": "test",
       "source_file": "client/package.json",
       "source_location": "L10"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models",
-      "label": "US-02-srs-engine-and-models.md",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "us-02-srs-engine-and-models.md",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_1_descripci\u00f3n",
-      "label": "1. Descripci\u00f3n",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. descripcion",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L8"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_2_criterios_de_aceptaci\u00f3n_ac",
-      "label": "2. Criterios de Aceptaci\u00f3n (AC)",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. criterios de aceptacion (ac)",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_3_subgrafo_afectado_identificado_con_graphify",
-      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. subgrafo afectado (identificado con graphify)",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L27"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_4_evidencia_de_pruebas_completado_por_verify_user_story",
-      "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_5_commit_de_cierre_en_dev",
-      "label": "5. Commit de Cierre en dev",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. commit de cierre en dev",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L50"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_tests_e2e_playwright",
-      "label": "Tests E2E (Playwright)",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests e2e (playwright)",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L46"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
-      "label": "Tests Unitarios e Integraci\u00f3n (Vitest / Supertest)",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests unitarios e integracion (vitest / supertest)",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L42"
-    },
-    {
-      "id": "tickets_us_02_srs_engine_and_models_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "label": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[US-02] Schemas Mongoose y Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[us-02] schemas mongoose y motor algoritmico srs (sm-2 adaptado)",
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_package_devdependencies",
-      "label": "devDependencies",
-      "_origin": "ast",
-      "community": 24,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "devdependencies",
-      "source_file": "server/package.json",
-      "source_location": "L17"
-    },
-    {
-      "id": "server_package_devdependencies_mongodb_memory_server",
-      "label": "mongodb-memory-server",
-      "_origin": "ast",
-      "community": 24,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "mongodb-memory-server",
-      "source_file": "server/package.json",
-      "source_location": "L18"
-    },
-    {
-      "id": "server_package_devdependencies_supertest",
-      "label": "supertest",
-      "_origin": "ast",
-      "community": 24,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "supertest",
-      "source_file": "server/package.json",
-      "source_location": "L19"
-    },
-    {
-      "id": "server_package_devdependencies_vitest",
-      "label": "vitest",
-      "_origin": "ast",
-      "community": 24,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "vitest",
-      "source_file": "server/package.json",
-      "source_location": "L20"
     },
     {
       "id": "antigravity_skills_document_tech_specs",
@@ -2626,42 +2263,6 @@
       "weight": 1.0
     },
     {
-      "source": "server_src_app",
-      "target": "server_src_routes_topics_topicsrouter",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/app.js",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_routes_topics",
-      "target": "server_src_models_topic_topic",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_routes_topics",
-      "target": "server_src_utils_srscalculator_calculatenextreview",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
       "source": "server_src_server",
       "target": "server_src_app_app",
       "relation": "imports",
@@ -2719,66 +2320,6 @@
       "context": "import",
       "source_file": "server/tests/health.test.js",
       "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_srscalculator_test",
-      "target": "server_src_utils_srscalculator_calculatenextreview",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/srsCalculator.test.js",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "server_src_app_app",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "server_src_db_connectdb",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "server_src_db_disconnectdb",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "server_src_models_topic_topic",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -2926,18 +2467,6 @@
       "weight": 1.0
     },
     {
-      "source": "server_src_app",
-      "target": "server_src_routes_topics",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/app.js",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
       "source": "server_src_db",
       "target": "ref_mongoose",
       "relation": "imports_from",
@@ -2950,18 +2479,6 @@
       "weight": 1.0
     },
     {
-      "source": "server_src_models_topic",
-      "target": "ref_mongoose",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "server_src_routes_health",
       "target": "ref_express",
       "relation": "imports_from",
@@ -2983,42 +2500,6 @@
       "context": "import",
       "source_file": "server/src/routes/health.js",
       "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_routes_topics",
-      "target": "ref_express",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_routes_topics",
-      "target": "server_src_models_topic",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_routes_topics",
-      "target": "server_src_utils_srscalculator",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -3127,114 +2608,6 @@
       "context": "import",
       "source_file": "server/tests/health.test.js",
       "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_srscalculator_test",
-      "target": "ref_vitest",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/srsCalculator.test.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_srscalculator_test",
-      "target": "server_src_utils_srscalculator",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/srsCalculator.test.js",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "ref_vitest",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "ref_supertest",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "ref_mongodb_memory_server",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "ref_mongoose",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "server_src_app",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "server_src_db",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "server_tests_topics_test",
-      "target": "server_src_models_topic",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "server/tests/topics.test.js",
-      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -3833,41 +3206,8 @@
       "weight": 1.0
     },
     {
-      "source": "docs_architecture_2_1_get_api_health",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L52",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_2_2_get_api_topics_due",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta_67",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L67",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_2_3_post_api_topics_review",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta_91",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L91",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_2_contratos_de_api",
-      "target": "docs_architecture_2_1_get_api_health",
+      "source": "docs_architecture_2_contratos_de_api_endpoints_iniciales",
+      "target": "docs_architecture_get_api_health",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3877,113 +3217,58 @@
       "weight": 1.0
     },
     {
-      "source": "docs_architecture_2_contratos_de_api",
-      "target": "docs_architecture_2_2_get_api_topics_due",
+      "source": "docs_architecture_3_diagramas_de_flujo_y_arquitectura",
+      "target": "docs_architecture_3_1_flujo_de_arranque_y_healthcheck",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L59",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
-      "source": "docs_architecture_2_contratos_de_api",
-      "target": "docs_architecture_2_3_post_api_topics_review",
+      "source": "docs_architecture_3_diagramas_de_flujo_y_arquitectura",
+      "target": "docs_architecture_3_2_harness_de_testing_y_e2e_playwright",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L74",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_3_modelo_de_datos_mongoose_schemas",
-      "target": "docs_architecture_modelo_topic_server_src_models_topic_js",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L104",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "target": "docs_architecture_4_1_m\u00e1quina_de_estados_del_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L132",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "target": "docs_architecture_4_2_flujo_de_arranque_y_healthcheck",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L164",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "target": "docs_architecture_4_3_harness_de_testing_y_e2e_playwright",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L188",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
-      "target": "docs_architecture_3_modelo_de_datos_mongoose_schemas",
+      "target": "docs_architecture_4_evoluci\u00f3n_hacia_las_siguientes_historias",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L102",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
-      "target": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L130",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
-      "target": "docs_architecture_5_evoluci\u00f3n_hacia_las_siguientes_historias",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L211",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
-      "target": "docs_architecture_2_contratos_de_api",
+      "target": "docs_architecture_2_contratos_de_api_endpoints_iniciales",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
       "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
+      "target": "docs_architecture_3_diagramas_de_flujo_y_arquitectura",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -3995,6 +3280,17 @@
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_get_api_health",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4017,61 +3313,6 @@
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L51",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_6_2_pruebas_manuales_con_curl",
-      "target": "docs_user_guide_consultar_temas_pendientes_de_repaso",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L120",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_6_2_pruebas_manuales_con_curl",
-      "target": "docs_user_guide_registrar_una_revisi\u00f3n_de_tema",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L127",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
-      "target": "docs_user_guide_6_1_l\u00f3gica_de_calificaci\u00f3n_y_estados",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L106",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
-      "target": "docs_user_guide_6_2_pruebas_manuales_con_curl",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L118",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -4522,7 +3763,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/src/app.js",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -4548,39 +3789,6 @@
       "weight": 1.0
     },
     {
-      "source": "server_src_models_topic",
-      "target": "server_src_models_topic_topicschema",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_models_topic",
-      "target": "server_src_models_topic_reviewhistoryschema",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_models_topic",
-      "target": "server_src_models_topic_topic",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "server/src/models/Topic.js",
-      "source_location": "L72",
-      "weight": 1.0
-    },
-    {
       "source": "server_src_routes_health",
       "target": "server_src_routes_health_healthrouter",
       "relation": "contains",
@@ -4592,17 +3800,6 @@
       "weight": 1.0
     },
     {
-      "source": "server_src_routes_topics",
-      "target": "server_src_routes_topics_topicsrouter",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
       "source": "server_src_server",
       "target": "server_src_server_bootstrap",
       "relation": "contains",
@@ -4611,17 +3808,6 @@
       "confidence_score": 1.0,
       "source_file": "server/src/server.js",
       "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "server_src_utils_srscalculator",
-      "target": "server_src_utils_srscalculator_calculatenextreview",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "server/src/utils/srsCalculator.js",
-      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -4797,94 +3983,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-01-scaffolding-and-tests.md",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models",
-      "target": "tickets_us_02_srs_engine_and_models_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models_4_evidencia_de_pruebas_completado_por_verify_user_story",
-      "target": "tickets_us_02_srs_engine_and_models_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L42",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models_4_evidencia_de_pruebas_completado_por_verify_user_story",
-      "target": "tickets_us_02_srs_engine_and_models_tests_e2e_playwright",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L46",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "target": "tickets_us_02_srs_engine_and_models_2_criterios_de_aceptaci\u00f3n_ac",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "target": "tickets_us_02_srs_engine_and_models_3_subgrafo_afectado_identificado_con_graphify",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "target": "tickets_us_02_srs_engine_and_models_4_evidencia_de_pruebas_completado_por_verify_user_story",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "target": "tickets_us_02_srs_engine_and_models_5_commit_de_cierre_en_dev",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L50",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_02_srs_engine_and_models_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "target": "tickets_us_02_srs_engine_and_models_1_descripci\u00f3n",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-02-srs-engine-and-models.md",
       "source_location": "L8",
       "weight": 1.0
     },
