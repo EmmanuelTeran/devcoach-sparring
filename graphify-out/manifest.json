@@ -24,8 +24,8 @@
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
-    "mtime": 1790825767.4652045,
-    "seen": 1790825803.593751,
+    "mtime": 1790826331.5795944,
+    "seen": 1790826333.0874276,
     "ast_hash": "2fdba24e2a95f315858750a800b252ed",
     "semantic_hash": ""
   },
@@ -78,8 +78,8 @@
     "semantic_hash": ""
   },
   "client/src/App.jsx": {
-    "mtime": 1790825545.502004,
-    "seen": 1790825803.593692,
+    "mtime": 1790826331.5835943,
+    "seen": 1790826333.0873876,
     "ast_hash": "beff74a4125348bc9450d7946460d42e",
     "semantic_hash": ""
   },
@@ -114,14 +114,14 @@
     "semantic_hash": ""
   },
   "server/package.json": {
-    "mtime": 1790825378.3346565,
-    "seen": 1790825803.5937164,
+    "mtime": 1790825871.7848258,
+    "seen": 1790826328.8350492,
     "ast_hash": "635b64838da3f23ebf11401044f7a130",
     "semantic_hash": ""
   },
   "server/src/app.js": {
-    "mtime": 1790825489.5502417,
-    "seen": 1790825803.5937178,
+    "mtime": 1790826331.5835943,
+    "seen": 1790826333.0873997,
     "ast_hash": "1922343f15e2d0a73b574a12489814d0",
     "semantic_hash": ""
   },
@@ -168,14 +168,14 @@
     "semantic_hash": ""
   },
   "docs/USER_GUIDE.md": {
-    "mtime": 1790825648.2216544,
-    "seen": 1790825803.593763,
+    "mtime": 1790826331.5835943,
+    "seen": 1790826333.0874374,
     "ast_hash": "18c151be14506ef5765ecba74ecc8bbf",
     "semantic_hash": ""
   },
   "docs/ARCHITECTURE.md": {
-    "mtime": 1790825705.6254408,
-    "seen": 1790825803.5937617,
+    "mtime": 1790826331.5835943,
+    "seen": 1790826333.0874362,
     "ast_hash": "52be11b9925eac3a6bfb3bf4a30ac11f",
     "semantic_hash": ""
   },
@@ -216,44 +216,44 @@
     "semantic_hash": ""
   },
   "client/src/components/HardSkillTrainer.jsx": {
-    "mtime": 1790825531.1820886,
-    "seen": 1790825803.593695,
+    "mtime": 1790825871.7648258,
+    "seen": 1790826328.8350294,
     "ast_hash": "9b215b0f3cefa690cb269a2016441228",
     "semantic_hash": ""
   },
   "server/src/models/SessionLog.js": {
-    "mtime": 1790825476.5502813,
-    "seen": 1790825803.5937219,
+    "mtime": 1790826331.5835943,
+    "seen": 1790826333.0874026,
     "ast_hash": "89772288f7ef75f865db2237bcadf661",
     "semantic_hash": ""
   },
   "server/src/routes/practice.js": {
-    "mtime": 1790825483.178269,
-    "seen": 1790825803.5937274,
+    "mtime": 1790825871.7888258,
+    "seen": 1790826328.8350627,
     "ast_hash": "d931c05b8a64f38bbdffeefae006bfc4",
     "semantic_hash": ""
   },
   "server/src/services/geminiService.js": {
-    "mtime": 1790825471.658289,
-    "seen": 1790825803.593732,
+    "mtime": 1790825871.7888258,
+    "seen": 1790826328.8350718,
     "ast_hash": "eb8b294f241747ef6b57a52770dbca5c",
     "semantic_hash": ""
   },
   "server/tests/practice.test.js": {
-    "mtime": 1790825502.6541698,
-    "seen": 1790825803.593737,
+    "mtime": 1790825871.7888258,
+    "seen": 1790826328.835081,
     "ast_hash": "e44d304ebed1b1440fe387cd2e9a494c",
     "semantic_hash": ""
   },
   "tests/e2e/hard-skills.spec.js": {
-    "mtime": 1790825575.9259107,
-    "seen": 1790825803.5937414,
+    "mtime": 1790825871.7888258,
+    "seen": 1790826328.8350894,
     "ast_hash": "0f72590231b7d90dc890ea8504b15d3a",
     "semantic_hash": ""
   },
   "tickets/US-03-hard-skills-module.md": {
-    "mtime": 1790825747.457292,
-    "seen": 1790825803.5937676,
+    "mtime": 1790825871.7888258,
+    "seen": 1790826328.8351293,
     "ast_hash": "e252f5fd47a2da59f07d713badf44551",
     "semantic_hash": ""
   }
