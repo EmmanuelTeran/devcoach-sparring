@@ -24,9 +24,9 @@
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
-    "mtime": 1790824873.128601,
-    "seen": 1790824874.3317792,
-    "ast_hash": "61e935fb037f789928f5547f42b68f78",
+    "mtime": 1790824884.8125556,
+    "seen": 1790824893.1804967,
+    "ast_hash": "3c36f4a9f3037eac92975602a174b84f",
     "semantic_hash": ""
   },
   ".antigravity/skills/document-tech-specs.md": {
@@ -210,9 +210,9 @@
     "semantic_hash": ""
   },
   "tickets/US-02-srs-engine-and-models.md": {
-    "mtime": 1790824873.148601,
-    "seen": 1790824874.331819,
-    "ast_hash": "df3087f7442b39bb2a8fd396779c39cb",
+    "mtime": 1790824879.5525749,
+    "seen": 1790824893.1805108,
+    "ast_hash": "86dc92e29f08c90a86d1f7fde9a0c2b7",
     "semantic_hash": ""
   }
 }
