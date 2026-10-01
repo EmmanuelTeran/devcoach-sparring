@@ -9,7 +9,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "connectdb()",
       "source_file": "server/src/db.js",
@@ -21,11 +21,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "disconnectdb()",
       "source_file": "server/src/db.js",
       "source_location": "L13"
+    },
+    {
+      "id": "server_src_scripts_seed_runstandaloneseed",
+      "label": "runStandaloneSeed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "runstandaloneseed()",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L288"
+    },
+    {
+      "id": "server_src_scripts_seed_seedtopics",
+      "label": "seedTopics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "seedtopics()",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L259"
     },
     {
       "id": "server_src_server_bootstrap",
@@ -33,59 +57,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "bootstrap()",
       "source_file": "server/src/server.js",
       "source_location": "L9"
-    },
-    {
-      "id": "server_src_services_geminiservice_evaluatehardskillsolution",
-      "label": "evaluateHardSkillSolution()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "evaluatehardskillsolution()",
-      "source_file": "server/src/services/geminiService.js",
-      "source_location": "L74"
-    },
-    {
-      "id": "server_src_services_geminiservice_generatehardskillchallenge",
-      "label": "generateHardSkillChallenge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "generatehardskillchallenge()",
-      "source_file": "server/src/services/geminiService.js",
-      "source_location": "L22"
-    },
-    {
-      "id": "server_src_services_geminiservice_getclient",
-      "label": "getClient()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "getclient()",
-      "source_file": "server/src/services/geminiService.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "server_src_utils_srscalculator_calculatenextreview",
-      "label": "calculateNextReview()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "calculatenextreview()",
-      "source_file": "server/src/utils/srsCalculator.js",
-      "source_location": "L10"
     },
     {
       "id": "client_src_app_app",
@@ -136,12 +112,24 @@
       "source_location": "L25"
     },
     {
+      "id": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
+      "label": "useVoiceInteraction()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "usevoiceinteraction()",
+      "source_file": "client/src/hooks/useVoiceInteraction.js",
+      "source_location": "L7"
+    },
+    {
       "id": "server_src_controllers_dashboardcontroller_aretopicsrelated",
       "label": "areTopicsRelated()",
       "_callable": true,
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 26,
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "aretopicsrelated()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -152,8 +140,8 @@
       "label": "extractKeywords()",
       "_callable": true,
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 26,
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "extractkeywords()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -164,8 +152,8 @@
       "label": "getDashboardSummary()",
       "_callable": true,
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 26,
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "getdashboardsummary()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -176,12 +164,96 @@
       "label": "getLastScore()",
       "_callable": true,
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 26,
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "getlastscore()",
       "source_file": "server/src/controllers/dashboardController.js",
       "source_location": "L35"
+    },
+    {
+      "id": "server_src_services_geminiservice_evaluatehardskillsolution",
+      "label": "evaluateHardSkillSolution()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "evaluatehardskillsolution()",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L74"
+    },
+    {
+      "id": "server_src_services_geminiservice_generatehardskillchallenge",
+      "label": "generateHardSkillChallenge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "generatehardskillchallenge()",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L22"
+    },
+    {
+      "id": "server_src_services_geminiservice_getclient",
+      "label": "getClient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "getclient()",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "server_src_services_softskillsparringservice_getclient",
+      "label": "getClient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "getclient()",
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "server_src_services_softskillsparringservice_replysoftskillsparring",
+      "label": "replySoftSkillSparring()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "replysoftskillsparring()",
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L125"
+    },
+    {
+      "id": "server_src_services_softskillsparringservice_startsoftskillsparring",
+      "label": "startSoftSkillSparring()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "startsoftskillsparring()",
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L43"
+    },
+    {
+      "id": "server_src_utils_srscalculator_calculatenextreview",
+      "label": "calculateNextReview()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "calculatenextreview()",
+      "source_file": "server/src/utils/srsCalculator.js",
+      "source_location": "L10"
     },
     {
       "id": "antigravity_graph",
@@ -747,7 +819,7 @@
       "label": "app",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "app",
       "source_file": "server/src/app.js",
@@ -758,7 +830,7 @@
       "label": "db.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "db.js",
       "source_file": "server/src/db.js",
@@ -769,7 +841,7 @@
       "label": "SessionLog.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "sessionlog.js",
       "source_file": "server/src/models/SessionLog.js",
@@ -780,18 +852,18 @@
       "label": "SessionLog",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "sessionlog",
       "source_file": "server/src/models/SessionLog.js",
-      "source_location": "L47"
+      "source_location": "L71"
     },
     {
       "id": "server_src_models_sessionlog_sessionlogschema",
       "label": "sessionLogSchema",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "sessionlogschema",
       "source_file": "server/src/models/SessionLog.js",
@@ -802,7 +874,7 @@
       "label": "Topic.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "topic.js",
       "source_file": "server/src/models/Topic.js",
@@ -813,7 +885,7 @@
       "label": "reviewHistorySchema",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "reviewhistoryschema",
       "source_file": "server/src/models/Topic.js",
@@ -824,7 +896,7 @@
       "label": "Topic",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "topic",
       "source_file": "server/src/models/Topic.js",
@@ -835,18 +907,40 @@
       "label": "topicSchema",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "topicschema",
       "source_file": "server/src/models/Topic.js",
       "source_location": "L27"
     },
     {
+      "id": "server_src_scripts_seed",
+      "label": "seed.js",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "seed.js",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_scripts_seed_seed_topics",
+      "label": "SEED_TOPICS",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "seed_topics",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L8"
+    },
+    {
       "id": "server_src_server",
       "label": "server.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "server.js",
       "source_file": "server/src/server.js",
@@ -857,7 +951,7 @@
       "label": "dashboard.test.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "dashboard.test.js",
       "source_file": "server/tests/dashboard.test.js",
@@ -868,7 +962,7 @@
       "label": "health.test.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "health.test.js",
       "source_file": "server/tests/health.test.js",
@@ -879,10 +973,32 @@
       "label": "practice.test.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "practice.test.js",
       "source_file": "server/tests/practice.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_tests_seed_test",
+      "label": "seed.test.js",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "seed.test.js",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_tests_softskillpractice_test",
+      "label": "softSkillPractice.test.js",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "softskillpractice.test.js",
+      "source_file": "server/tests/softSkillPractice.test.js",
       "source_location": "L1"
     },
     {
@@ -890,44 +1006,55 @@
       "label": "topics.test.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "code",
       "norm_label": "topics.test.js",
       "source_file": "server/tests/topics.test.js",
       "source_location": "L1"
     },
     {
+      "id": "ref_dotenv",
+      "label": "dotenv",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "concept",
+      "norm_label": "dotenv",
+      "source_file": "server/package.json",
+      "source_location": "L15"
+    },
+    {
       "id": "ref_mongodb_memory_server",
       "label": "mongodb-memory-server",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "concept",
       "norm_label": "mongodb-memory-server",
       "source_file": "server/package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "ref_mongoose",
       "label": "mongoose",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "concept",
       "norm_label": "mongoose",
       "source_file": "server/package.json",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "ref_supertest",
       "label": "supertest",
       "_origin": "ast",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "file_type": "concept",
       "norm_label": "supertest",
       "source_file": "server/package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "package",
@@ -960,7 +1087,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "package_devdependencies_concurrently",
@@ -971,7 +1098,7 @@
       "file_type": "code",
       "norm_label": "concurrently",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "package_devdependencies_playwright_test",
@@ -982,7 +1109,7 @@
       "file_type": "code",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "package_name",
@@ -1051,6 +1178,17 @@
       "source_location": "L12"
     },
     {
+      "id": "package_scripts_seed",
+      "label": "seed",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "seed",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
       "id": "package_scripts_test",
       "label": "test",
       "_origin": "ast",
@@ -1059,7 +1197,7 @@
       "file_type": "code",
       "norm_label": "test",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "package_scripts_test_all",
@@ -1070,7 +1208,7 @@
       "file_type": "code",
       "norm_label": "test:all",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "package_scripts_test_client",
@@ -1081,7 +1219,7 @@
       "file_type": "code",
       "norm_label": "test:client",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "package_scripts_test_e2e",
@@ -1092,7 +1230,7 @@
       "file_type": "code",
       "norm_label": "test:e2e",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "package_scripts_test_server",
@@ -1103,7 +1241,7 @@
       "file_type": "code",
       "norm_label": "test:server",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "package_type",
@@ -1183,6 +1321,17 @@
       "source_location": "L1"
     },
     {
+      "id": "tests_e2e_soft_skills_spec",
+      "label": "soft-skills.spec.js",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "soft-skills.spec.js",
+      "source_file": "tests/e2e/soft-skills.spec.js",
+      "source_location": "L1"
+    },
+    {
       "id": "ref_concurrently",
       "label": "concurrently",
       "_origin": "ast",
@@ -1191,7 +1340,7 @@
       "file_type": "concept",
       "norm_label": "concurrently",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L24"
     },
     {
       "id": "ref_playwright_test",
@@ -1202,7 +1351,7 @@
       "file_type": "concept",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "docs_user_guide",
@@ -1215,6 +1364,54 @@
       "norm_label": "user_guide.md",
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L1"
+    },
+    {
+      "id": "docs_user_guide_10_1_interpretaci\u00f3n_de_m\u00e9tricas_r\u00e1pidas",
+      "label": "10.1 Interpretaci\u00f3n de M\u00e9tricas R\u00e1pidas",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10.1 interpretacion de metricas rapidas",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L302"
+    },
+    {
+      "id": "docs_user_guide_10_2_priorizaci\u00f3n_autom\u00e1tica_bot\u00f3n_entrenar_ahora_recommendednext",
+      "label": "10.2 Priorizaci\u00f3n Autom\u00e1tica: Bot\u00f3n \"Entrenar Ahora\" (`recommendedNext`)",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10.2 priorizacion automatica: boton \"entrenar ahora\" (`recommendednext`)",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "docs_user_guide_10_3_gesti\u00f3n_y_limpieza_de_\u00e1reas_cr\u00edticas",
+      "label": "10.3 Gesti\u00f3n y Limpieza de \u00c1reas Cr\u00edticas",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10.3 gestion y limpieza de areas criticas",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L318"
+    },
+    {
+      "id": "docs_user_guide_10_panel_de_control_y_dashboard_operativo",
+      "label": "10. Panel de Control y Dashboard Operativo",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. panel de control y dashboard operativo",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L298"
     },
     {
       "id": "docs_user_guide_1_requisitos_previos",
@@ -1241,52 +1438,76 @@
       "source_location": "L15"
     },
     {
-      "id": "docs_user_guide_3_c\u00f3mo_arrancar_la_aplicaci\u00f3n_en_local",
-      "label": "3. C\u00f3mo Arrancar la Aplicaci\u00f3n en Local",
+      "id": "docs_user_guide_3_1_poblado_inicial_de_la_base_de_datos_seeding_idempotente",
+      "label": "3.1 Poblado Inicial de la Base de Datos (Seeding Idempotente)",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3. como arrancar la aplicacion en local",
+      "norm_label": "3.1 poblado inicial de la base de datos (seeding idempotente)",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "docs_user_guide_3_2_levantamiento_concurrente",
+      "label": "3.2 Levantamiento Concurrente",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.2 levantamiento concurrente",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "docs_user_guide_3_c\u00f3mo_arrancar_la_aplicaci\u00f3n_en_local_quickstart_definitivo",
+      "label": "3. C\u00f3mo Arrancar la Aplicaci\u00f3n en Local (Quickstart Definitivo)",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. como arrancar la aplicacion en local (quickstart definitivo)",
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L31"
     },
     {
-      "id": "docs_user_guide_4_1_comprobaci\u00f3n_r\u00e1pida_de_salud_healthcheck",
-      "label": "4.1 Comprobaci\u00f3n R\u00e1pida de Salud (Healthcheck)",
+      "id": "docs_user_guide_4_protocolo_diario_recomendado_20_minutos_de_sparring",
+      "label": "4. Protocolo Diario Recomendado: 20 Minutos de Sparring",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.1 comprobacion rapida de salud (healthcheck)",
+      "norm_label": "4. protocolo diario recomendado: 20 minutos de sparring",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L51"
+      "source_location": "L61"
     },
     {
-      "id": "docs_user_guide_4_c\u00f3mo_verificar_el_estado_y_la_salud_del_sistema",
-      "label": "4. C\u00f3mo Verificar el Estado y la Salud del Sistema",
+      "id": "docs_user_guide_5_1_comprobaci\u00f3n_r\u00e1pida_de_salud_healthcheck",
+      "label": "5.1 Comprobaci\u00f3n R\u00e1pida de Salud (Healthcheck)",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4. como verificar el estado y la salud del sistema",
+      "norm_label": "5.1 comprobacion rapida de salud (healthcheck)",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L49"
+      "source_location": "L94"
     },
     {
-      "id": "docs_user_guide_5_bater\u00eda_de_pruebas_automatizadas",
-      "label": "5. Bater\u00eda de Pruebas Automatizadas",
+      "id": "docs_user_guide_5_c\u00f3mo_verificar_el_estado_y_la_salud_del_sistema",
+      "label": "5. C\u00f3mo Verificar el Estado y la Salud del Sistema",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "5. bateria de pruebas automatizadas",
+      "norm_label": "5. como verificar el estado y la salud del sistema",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L85"
+      "source_location": "L92"
     },
     {
       "id": "docs_user_guide_6_1_l\u00f3gica_de_calificaci\u00f3n_y_estados",
@@ -1298,7 +1519,7 @@
       "node_kind": "heading",
       "norm_label": "6.1 logica de calificacion y estados",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L106"
+      "source_location": "L149"
     },
     {
       "id": "docs_user_guide_6_2_pruebas_manuales_con_curl",
@@ -1310,163 +1531,127 @@
       "node_kind": "heading",
       "norm_label": "6.2 pruebas manuales con curl",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L118"
+      "source_location": "L161"
     },
     {
-      "id": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
-      "label": "6. Motor SRS y Flujo de Repaso Espaciado (SM-2 Adaptado)",
+      "id": "docs_user_guide_6_bater\u00eda_de_pruebas_automatizadas",
+      "label": "6. Bater\u00eda de Pruebas Automatizadas",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "6. motor srs y flujo de repaso espaciado (sm-2 adaptado)",
+      "norm_label": "6. bateria de pruebas automatizadas",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L102"
+      "source_location": "L128"
     },
     {
-      "id": "docs_user_guide_7_1_configuraci\u00f3n_de_gemini_api_gemini_api_key",
-      "label": "7.1 Configuraci\u00f3n de Gemini API (`GEMINI_API_KEY`)",
+      "id": "docs_user_guide_7_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
+      "label": "7. Motor SRS y Flujo de Repaso Espaciado (SM-2 Adaptado)",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "7.1 configuracion de gemini api (`gemini_api_key`)",
+      "norm_label": "7. motor srs y flujo de repaso espaciado (sm-2 adaptado)",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L173"
+      "source_location": "L145"
     },
     {
-      "id": "docs_user_guide_7_2_c\u00f3mo_usar_la_interfaz_de_hard_skills",
-      "label": "7.2 C\u00f3mo Usar la Interfaz de Hard Skills",
+      "id": "docs_user_guide_8_1_configuraci\u00f3n_de_gemini_api_gemini_api_key",
+      "label": "8.1 Configuraci\u00f3n de Gemini API (`GEMINI_API_KEY`)",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "7.2 como usar la interfaz de hard skills",
+      "norm_label": "8.1 configuracion de gemini api (`gemini_api_key`)",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L185"
+      "source_location": "L216"
     },
     {
-      "id": "docs_user_guide_7_3_qu\u00e9_formato_de_respuesta_espera_la_ia_para_dar_un_5_5",
-      "label": "7.3 Qu\u00e9 Formato de Respuesta Espera la IA para Dar un 5/5",
+      "id": "docs_user_guide_8_2_c\u00f3mo_usar_la_interfaz_de_hard_skills",
+      "label": "8.2 C\u00f3mo Usar la Interfaz de Hard Skills",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "7.3 que formato de respuesta espera la ia para dar un 5/5",
+      "norm_label": "8.2 como usar la interfaz de hard skills",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L199"
+      "source_location": "L228"
     },
     {
-      "id": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
-      "label": "7. M\u00f3dulo Hard Skills: Active Recall con Evaluaci\u00f3n por IA",
+      "id": "docs_user_guide_8_3_qu\u00e9_formato_de_respuesta_espera_la_ia_para_dar_un_5_5",
+      "label": "8.3 Qu\u00e9 Formato de Respuesta Espera la IA para Dar un 5/5",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "7. modulo hard skills: active recall con evaluacion por ia",
+      "norm_label": "8.3 que formato de respuesta espera la ia para dar un 5/5",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L169"
+      "source_location": "L242"
     },
     {
-      "id": "docs_user_guide_8_1_c\u00f3mo_conceder_permisos_de_micr\u00f3fono_en_el_navegador",
-      "label": "8.1 C\u00f3mo Conceder Permisos de Micr\u00f3fono en el Navegador",
+      "id": "docs_user_guide_8_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "label": "8. M\u00f3dulo Hard Skills: Active Recall con Evaluaci\u00f3n por IA",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "8.1 como conceder permisos de microfono en el navegador",
+      "norm_label": "8. modulo hard skills: active recall con evaluacion por ia",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L214"
+      "source_location": "L212"
     },
     {
-      "id": "docs_user_guide_8_2_c\u00f3mo_usar_el_simulador_de_sparring",
-      "label": "8.2 C\u00f3mo Usar el Simulador de Sparring",
+      "id": "docs_user_guide_9_1_c\u00f3mo_conceder_permisos_de_micr\u00f3fono_en_el_navegador",
+      "label": "9.1 C\u00f3mo Conceder Permisos de Micr\u00f3fono en el Navegador",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "8.2 como usar el simulador de sparring",
+      "norm_label": "9.1 como conceder permisos de microfono en el navegador",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L226"
+      "source_location": "L257"
     },
     {
-      "id": "docs_user_guide_8_3_qu\u00e9_eval\u00faa_el_simulador_de_consultor\u00eda",
-      "label": "8.3 Qu\u00e9 Eval\u00faa el Simulador de Consultor\u00eda",
+      "id": "docs_user_guide_9_2_c\u00f3mo_usar_el_simulador_de_sparring",
+      "label": "9.2 C\u00f3mo Usar el Simulador de Sparring",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "8.3 que evalua el simulador de consultoria",
+      "norm_label": "9.2 como usar el simulador de sparring",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L240"
+      "source_location": "L269"
     },
     {
-      "id": "docs_user_guide_8_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
-      "label": "8. M\u00f3dulo Soft Skills: Sparring por Voz & Consultor\u00eda T\u00e9cnica",
+      "id": "docs_user_guide_9_3_qu\u00e9_eval\u00faa_el_simulador_de_consultor\u00eda",
+      "label": "9.3 Qu\u00e9 Eval\u00faa el Simulador de Consultor\u00eda",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "8. modulo soft skills: sparring por voz & consultoria tecnica",
+      "norm_label": "9.3 que evalua el simulador de consultoria",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L210"
+      "source_location": "L283"
     },
     {
-      "id": "docs_user_guide_9_1_interpretaci\u00f3n_de_m\u00e9tricas_r\u00e1pidas",
-      "label": "9.1 Interpretaci\u00f3n de M\u00e9tricas R\u00e1pidas",
+      "id": "docs_user_guide_9_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
+      "label": "9. M\u00f3dulo Soft Skills: Sparring por Voz & Consultor\u00eda T\u00e9cnica",
       "_origin": "ast",
       "community": 14,
       "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "9.1 interpretacion de metricas rapidas",
+      "norm_label": "9. modulo soft skills: sparring por voz & consultoria tecnica",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L259"
-    },
-    {
-      "id": "docs_user_guide_9_2_priorizaci\u00f3n_autom\u00e1tica_bot\u00f3n_entrenar_ahora_recommendednext",
-      "label": "9.2 Priorizaci\u00f3n Autom\u00e1tica: Bot\u00f3n \"Entrenar Ahora\" (`recommendedNext`)",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9.2 priorizacion automatica: boton \"entrenar ahora\" (`recommendednext`)",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L267"
-    },
-    {
-      "id": "docs_user_guide_9_3_gesti\u00f3n_y_limpieza_de_\u00e1reas_cr\u00edticas",
-      "label": "9.3 Gesti\u00f3n y Limpieza de \u00c1reas Cr\u00edticas",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9.3 gestion y limpieza de areas criticas",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L275"
-    },
-    {
-      "id": "docs_user_guide_9_panel_de_control_y_dashboard_operativo",
-      "label": "9. Panel de Control y Dashboard Operativo",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9. panel de control y dashboard operativo",
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L255"
+      "source_location": "L253"
     },
     {
       "id": "docs_user_guide_consultar_temas_pendientes_de_repaso",
@@ -1478,7 +1663,7 @@
       "node_kind": "heading",
       "norm_label": "consultar temas pendientes de repaso",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L120"
+      "source_location": "L163"
     },
     {
       "id": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
@@ -1502,7 +1687,7 @@
       "node_kind": "heading",
       "norm_label": "registrar una revision de tema",
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L127"
+      "source_location": "L170"
     },
     {
       "id": "tickets_us_01_scaffolding_and_tests",
@@ -1658,7 +1843,7 @@
       "node_kind": "heading",
       "norm_label": "2.4 `post /api/practice/hard-skill/generate`",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L95"
+      "source_location": "L100"
     },
     {
       "id": "docs_architecture_2_5_post_api_practice_hard_skill_evaluate",
@@ -1670,7 +1855,7 @@
       "node_kind": "heading",
       "norm_label": "2.5 `post /api/practice/hard-skill/evaluate`",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L118"
+      "source_location": "L123"
     },
     {
       "id": "docs_architecture_2_6_post_api_practice_soft_skill_start",
@@ -1682,7 +1867,7 @@
       "node_kind": "heading",
       "norm_label": "2.6 `post /api/practice/soft-skill/start`",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L143"
+      "source_location": "L148"
     },
     {
       "id": "docs_architecture_2_7_post_api_practice_soft_skill_reply",
@@ -1694,7 +1879,7 @@
       "node_kind": "heading",
       "norm_label": "2.7 `post /api/practice/soft-skill/reply`",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L166"
+      "source_location": "L171"
     },
     {
       "id": "docs_architecture_2_8_get_api_dashboard_summary",
@@ -1706,7 +1891,7 @@
       "node_kind": "heading",
       "norm_label": "2.8 `get /api/dashboard/summary`",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L193"
+      "source_location": "L198"
     },
     {
       "id": "docs_architecture_2_contratos_de_api",
@@ -1733,7 +1918,7 @@
       "source_location": "L52"
     },
     {
-      "id": "docs_architecture_c\u00f3digos_de_respuesta_109",
+      "id": "docs_architecture_c\u00f3digos_de_respuesta_114",
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 16,
@@ -1742,10 +1927,10 @@
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L109"
+      "source_location": "L114"
     },
     {
-      "id": "docs_architecture_c\u00f3digos_de_respuesta_134",
+      "id": "docs_architecture_c\u00f3digos_de_respuesta_139",
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 16,
@@ -1754,10 +1939,10 @@
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L134"
+      "source_location": "L139"
     },
     {
-      "id": "docs_architecture_c\u00f3digos_de_respuesta_157",
+      "id": "docs_architecture_c\u00f3digos_de_respuesta_162",
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 16,
@@ -1766,10 +1951,10 @@
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L157"
+      "source_location": "L162"
     },
     {
-      "id": "docs_architecture_c\u00f3digos_de_respuesta_185",
+      "id": "docs_architecture_c\u00f3digos_de_respuesta_190",
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 16,
@@ -1778,10 +1963,10 @@
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L185"
+      "source_location": "L190"
     },
     {
-      "id": "docs_architecture_c\u00f3digos_de_respuesta_201",
+      "id": "docs_architecture_c\u00f3digos_de_respuesta_206",
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 16,
@@ -1790,7 +1975,7 @@
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L201"
+      "source_location": "L206"
     },
     {
       "id": "docs_architecture_c\u00f3digos_de_respuesta_67",
@@ -1821,7 +2006,7 @@
       "label": "server/package.json",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "server/package.json",
       "source_file": "server/package.json",
@@ -1832,73 +2017,117 @@
       "label": "dependencies",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "server/package.json",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "server_package_dependencies_cors",
       "label": "cors",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "cors",
       "source_file": "server/package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "server_package_dependencies_dotenv",
       "label": "dotenv",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "dotenv",
       "source_file": "server/package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "server_package_dependencies_express",
       "label": "express",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "express",
       "source_file": "server/package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "server_package_dependencies_google_genai",
       "label": "@google/genai",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "@google/genai",
       "source_file": "server/package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "server_package_dependencies_mongoose",
       "label": "mongoose",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "mongoose",
       "source_file": "server/package.json",
-      "source_location": "L16"
+      "source_location": "L17"
+    },
+    {
+      "id": "server_package_devdependencies",
+      "label": "devDependencies",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "devdependencies",
+      "source_file": "server/package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "server_package_devdependencies_mongodb_memory_server",
+      "label": "mongodb-memory-server",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "mongodb-memory-server",
+      "source_file": "server/package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "server_package_devdependencies_supertest",
+      "label": "supertest",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "supertest",
+      "source_file": "server/package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "server_package_devdependencies_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "vitest",
+      "source_file": "server/package.json",
+      "source_location": "L22"
     },
     {
       "id": "server_package_name",
       "label": "name",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "name",
       "source_file": "server/package.json",
@@ -1909,7 +2138,7 @@
       "label": "private",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "private",
       "source_file": "server/package.json",
@@ -1920,7 +2149,7 @@
       "label": "scripts",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "server/package.json",
@@ -1931,18 +2160,29 @@
       "label": "dev",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "dev",
       "source_file": "server/package.json",
       "source_location": "L7"
     },
     {
+      "id": "server_package_scripts_seed",
+      "label": "seed",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "seed",
+      "source_file": "server/package.json",
+      "source_location": "L9"
+    },
+    {
       "id": "server_package_scripts_start",
       "label": "start",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "start",
       "source_file": "server/package.json",
@@ -1953,18 +2193,18 @@
       "label": "test",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "test",
       "source_file": "server/package.json",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
       "id": "server_package_type",
       "label": "type",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "type",
       "source_file": "server/package.json",
@@ -1975,176 +2215,44 @@
       "label": "version",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "code",
       "norm_label": "version",
       "source_file": "server/package.json",
       "source_location": "L3"
     },
     {
-      "id": "server_src_app",
-      "label": "app.js",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "app.js",
-      "source_file": "server/src/app.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_routes_health",
-      "label": "health.js",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "health.js",
-      "source_file": "server/src/routes/health.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_routes_health_healthrouter",
-      "label": "healthRouter",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "healthrouter",
-      "source_file": "server/src/routes/health.js",
-      "source_location": "L4"
-    },
-    {
-      "id": "server_src_routes_practice",
-      "label": "practice.js",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "practice.js",
-      "source_file": "server/src/routes/practice.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_routes_practice_practicerouter",
-      "label": "practiceRouter",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "practicerouter",
-      "source_file": "server/src/routes/practice.js",
-      "source_location": "L7"
-    },
-    {
-      "id": "server_src_routes_topics",
-      "label": "topics.js",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "topics.js",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_routes_topics_topicsrouter",
-      "label": "topicsRouter",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "topicsrouter",
-      "source_file": "server/src/routes/topics.js",
-      "source_location": "L5"
-    },
-    {
-      "id": "server_src_services_geminiservice",
-      "label": "geminiService.js",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "geminiservice.js",
-      "source_file": "server/src/services/geminiService.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_utils_srscalculator",
-      "label": "srsCalculator.js",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "srscalculator.js",
-      "source_file": "server/src/utils/srsCalculator.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_tests_srscalculator_test",
-      "label": "srsCalculator.test.js",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "srscalculator.test.js",
-      "source_file": "server/tests/srsCalculator.test.js",
-      "source_location": "L1"
-    },
-    {
       "id": "ref_cors",
       "label": "cors",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "concept",
       "norm_label": "cors",
       "source_file": "server/package.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "ref_dotenv",
-      "label": "dotenv",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "concept",
-      "norm_label": "dotenv",
-      "source_file": "server/package.json",
       "source_location": "L14"
-    },
-    {
-      "id": "ref_express",
-      "label": "express",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "app.js",
-      "file_type": "concept",
-      "norm_label": "express",
-      "source_file": "server/package.json",
-      "source_location": "L15"
     },
     {
       "id": "ref_google_genai",
       "label": "@google/genai",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "concept",
       "norm_label": "@google/genai",
       "source_file": "server/package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "server_package_json_ref_vitest",
       "label": "vitest",
       "_origin": "ast",
       "community": 17,
-      "community_name": "app.js",
+      "community_name": "server/package.json",
       "file_type": "concept",
       "norm_label": "vitest",
       "source_file": "server/package.json",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "client_src_app",
@@ -2191,6 +2299,17 @@
       "source_location": "L1"
     },
     {
+      "id": "client_src_hooks_usevoiceinteraction",
+      "label": "useVoiceInteraction.js",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "usevoiceinteraction.js",
+      "source_file": "client/src/hooks/useVoiceInteraction.js",
+      "source_location": "L1"
+    },
+    {
       "id": "client_src_main",
       "label": "main.jsx",
       "_origin": "ast",
@@ -2222,6 +2341,18 @@
       "norm_label": "react",
       "source_file": "client/package.json",
       "source_location": "L14"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_3_subgrafo_afectado_identificado_con_graphify",
+      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "App.jsx",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. subgrafo afectado (identificado con graphify)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L25"
     },
     {
       "id": "docs_architecture",
@@ -2257,7 +2388,7 @@
       "node_kind": "heading",
       "norm_label": "3. modelo de datos (mongoose schemas)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L211"
+      "source_location": "L216"
     },
     {
       "id": "docs_architecture_4_1_flujo_de_active_recall_y_evaluaci\u00f3n_de_hard_skills_gemini_srs",
@@ -2269,7 +2400,7 @@
       "node_kind": "heading",
       "norm_label": "4.1 flujo de active recall y evaluacion de hard skills (gemini + srs)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L258"
+      "source_location": "L263"
     },
     {
       "id": "docs_architecture_4_2_m\u00e1quina_de_estados_del_motor_algor\u00edtmico_srs_sm_2_adaptado",
@@ -2281,7 +2412,7 @@
       "node_kind": "heading",
       "norm_label": "4.2 maquina de estados del motor algoritmico srs (sm-2 adaptado)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L293"
+      "source_location": "L298"
     },
     {
       "id": "docs_architecture_4_3_flujo_de_arranque_y_healthcheck",
@@ -2293,7 +2424,7 @@
       "node_kind": "heading",
       "norm_label": "4.3 flujo de arranque y healthcheck",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L325"
+      "source_location": "L330"
     },
     {
       "id": "docs_architecture_4_4_harness_de_testing_y_e2e_playwright",
@@ -2305,7 +2436,7 @@
       "node_kind": "heading",
       "norm_label": "4.4 harness de testing y e2e playwright",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L349"
+      "source_location": "L354"
     },
     {
       "id": "docs_architecture_4_5_flujo_de_sparring_por_voz_web_speech_api_gemini_srs",
@@ -2317,7 +2448,7 @@
       "node_kind": "heading",
       "norm_label": "4.5 flujo de sparring por voz (web speech api + gemini + srs)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L370"
+      "source_location": "L375"
     },
     {
       "id": "docs_architecture_4_6_l\u00f3gica_de_recomendaci\u00f3n_acoplada_hard_skills_soft_skills",
@@ -2329,7 +2460,19 @@
       "node_kind": "heading",
       "norm_label": "4.6 logica de recomendacion acoplada (hard skills + soft skills)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L417"
+      "source_location": "L422"
+    },
+    {
+      "id": "docs_architecture_4_7_diagrama_general_del_ecosistema_devcoach_sparring",
+      "label": "4.7 Diagrama General del Ecosistema DevCoach Sparring",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "4. Diagramas de Flujo y Arquitectura",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4.7 diagrama general del ecosistema devcoach sparring",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L453"
     },
     {
       "id": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
@@ -2341,7 +2484,7 @@
       "node_kind": "heading",
       "norm_label": "4. diagramas de flujo y arquitectura",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L256"
+      "source_location": "L261"
     },
     {
       "id": "docs_architecture_5_evoluci\u00f3n_hacia_las_siguientes_historias",
@@ -2353,7 +2496,19 @@
       "node_kind": "heading",
       "norm_label": "5. evolucion hacia las siguientes historias",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L450"
+      "source_location": "L508"
+    },
+    {
+      "id": "docs_architecture_6_cobertura_y_resumen_de_validaci\u00f3n",
+      "label": "6. Cobertura y Resumen de Validaci\u00f3n",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "4. Diagramas de Flujo y Arquitectura",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. cobertura y resumen de validacion",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L519"
     },
     {
       "id": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
@@ -2377,7 +2532,7 @@
       "node_kind": "heading",
       "norm_label": "modelo `sessionlog` (`server/src/models/sessionlog.js`)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L237"
+      "source_location": "L242"
     },
     {
       "id": "docs_architecture_modelo_topic_server_src_models_topic_js",
@@ -2389,7 +2544,7 @@
       "node_kind": "heading",
       "norm_label": "modelo `topic` (`server/src/models/topic.js`)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L213"
+      "source_location": "L218"
     },
     {
       "id": "antigravity_context",
@@ -2786,11 +2941,22 @@
       "source_location": "L1"
     },
     {
+      "id": "server_src_app",
+      "label": "app.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "app.js",
+      "source_file": "server/src/app.js",
+      "source_location": "L1"
+    },
+    {
       "id": "server_src_controllers_dashboardcontroller",
       "label": "dashboardController.js",
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 26,
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "dashboardcontroller.js",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -2800,8 +2966,8 @@
       "id": "server_src_routes_dashboard",
       "label": "dashboard.js",
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 26,
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "dashboard.js",
       "source_file": "server/src/routes/dashboard.js",
@@ -2811,56 +2977,346 @@
       "id": "server_src_routes_dashboard_dashboardrouter",
       "label": "dashboardRouter",
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 26,
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "dashboardrouter",
       "source_file": "server/src/routes/dashboard.js",
       "source_location": "L4"
     },
     {
-      "id": "server_package_devdependencies",
-      "label": "devDependencies",
+      "id": "server_src_routes_health",
+      "label": "health.js",
       "_origin": "ast",
       "community": 26,
-      "community_name": "devDependencies",
+      "community_name": "app.js",
       "file_type": "code",
-      "norm_label": "devdependencies",
-      "source_file": "server/package.json",
-      "source_location": "L18"
+      "norm_label": "health.js",
+      "source_file": "server/src/routes/health.js",
+      "source_location": "L1"
     },
     {
-      "id": "server_package_devdependencies_mongodb_memory_server",
-      "label": "mongodb-memory-server",
+      "id": "server_src_routes_health_healthrouter",
+      "label": "healthRouter",
       "_origin": "ast",
       "community": 26,
-      "community_name": "devDependencies",
+      "community_name": "app.js",
       "file_type": "code",
-      "norm_label": "mongodb-memory-server",
-      "source_file": "server/package.json",
-      "source_location": "L19"
+      "norm_label": "healthrouter",
+      "source_file": "server/src/routes/health.js",
+      "source_location": "L4"
     },
     {
-      "id": "server_package_devdependencies_supertest",
-      "label": "supertest",
+      "id": "server_src_routes_practice",
+      "label": "practice.js",
       "_origin": "ast",
       "community": 26,
-      "community_name": "devDependencies",
+      "community_name": "app.js",
       "file_type": "code",
-      "norm_label": "supertest",
-      "source_file": "server/package.json",
-      "source_location": "L20"
+      "norm_label": "practice.js",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L1"
     },
     {
-      "id": "server_package_devdependencies_vitest",
-      "label": "vitest",
+      "id": "server_src_routes_practice_practicerouter",
+      "label": "practiceRouter",
       "_origin": "ast",
       "community": 26,
-      "community_name": "devDependencies",
+      "community_name": "app.js",
       "file_type": "code",
-      "norm_label": "vitest",
+      "norm_label": "practicerouter",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "server_src_routes_softskillpractice",
+      "label": "softSkillPractice.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "softskillpractice.js",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_routes_softskillpractice_softskillpracticerouter",
+      "label": "softSkillPracticeRouter",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "softskillpracticerouter",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L10"
+    },
+    {
+      "id": "server_src_routes_topics",
+      "label": "topics.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "topics.js",
+      "source_file": "server/src/routes/topics.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_routes_topics_topicsrouter",
+      "label": "topicsRouter",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "topicsrouter",
+      "source_file": "server/src/routes/topics.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "server_src_services_geminiservice",
+      "label": "geminiService.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "geminiservice.js",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_services_softskillsparringservice",
+      "label": "softSkillSparringService.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "softskillsparringservice.js",
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_services_softskillsparringservice_sparring_roles",
+      "label": "SPARRING_ROLES",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "sparring_roles",
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L16"
+    },
+    {
+      "id": "server_src_utils_srscalculator",
+      "label": "srsCalculator.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "srscalculator.js",
+      "source_file": "server/src/utils/srsCalculator.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_tests_srscalculator_test",
+      "label": "srsCalculator.test.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "srscalculator.test.js",
+      "source_file": "server/tests/srsCalculator.test.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_express",
+      "label": "express",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "concept",
+      "norm_label": "express",
       "source_file": "server/package.json",
-      "source_location": "L21"
+      "source_location": "L16"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice",
+      "label": "US-04-soft-skills-voice.md",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "us-04-soft-skills-voice.md",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_1_descripci\u00f3n",
+      "label": "1. Descripci\u00f3n",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. descripcion",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_2_criterios_de_aceptaci\u00f3n_ac",
+      "label": "2. Criterios de Aceptaci\u00f3n (AC)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. criterios de aceptacion (ac)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_tests_end_to_end_frontend_playwright",
+      "label": "Tests End-to-End Frontend (Playwright)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests end-to-end frontend (playwright)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_tests_unitarios_e_integraci\u00f3n_backend_vitest_supertest",
+      "label": "Tests Unitarios e Integraci\u00f3n Backend (Vitest / Supertest)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests unitarios e integracion backend (vitest / supertest)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "label": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-04] modulo soft skills: sparring por voz (web speech api + gemini)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final",
+      "label": "US-06-seed-and-e2e-final.md",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "us-06-seed-and-e2e-final.md",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final_1_descripci\u00f3n",
+      "label": "1. Descripci\u00f3n",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. descripcion",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final_2_criterios_de_aceptaci\u00f3n_ac",
+      "label": "2. Criterios de Aceptaci\u00f3n (AC)",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. criterios de aceptacion (ac)",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final_3_subgrafo_afectado_identificado_con_graphify",
+      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. subgrafo afectado (identificado con graphify)",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final_pruebas_e2e_playwright",
+      "label": "Pruebas E2E (Playwright)",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "pruebas e2e (playwright)",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final_tests_unitarios_e_integraci\u00f3n_backend_vitest_supertest",
+      "label": "Tests Unitarios e Integraci\u00f3n Backend (Vitest / Supertest)",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests unitarios e integracion backend (vitest / supertest)",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "tickets_us_06_seed_and_e2e_final_us_06_seed_senior_30_temas_clave_y_suite_e2e_final",
+      "label": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-06] seed senior (30 temas clave) y suite e2e final",
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L1"
     },
     {
       "id": "antigravity_skills_document_tech_specs",
@@ -3163,7 +3619,7 @@
       "label": "ref_vitest",
       "_origin": "semantic",
       "community": 12,
-      "community_name": "dashboard.test.js",
+      "community_name": "Topic.js",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_vitest",
@@ -3179,50 +3635,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "client_src_index",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "server_src_routes_softskillpractice",
-      "label": "server_src_routes_softskillpractice",
-      "community": 17,
-      "community_name": "app.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "server_src_routes_softskillpractice",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "server_src_routes_softskillpractice_softskillpracticerouter",
-      "label": "server_src_routes_softskillpractice_softskillpracticerouter",
-      "community": 17,
-      "community_name": "app.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "server_src_routes_softskillpractice_softskillpracticerouter",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "client_src_hooks_usevoiceinteraction",
-      "label": "client_src_hooks_usevoiceinteraction",
-      "community": 18,
-      "community_name": "App.jsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "client_src_hooks_usevoiceinteraction",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
-      "label": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
-      "community": 18,
-      "community_name": "App.jsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
       "source_file": "",
       "type": "external"
     }
@@ -3265,6 +3677,18 @@
       "weight": 1.0
     },
     {
+      "source": "client_src_components_softskilltrainer_softskilltrainer",
+      "target": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "client/src/components/SoftSkillTrainer.jsx",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_controllers_dashboardcontroller_aretopicsrelated",
       "target": "server_src_controllers_dashboardcontroller_extractkeywords",
       "relation": "calls",
@@ -3301,6 +3725,42 @@
       "weight": 1.0
     },
     {
+      "source": "server_src_scripts_seed_runstandaloneseed",
+      "target": "server_src_db_connectdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L292",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed_runstandaloneseed",
+      "target": "server_src_scripts_seed_seedtopics",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L295",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed_runstandaloneseed",
+      "target": "server_src_db_disconnectdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L302",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_server_bootstrap",
       "target": "server_src_db_connectdb",
       "relation": "calls",
@@ -3334,6 +3794,30 @@
       "context": "call",
       "source_file": "server/src/services/geminiService.js",
       "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_softskillsparringservice_replysoftskillsparring",
+      "target": "server_src_services_softskillsparringservice_getclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_softskillsparringservice_startsoftskillsparring",
+      "target": "server_src_services_softskillsparringservice_getclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -3513,7 +3997,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -3525,7 +4009,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -3537,7 +4021,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -3549,7 +4033,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -3561,7 +4045,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -3573,7 +4057,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -3585,7 +4069,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -3597,7 +4081,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -3609,7 +4093,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -3621,7 +4105,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -3769,6 +4253,66 @@
       "weight": 1.0
     },
     {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_models_topic_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_models_sessionlog_sessionlog",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_utils_srscalculator_calculatenextreview",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_services_softskillsparringservice_replysoftskillsparring",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_services_softskillsparringservice_startsoftskillsparring",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_routes_topics",
       "target": "server_src_models_topic_topic",
       "relation": "imports",
@@ -3790,6 +4334,42 @@
       "context": "import",
       "source_file": "server/src/routes/topics.js",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_models_topic_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_db_connectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_db_disconnectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -3970,6 +4550,126 @@
       "context": "import",
       "source_file": "server/tests/practice.test.js",
       "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_db_connectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_db_disconnectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_models_topic_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_scripts_seed_seed_topics",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_scripts_seed_seedtopics",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_app_app",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_db_connectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_db_disconnectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_models_topic_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_models_sessionlog_sessionlog",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4174,6 +4874,18 @@
       "context": "import",
       "source_file": "client/src/components/SoftSkillTrainer.jsx",
       "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_hooks_usevoiceinteraction",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "client/src/hooks/useVoiceInteraction.js",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -4513,6 +5225,66 @@
       "weight": 1.0
     },
     {
+      "source": "server_src_routes_softskillpractice",
+      "target": "ref_express",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_models_topic",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_models_sessionlog",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_utils_srscalculator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_services_softskillsparringservice",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_routes_topics",
       "target": "ref_express",
       "relation": "imports_from",
@@ -4546,6 +5318,54 @@
       "context": "import",
       "source_file": "server/src/routes/topics.js",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "ref_dotenv",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "ref_mongoose",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_models_topic",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_db",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -4593,6 +5413,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/src/services/geminiService.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_softskillsparringservice",
+      "target": "ref_google_genai",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/services/softSkillSparringService.js",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -4861,6 +5693,174 @@
       "weight": 1.0
     },
     {
+      "source": "server_tests_seed_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "ref_mongodb_memory_server",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "ref_mongoose",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_db",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_models_topic",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_seed_test",
+      "target": "server_src_scripts_seed",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/seed.test.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "ref_supertest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "ref_mongodb_memory_server",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "ref_mongoose",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_app",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_db",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_models_topic",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_softskillpractice_test",
+      "target": "server_src_models_sessionlog",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/softSkillPractice.test.js",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
       "source": "server_tests_srscalculator_test",
       "target": "ref_vitest",
       "relation": "imports_from",
@@ -5001,6 +6001,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "tests/e2e/smoke.spec.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_e2e_soft_skills_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/e2e/soft-skills.spec.js",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -5610,6 +6622,17 @@
       "weight": 1.0
     },
     {
+      "source": "client_src_hooks_usevoiceinteraction",
+      "target": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/hooks/useVoiceInteraction.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "docs_architecture",
       "target": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
       "relation": "contains",
@@ -5655,57 +6678,68 @@
     },
     {
       "source": "docs_architecture_2_4_post_api_practice_hard_skill_generate",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta_109",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta_114",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L109",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_2_5_post_api_practice_hard_skill_evaluate",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta_134",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta_139",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L134",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_2_6_post_api_practice_soft_skill_start",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta_157",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta_162",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L157",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_2_7_post_api_practice_soft_skill_reply",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta_185",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta_190",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L185",
+      "source_location": "L190",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_2_8_get_api_dashboard_summary",
-      "target": "docs_architecture_c\u00f3digos_de_respuesta_201",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta_206",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L201",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_2_contratos_de_api",
+      "target": "docs_architecture_2_4_post_api_practice_hard_skill_generate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -5716,7 +6750,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L118",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -5727,7 +6761,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L143",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -5738,7 +6772,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L166",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -5749,7 +6783,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L193",
+      "source_location": "L198",
       "weight": 1.0
     },
     {
@@ -5786,17 +6820,6 @@
       "weight": 1.0
     },
     {
-      "source": "docs_architecture_2_contratos_de_api",
-      "target": "docs_architecture_2_4_post_api_practice_hard_skill_generate",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L95",
-      "weight": 1.0
-    },
-    {
       "source": "docs_architecture_3_modelo_de_datos_mongoose_schemas",
       "target": "docs_architecture_modelo_topic_server_src_models_topic_js",
       "relation": "contains",
@@ -5804,7 +6827,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L213",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -5815,7 +6838,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L237",
+      "source_location": "L242",
       "weight": 1.0
     },
     {
@@ -5826,7 +6849,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L258",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -5837,7 +6860,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L293",
+      "source_location": "L298",
       "weight": 1.0
     },
     {
@@ -5848,7 +6871,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L325",
+      "source_location": "L330",
       "weight": 1.0
     },
     {
@@ -5859,7 +6882,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L349",
+      "source_location": "L354",
       "weight": 1.0
     },
     {
@@ -5870,7 +6893,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L370",
+      "source_location": "L375",
       "weight": 1.0
     },
     {
@@ -5881,7 +6904,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L417",
+      "source_location": "L422",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
+      "target": "docs_architecture_4_7_diagrama_general_del_ecosistema_devcoach_sparring",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L453",
       "weight": 1.0
     },
     {
@@ -5892,7 +6926,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L211",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -5903,7 +6937,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L256",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -5925,7 +6959,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L450",
+      "source_location": "L508",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
+      "target": "docs_architecture_6_cobertura_y_resumen_de_validaci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L519",
       "weight": 1.0
     },
     {
@@ -5951,14 +6996,69 @@
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_4_c\u00f3mo_verificar_el_estado_y_la_salud_del_sistema",
-      "target": "docs_user_guide_4_1_comprobaci\u00f3n_r\u00e1pida_de_salud_healthcheck",
+      "source": "docs_user_guide_10_panel_de_control_y_dashboard_operativo",
+      "target": "docs_user_guide_10_1_interpretaci\u00f3n_de_m\u00e9tricas_r\u00e1pidas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L51",
+      "source_location": "L302",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_10_panel_de_control_y_dashboard_operativo",
+      "target": "docs_user_guide_10_2_priorizaci\u00f3n_autom\u00e1tica_bot\u00f3n_entrenar_ahora_recommendednext",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L310",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_10_panel_de_control_y_dashboard_operativo",
+      "target": "docs_user_guide_10_3_gesti\u00f3n_y_limpieza_de_\u00e1reas_cr\u00edticas",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L318",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_3_c\u00f3mo_arrancar_la_aplicaci\u00f3n_en_local_quickstart_definitivo",
+      "target": "docs_user_guide_3_1_poblado_inicial_de_la_base_de_datos_seeding_idempotente",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_3_c\u00f3mo_arrancar_la_aplicaci\u00f3n_en_local_quickstart_definitivo",
+      "target": "docs_user_guide_3_2_levantamiento_concurrente",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_5_c\u00f3mo_verificar_el_estado_y_la_salud_del_sistema",
+      "target": "docs_user_guide_5_1_comprobaci\u00f3n_r\u00e1pida_de_salud_healthcheck",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -5969,7 +7069,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L120",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -5980,139 +7080,117 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L127",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
+      "source": "docs_user_guide_7_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
       "target": "docs_user_guide_6_1_l\u00f3gica_de_calificaci\u00f3n_y_estados",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L106",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
+      "source": "docs_user_guide_7_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
       "target": "docs_user_guide_6_2_pruebas_manuales_con_curl",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L118",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
-      "target": "docs_user_guide_7_1_configuraci\u00f3n_de_gemini_api_gemini_api_key",
+      "source": "docs_user_guide_8_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "target": "docs_user_guide_8_1_configuraci\u00f3n_de_gemini_api_gemini_api_key",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L173",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
-      "target": "docs_user_guide_7_2_c\u00f3mo_usar_la_interfaz_de_hard_skills",
+      "source": "docs_user_guide_8_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "target": "docs_user_guide_8_2_c\u00f3mo_usar_la_interfaz_de_hard_skills",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L185",
+      "source_location": "L228",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
-      "target": "docs_user_guide_7_3_qu\u00e9_formato_de_respuesta_espera_la_ia_para_dar_un_5_5",
+      "source": "docs_user_guide_8_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "target": "docs_user_guide_8_3_qu\u00e9_formato_de_respuesta_espera_la_ia_para_dar_un_5_5",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L199",
+      "source_location": "L242",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_8_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
-      "target": "docs_user_guide_8_1_c\u00f3mo_conceder_permisos_de_micr\u00f3fono_en_el_navegador",
+      "source": "docs_user_guide_9_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
+      "target": "docs_user_guide_9_1_c\u00f3mo_conceder_permisos_de_micr\u00f3fono_en_el_navegador",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L214",
+      "source_location": "L257",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_8_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
-      "target": "docs_user_guide_8_2_c\u00f3mo_usar_el_simulador_de_sparring",
+      "source": "docs_user_guide_9_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
+      "target": "docs_user_guide_9_2_c\u00f3mo_usar_el_simulador_de_sparring",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L226",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
-      "source": "docs_user_guide_8_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
-      "target": "docs_user_guide_8_3_qu\u00e9_eval\u00faa_el_simulador_de_consultor\u00eda",
+      "source": "docs_user_guide_9_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
+      "target": "docs_user_guide_9_3_qu\u00e9_eval\u00faa_el_simulador_de_consultor\u00eda",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L240",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_9_panel_de_control_y_dashboard_operativo",
-      "target": "docs_user_guide_9_1_interpretaci\u00f3n_de_m\u00e9tricas_r\u00e1pidas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L259",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_9_panel_de_control_y_dashboard_operativo",
-      "target": "docs_user_guide_9_2_priorizaci\u00f3n_autom\u00e1tica_bot\u00f3n_entrenar_ahora_recommendednext",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L267",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_user_guide_9_panel_de_control_y_dashboard_operativo",
-      "target": "docs_user_guide_9_3_gesti\u00f3n_y_limpieza_de_\u00e1reas_cr\u00edticas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L275",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
+      "target": "docs_user_guide_6_bater\u00eda_de_pruebas_automatizadas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L102",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
+      "target": "docs_user_guide_7_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -6128,40 +7206,40 @@
     },
     {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "target": "docs_user_guide_8_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L169",
+      "source_location": "L212",
       "weight": 1.0
     },
     {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_8_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
+      "target": "docs_user_guide_9_m\u00f3dulo_soft_skills_sparring_por_voz_consultor\u00eda_t\u00e9cnica",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L210",
+      "source_location": "L253",
       "weight": 1.0
     },
     {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_9_panel_de_control_y_dashboard_operativo",
+      "target": "docs_user_guide_10_panel_de_control_y_dashboard_operativo",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L255",
+      "source_location": "L298",
       "weight": 1.0
     },
     {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_3_c\u00f3mo_arrancar_la_aplicaci\u00f3n_en_local",
+      "target": "docs_user_guide_3_c\u00f3mo_arrancar_la_aplicaci\u00f3n_en_local_quickstart_definitivo",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6172,13 +7250,13 @@
     },
     {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_4_c\u00f3mo_verificar_el_estado_y_la_salud_del_sistema",
+      "target": "docs_user_guide_4_protocolo_diario_recomendado_20_minutos_de_sparring",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L49",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -6194,13 +7272,13 @@
     },
     {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
-      "target": "docs_user_guide_5_bater\u00eda_de_pruebas_automatizadas",
+      "target": "docs_user_guide_5_c\u00f3mo_verificar_el_estado_y_la_salud_del_sistema",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
-      "source_location": "L85",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -6233,7 +7311,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -6299,7 +7377,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -6310,7 +7388,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -6348,7 +7426,7 @@
     },
     {
       "source": "package_scripts",
-      "target": "package_scripts_test_server",
+      "target": "package_scripts_seed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6359,7 +7437,7 @@
     },
     {
       "source": "package_scripts",
-      "target": "package_scripts_test_client",
+      "target": "package_scripts_test_server",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6370,7 +7448,7 @@
     },
     {
       "source": "package_scripts",
-      "target": "package_scripts_test",
+      "target": "package_scripts_test_client",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6381,7 +7459,7 @@
     },
     {
       "source": "package_scripts",
-      "target": "package_scripts_test_e2e",
+      "target": "package_scripts_test",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6392,13 +7470,24 @@
     },
     {
       "source": "package_scripts",
-      "target": "package_scripts_test_all",
+      "target": "package_scripts_test_e2e",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_all",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -6409,7 +7498,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -6420,7 +7509,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -6486,7 +7575,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -6497,7 +7586,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -6508,7 +7597,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -6519,7 +7608,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -6530,7 +7619,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -6541,7 +7630,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -6552,7 +7641,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -6563,7 +7652,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L21",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "server_package_scripts",
+      "target": "server_package_scripts_test",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/package.json",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -6590,7 +7690,7 @@
     },
     {
       "source": "server_package_scripts",
-      "target": "server_package_scripts_test",
+      "target": "server_package_scripts_seed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6695,7 +7795,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/src/models/SessionLog.js",
-      "source_location": "L47",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -6765,6 +7865,17 @@
       "weight": 1.0
     },
     {
+      "source": "server_src_routes_softskillpractice",
+      "target": "server_src_routes_softskillpractice_softskillpracticerouter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/routes/softSkillPractice.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_routes_topics",
       "target": "server_src_routes_topics_topicsrouter",
       "relation": "contains",
@@ -6773,6 +7884,39 @@
       "confidence_score": 1.0,
       "source_file": "server/src/routes/topics.js",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_scripts_seed_seedtopics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L259",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_scripts_seed_runstandaloneseed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_scripts_seed",
+      "target": "server_src_scripts_seed_seed_topics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/scripts/seed.js",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -6817,6 +7961,50 @@
       "confidence_score": 1.0,
       "source_file": "server/src/services/geminiService.js",
       "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_softskillsparringservice",
+      "target": "server_src_services_softskillsparringservice_replysoftskillsparring",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_softskillsparringservice",
+      "target": "server_src_services_softskillsparringservice_sparring_roles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_softskillsparringservice",
+      "target": "server_src_services_softskillsparringservice_startsoftskillsparring",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_softskillsparringservice",
+      "target": "server_src_services_softskillsparringservice_getclient",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/services/softSkillSparringService.js",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -7172,6 +8360,83 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_04_soft_skills_voice",
+      "target": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_04_soft_skills_voice_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_04_soft_skills_voice_tests_unitarios_e_integraci\u00f3n_backend_vitest_supertest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_04_soft_skills_voice_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_04_soft_skills_voice_tests_end_to_end_frontend_playwright",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "target": "tickets_us_04_soft_skills_voice_2_criterios_de_aceptaci\u00f3n_ac",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "target": "tickets_us_04_soft_skills_voice_3_subgrafo_afectado_identificado_con_graphify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "target": "tickets_us_04_soft_skills_voice_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "target": "tickets_us_04_soft_skills_voice_1_descripci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "tickets_us_05_dashboard_and_coupling",
       "target": "tickets_us_05_dashboard_and_coupling_us_05_dashboard_operativo_y_acoplamiento_de_habilidades_hard_soft_skills",
       "relation": "contains",
@@ -7249,6 +8514,83 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_06_seed_and_e2e_final",
+      "target": "tickets_us_06_seed_and_e2e_final_us_06_seed_senior_30_temas_clave_y_suite_e2e_final",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_06_seed_and_e2e_final_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_06_seed_and_e2e_final_tests_unitarios_e_integraci\u00f3n_backend_vitest_supertest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_06_seed_and_e2e_final_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_06_seed_and_e2e_final_pruebas_e2e_playwright",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_06_seed_and_e2e_final_us_06_seed_senior_30_temas_clave_y_suite_e2e_final",
+      "target": "tickets_us_06_seed_and_e2e_final_2_criterios_de_aceptaci\u00f3n_ac",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_06_seed_and_e2e_final_us_06_seed_senior_30_temas_clave_y_suite_e2e_final",
+      "target": "tickets_us_06_seed_and_e2e_final_3_subgrafo_afectado_identificado_con_graphify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_06_seed_and_e2e_final_us_06_seed_senior_30_temas_clave_y_suite_e2e_final",
+      "target": "tickets_us_06_seed_and_e2e_final_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_06_seed_and_e2e_final_us_06_seed_senior_30_temas_clave_y_suite_e2e_final",
+      "target": "tickets_us_06_seed_and_e2e_final_1_descripci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-06-seed-and-e2e-final.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_routes_dashboard",
       "target": "server_src_controllers_dashboardcontroller_getdashboardsummary",
       "relation": "indirect_call",
@@ -7273,6 +8615,18 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_04_soft_skills_voice_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "client_src_components_softskilltrainer_softskilltrainer",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "SoftSkillTrainer",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
       "source": "tickets_us_02_srs_engine_and_models_3_subgrafo_afectado_identificado_con_graphify",
       "target": "server_src_utils_srscalculator_calculatenextreview",
       "relation": "references",
@@ -7283,8 +8637,32 @@
       "source_file": "tickets/US-02-srs-engine-and-models.md",
       "source_location": "L29",
       "weight": 1.0
+    },
+    {
+      "source": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "target": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "useVoiceInteraction",
+      "source_file": ".antigravity/graph.md",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_04_soft_skills_voice_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "useVoiceInteraction",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L27",
+      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "216f1f68741b1d5620c375d381ad91ba47021fc6"
+  "built_at_commit": "2447ec3999d3b495a78b13e11f59690910e6e2c2"
 }
