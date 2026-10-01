@@ -34,6 +34,30 @@ const sessionLogSchema = new mongoose.Schema(
       type: [String],
       default: [],
     },
+    businessClarity: {
+      type: String,
+      default: '',
+    },
+    tradeOffDefense: {
+      type: String,
+      default: '',
+    },
+    assertivenessScore: {
+      type: Number,
+      min: 1,
+      max: 5,
+    },
+    conversationHistory: [
+      {
+        speaker: { type: String, enum: ['ai', 'user'] },
+        text: String,
+        timestamp: { type: Date, default: Date.now },
+      },
+    ],
+    role: {
+      type: String,
+      default: '',
+    },
     reviewedAt: {
       type: Date,
       default: Date.now,

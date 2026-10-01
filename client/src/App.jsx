@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Terminal, Activity, ShieldCheck } from 'lucide-react';
+import { Terminal, Activity, ShieldCheck, Brain, MessageSquare } from 'lucide-react';
 import { HardSkillTrainer } from './components/HardSkillTrainer';
+import { SoftSkillTrainer } from './components/SoftSkillTrainer';
 
 export function App() {
   const [healthStatus, setHealthStatus] = useState('checking...');
+  const [activeTab, setActiveTab] = useState('hard-skills');
 
   useEffect(() => {
     fetch('http://localhost:5000/api/health')
@@ -41,8 +43,38 @@ export function App() {
           Práctica deliberada con Active Recall y Sparring por voz para defender decisiones ante Tech Leads y Clientes.
         </p>
 
-        {/* Módulo Interactivo de Hard Skills */}
-        <HardSkillTrainer />
+        {/* Selector de Pestañas */}
+        <div className="flex items-center gap-2 p-1.5 bg-slate-900 border border-slate-800 rounded-xl mb-6 shadow-lg">
+          <button
+            id="tab-hard-skills"
+            onClick={() => setActiveTab('hard-skills')}
+            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+              activeTab === 'hard-skills'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+            }`}
+          >
+            <Brain className="w-4 h-4" />
+            <span>Hard Skills (Active Recall)</span>
+          </button>
+
+          <button
+            id="tab-soft-skills"
+            onClick={() => setActiveTab('soft-skills')}
+            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${
+              activeTab === 'soft-skills'
+                ? 'bg-purple-600 text-white shadow-md shadow-purple-500/25'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+            }`}
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>Soft Skills (Voz & Consultoría)</span>
+          </button>
+        </div>
+
+        {/* Contenido Dinámico según la pestaña activa */}
+        {activeTab === 'hard-skills' && <HardSkillTrainer />}
+        {activeTab === 'soft-skills' && <SoftSkillTrainer />}
       </main>
 
       <footer className="border-t border-slate-900 py-4 text-center text-xs text-slate-600">
@@ -53,4 +85,5 @@ export function App() {
 }
 
 export default App;
+
 

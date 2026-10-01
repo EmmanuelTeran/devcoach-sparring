@@ -140,6 +140,59 @@ Recibe la solución técnica del usuario, la evalúa con un prompt estricto de S
 | `404 Not Found` | Topic inexistente | `{"error": "Topic not found"}` |
 | `500 Internal Server Error` | Error en evaluación o BD | `{"error": "Internal Server Error"}` |
 
+### 2.6 `POST /api/practice/soft-skill/start`
+
+Inicia el sparring de consultoría asignando un rol de stakeholder (`Tech Lead`, `PM orientado a costos`, `Cliente No Técnico`) y planteando un escenario conflictivo inicial.
+
+- **Método:** `POST`
+- **Ruta:** `/api/practice/soft-skill/start`
+- **Headers:** `Content-Type: application/json`
+- **Body:**
+  ```json
+  {
+    "topicId": "674c11112222333344445555"
+  }
+  ```
+
+#### Códigos de Respuesta
+
+| Código HTTP | Escenario | Payload de Ejemplo |
+| :--- | :--- | :--- |
+| `200 OK` | Escenario y rol inicial generados | `{"topicId": "...", "title": "Microservicios", "role": "Tech Lead Escéptico", "avatar": "🛡️", "scenario": "El cliente cuestiona...", "initialQuestion": "¿Por qué necesitamos...?"}` |
+| `400 Bad Request` | Falta `topicId` | `{"error": "topicId is required"}` |
+| `404 Not Found` | Topic inexistente | `{"error": "Topic not found"}` |
+| `500 Internal Server Error` | Error al invocar IA | `{"error": "Internal Server Error"}` |
+
+### 2.7 `POST /api/practice/soft-skill/reply`
+
+Gestiona el flujo conversacional por turnos. Si es turno intermedio (1 o 2), replica con escepticismo. Si es turno final (3), genera el veredicto del Evaluador Asertivo, recalcula SRS y persiste en `SessionLog`.
+
+- **Método:** `POST`
+- **Ruta:** `/api/practice/soft-skill/reply`
+- **Headers:** `Content-Type: application/json`
+- **Body:**
+  ```json
+  {
+    "topicId": "674c11112222333344445555",
+    "role": "Tech Lead Escéptico",
+    "conversationHistory": [
+      { "speaker": "ai", "text": "¿Por qué no usamos SQLite en vez de Postgres?" }
+    ],
+    "userAudioTranscript": "PostgreSQL nos brinda concurrencia MVCC y extensiones de indexación esenciales para escalar."
+  }
+  ```
+
+#### Códigos de Respuesta
+
+| Código HTTP | Escenario | Payload de Ejemplo |
+| :--- | :--- | :--- |
+| `200 OK (Turno Intermedio)` | Réplica del stakeholder | `{"isFinalTurn": false, "role": "Tech Lead Escéptico", "reply": "Entiendo, pero ¿cómo justificas el costo operacional?"}` |
+| `200 OK (Turno Final)` | Veredicto con SRS y Mongo | `{"isFinalTurn": true, "score": 4, "feedback": "...", "businessClarity": "...", "tradeOffDefense": "...", "assertivenessScore": 4, "missingTradeoffs": [], "strengths": ["..."], "nextReviewAt": "...", "sessionLogId": "..."}` |
+| `400 Bad Request` | Faltan campos requeridos | `{"error": "topicId and userAudioTranscript are required"}` |
+| `404 Not Found` | Topic inexistente | `{"error": "Topic not found"}` |
+| `500 Internal Server Error` | Error de procesamiento | `{"error": "Internal Server Error"}` |
+
+
 ---
 
 
@@ -302,11 +355,62 @@ graph TD
     end
 ```
 
+### 4.5 Flujo de Sparring por Voz (Web Speech API + Gemini + SRS)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Ingeniero
+    participant Browser as Web Speech API (Mic / TTS)
+    participant UI as SoftSkillTrainer (React)
+    participant API as Express (softSkillPracticeRouter)
+    participant Gemini as Gemini SDK (gemini-2.5-flash)
+    participant SRS as srsCalculator (SM-2)
+    participant DB as MongoDB (Topic & SessionLog)
+
+    Ingeniero->>UI: Clic en "Iniciar Sparring"
+    UI->>API: POST /api/practice/soft-skill/start { topicId }
+    API->>DB: Topic.findById(topicId)
+    API->>Gemini: startSoftSkillSparring(topic)
+    Gemini-->>API: JSON { scenario, initialQuestion, role, avatar }
+    API-->>UI: 200 OK { role, avatar, scenario, initialQuestion }
+    UI->>Browser: speakText(initialQuestion) vía SpeechSynthesis
+    Browser-->>Ingeniero: Audio sintetizado de la objeción del stakeholder
+
+    loop Turnos Intermedios (1 y 2)
+        Ingeniero->>Browser: Habla por micrófono (o escribe en input)
+        Browser->>UI: Transcripción de voz (SpeechRecognition)
+        Ingeniero->>UI: Envía réplica
+        UI->>API: POST /api/practice/soft-skill/reply { topicId, conversationHistory, userAudioTranscript, role }
+        API->>Gemini: replySoftSkillSparring (Rol de stakeholder escéptico)
+        Gemini-->>API: { isFinalTurn: false, reply }
+        API-->>UI: 200 OK { isFinalTurn: false, reply }
+        UI->>Browser: speakText(reply)
+        Browser-->>Ingeniero: Réplica hablada del stakeholder
+    end
+
+    Note over Ingeniero,DB: Turno 3 (Final): Evaluación y Cierre
+    Ingeniero->>UI: Envía tercera y última argumentación técnica
+    UI->>API: POST /api/practice/soft-skill/reply { topicId, conversationHistory, userAudioTranscript }
+    API->>Gemini: replySoftSkillSparring (Evaluador Asertivo de Consultoría)
+    Gemini-->>API: JSON { score, feedback, businessClarity, tradeOffDefense, assertivenessScore, missingTradeoffs, strengths }
+    API->>SRS: calculateNextReview(stage, easeFactor, score, intervalDays)
+    SRS-->>API: { srsStage, easeFactor, intervalDays, nextReviewAt }
+    API->>DB: topic.save() (actualiza SRS + history)
+    API->>DB: SessionLog.create() (persiste diálogo y dimensiones)
+    API-->>UI: 200 OK { isFinalTurn: true, score, feedback, businessClarity, tradeOffDefense, assertivenessScore, nextReviewAt }
+    UI-->>Ingeniero: Muestra panel de veredicto con las 3 dimensiones de consultoría y próxima fecha
+```
+
 ---
 
 ## 5. Evolución Hacia las Siguientes Historias
 
-- **US-04:** Módulo Soft Skills (Sparring por Voz con Web Speech API y Gemini).
-- **US-05:** Presentará la cola `/api/topics/due` en el Dashboard de React y enlazará las sesiones con `POST /api/topics/review`.
-- **US-06:** Seed Senior del Roadmap y Validación E2E Total.
+- [x] **US-01:** Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright).
+- [x] **US-02:** Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado).
+- [x] **US-03:** Módulo Hard Skills: Active Recall Teórico y Práctico con IA.
+- [x] **US-04:** Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini).
+- [ ] **US-05:** Dashboard Operativo y Acoplamiento de Habilidades (Cola de Repaso Unificada y visualización integrada).
+- [ ] **US-06:** Seed Senior del Roadmap y Validación E2E Total.
+
 
