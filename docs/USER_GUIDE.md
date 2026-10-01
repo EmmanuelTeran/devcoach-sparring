@@ -204,3 +204,48 @@ El Evaluador Técnico Senior utiliza criterios estrictos equivalentes a entrevis
 - **Análisis Explícito de Trade-offs:** Compara tu enfoque con alternativas viables explicando el costo o compromiso asumido (ej. latencia de red vs uso de memoria heap, simplicidad de código vs throughput, consistencia eventual vs bloqueo transaccional).
 - **Consideración de Casos Límite y Producción:** Menciona cómo se comporta la solución ante alta concurrencia, degradación de servicios downstream, fugas de memoria o backpressure.
 - **Claridad y Terminología Precisa:** Emplea términos técnicos estándar de la industria sin rodeos ni ambigüedades.
+
+---
+
+## 8. Módulo Soft Skills: Sparring por Voz & Consultoría Técnica
+
+El módulo de **Soft Skills** permite entrenar la defensa verbal de decisiones de ingeniería, negociación de deuda técnica y trade-offs ante stakeholders difíciles (Tech Leads escépticos, Product Managers obsesionados con fechas o Clientes no técnicos).
+
+### 8.1 Cómo Conceder Permisos de Micrófono en el Navegador
+
+El simulador utiliza la **Web Speech API** nativa (`SpeechRecognition` / `webkitSpeechRecognition`) para transcribir tu voz en tiempo real:
+
+1. Al presionar por primera vez el botón de micrófono en [http://localhost:5173](http://localhost:5173), el navegador mostrará un diálogo emergente: *"¿Permitir que localhost use el micrófono?"*.
+2. Haz clic en **"Permitir"** (o *"Permitir mientras se usa el sitio"*).
+3. **Solución si denegaste el permiso accidentalmente:**
+   - Haz clic en el ícono de candado o configuración a la izquierda de la barra de direcciones URL del navegador.
+   - En la sección **Micrófono**, cambia el selector de "Bloqueado" a **"Permitir"**.
+   - Recarga la pestaña.
+4. **Fallback Manual por Texto:** Si tu sistema o navegador no soporta captura de micrófono (ej. navegadores antiguos o entornos WSL2 sin servidor PulseAudio configurado), puedes redactar tu defensa en el cuadro de texto. La simulación y evaluación funcionan con paridad total del 100%.
+
+### 8.2 Cómo Usar el Simulador de Sparring
+
+1. **Acceder a la Pestaña:** En la parte superior de la aplicación, haz clic en la pestaña **"Soft Skills (Voz & Consultoría)"**.
+2. **Seleccionar Tema o Escenario:** Elige el tema que deseas defender (o utiliza el tema priorizado por el motor SRS).
+3. **Iniciar Sparring:** Presiona **"Iniciar Sparring"**. La IA adoptará un rol de stakeholder y planteará un escenario conflictivo inicial (ej. exigir recortar tests para entregar antes, o cuestionar la necesidad de redundancia).
+4. **Escucha y Réplica por Voz:**
+   - Si la síntesis de voz está habilitada (ícono de altavoz), escucharás la pregunta hablada del cliente.
+   - Presiona el **botón de micrófono (morado)** para comenzar a hablar. El botón parpadeará en rojo indicando grabación activa.
+   - Habla con firmeza y claridad. Verás tu transcripción reflejada en tiempo real.
+   - Presiona el botón de envío para remitir tu argumento.
+5. **Dinámica de 3 Turnos:**
+   - **Turno 1 y 2 (Intermedios):** El stakeholder contraatacará con objeciones financieras o de tiempo ("¿Y si la demanda se triplica?", "¿Por qué no usamos una solución más barata?").
+   - **Turno 3 (Final):** Tras tu tercera intervención, la IA convoca al Evaluador Asertivo para generar el veredicto formal.
+
+### 8.3 Qué Evalúa el Simulador de Consultoría
+
+El veredicto final desglosa tu desempeño en tres dimensiones críticas para roles Senior y Staff:
+
+1. **Claridad de Negocio (Business Clarity):**
+   - Evalúa tu capacidad para traducir métricas técnicas (latencia, consistencia, memoria) a impacto directo de negocio (SLA, facturación, retención, costos de nube).
+2. **Defensa de Trade-Offs (Trade-Off Defense):**
+   - Mide si fuiste honesto sobre lo que se sacrifica (ej. tiempo de entrega vs riesgo de regresión) y si ofreciste alternativas viables (ej. canary release, automatización del camino crítico).
+3. **Asertividad & Manejo de Presión (Assertiveness):**
+   - Califica del 1 al 5 si mantuviste tu criterio profesional ante la insistencia del cliente sin ser agresivo ni tampoco capitular aceptando deuda técnica crítica.
+4. **Puntuación Global (1 a 5) y Reprogramación SRS:**
+   - Tu puntaje actualiza automáticamente la próxima fecha de repaso del tema en el algoritmo SRS y queda registrado en `SessionLog` de MongoDB.
