@@ -78,4 +78,4 @@ Running 1 test using 1 worker
 
 ## 5. Commit de Cierre en dev
 
-`PENDING_MERGE_COMMIT`
+`ad850f8b50c25f395b97305e7fe1bebd0e6d84fe`
