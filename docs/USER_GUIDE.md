@@ -162,3 +162,45 @@ Respuesta esperada:
   }
 }
 ```
+
+---
+
+
+## 7. Módulo Hard Skills: Active Recall con Evaluación por IA
+
+El módulo de Hard Skills permite practicar Active Recall deliberado sobre temas técnicos avanzados del roadmap Fullstack (arquitectura interna de Node.js, reconciliación Fiber de React, indexación y agregaciones de MongoDB, concurrencia, etc.).
+
+### 7.1 Configuración de Gemini API (`GEMINI_API_KEY`)
+
+Para utilizar el modelo de lenguaje de última generación (`gemini-2.5-flash`), configura tu clave de API de Google Gemini en el archivo de entorno del backend:
+
+1. Crea o edita el archivo `server/.env` (puedes tomar como referencia `server/.env.example`):
+   ```bash
+   PORT=5000
+   MONGODB_URI=mongodb://localhost:27017/devcoach-sparring
+   GEMINI_API_KEY=tu_gemini_api_key_aqui
+   ```
+2. Si no dispones de una clave de API inmediata, el sistema cuenta con un motor heurístico offline que permite generar y evaluar desafíos sin interrumpir el flujo de desarrollo local ni las pruebas automatizadas.
+
+### 7.2 Cómo Usar la Interfaz de Hard Skills
+
+1. **Selección del Tema:** En la sección superior del módulo, selecciona un tema pendiente del menú desplegable o haz clic en **"Cargar tema prioritario"**. El sistema consultará la cola priorizada del algoritmo SRS.
+2. **Visualización del Desafío:** La IA formulará un reto incisivo:
+   - **Tópicos Teóricos:** Dilemas sobre arquitectura interna, protocolos, fases del event loop, gestión de memoria o trade-offs (sin preguntas triviales de memorización).
+   - **Tópicos Prácticos:** Escenarios reales de cuellos de botella en producción, diseño de componentes de alto rendimiento o optimización de flujos asíncronos.
+3. **Área de Redacción Técnica:** Escribe tu solución en el editor monoespaciado. Puedes redactar fragmentos de código, explicaciones paso a paso y justificación de trade-offs.
+4. **Evaluación Senior:** Presiona **"Evaluar Solución"**. El Senior Evaluator analizará tu respuesta y mostrará:
+   - **Badge de Score (1 a 5):** Nivel de dominio técnico demostrado.
+   - **Retroalimentación Técnica Directa:** Dictamen sin condescendencia sobre la precisión de tu respuesta.
+   - **Fortalezas Identificadas:** Puntos altos y precisiones arquitectónicas correctas.
+   - **Puntos Ciegos / Trade-offs Omitidos:** Aspectos de escalabilidad, límites de recursos o casos de borde que omitiste.
+   - **Próximo Repaso SRS:** Fecha reprogramada automáticamente y etapa en la que se encuentra el tópico.
+
+### 7.3 Qué Formato de Respuesta Espera la IA para Dar un 5/5
+
+El Evaluador Técnico Senior utiliza criterios estrictos equivalentes a entrevistas para Staff / Principal Engineer. Para obtener una calificación de **5/5**, tu respuesta debe cumplir:
+
+- **Justificación del "Por Qué":** No basta con decir *cómo* se soluciona; debes explicar qué sucede a nivel de runtime o bajo el capó (ej. qué fases de libuv intervienen, cómo se serializa el trabajo o qué estructuras de datos internas se ven afectadas).
+- **Análisis Explícito de Trade-offs:** Compara tu enfoque con alternativas viables explicando el costo o compromiso asumido (ej. latencia de red vs uso de memoria heap, simplicidad de código vs throughput, consistencia eventual vs bloqueo transaccional).
+- **Consideración de Casos Límite y Producción:** Menciona cómo se comporta la solución ante alta concurrencia, degradación de servicios downstream, fugas de memoria o backpressure.
+- **Claridad y Terminología Precisa:** Emplea términos técnicos estándar de la industria sin rodeos ni ambigüedades.

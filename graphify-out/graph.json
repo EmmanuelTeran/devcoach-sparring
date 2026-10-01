@@ -13,7 +13,19 @@
       "file_type": "code",
       "norm_label": "app()",
       "source_file": "client/src/App.jsx",
-      "source_location": "L4"
+      "source_location": "L5"
+    },
+    {
+      "id": "client_src_components_hardskilltrainer_hardskilltrainer",
+      "label": "HardSkillTrainer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "client/package.json",
+      "file_type": "code",
+      "norm_label": "hardskilltrainer()",
+      "source_file": "client/src/components/HardSkillTrainer.jsx",
+      "source_location": "L18"
     },
     {
       "id": "server_src_db_connectdb",
@@ -21,7 +33,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "connectdb()",
       "source_file": "server/src/db.js",
@@ -33,7 +45,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "disconnectdb()",
       "source_file": "server/src/db.js",
@@ -45,19 +57,55 @@
       "_callable": true,
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bootstrap()",
       "source_file": "server/src/server.js",
       "source_location": "L9"
     },
     {
+      "id": "server_src_services_geminiservice_evaluatehardskillsolution",
+      "label": "evaluateHardSkillSolution()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "evaluatehardskillsolution()",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L74"
+    },
+    {
+      "id": "server_src_services_geminiservice_generatehardskillchallenge",
+      "label": "generateHardSkillChallenge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "generatehardskillchallenge()",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L22"
+    },
+    {
+      "id": "server_src_services_geminiservice_getclient",
+      "label": "getClient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "getclient()",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L5"
+    },
+    {
       "id": "server_src_utils_srscalculator_calculatenextreview",
       "label": "calculateNextReview()",
       "_callable": true,
       "_origin": "ast",
-      "community": 12,
-      "community_name": "topics.test.js",
+      "community": 18,
+      "community_name": "practice.js",
       "file_type": "code",
       "norm_label": "calculatenextreview()",
       "source_file": "server/src/utils/srsCalculator.js",
@@ -469,6 +517,17 @@
       "source_location": "L1"
     },
     {
+      "id": "client_src_components_hardskilltrainer",
+      "label": "HardSkillTrainer.jsx",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "client/package.json",
+      "file_type": "code",
+      "norm_label": "hardskilltrainer.jsx",
+      "source_file": "client/src/components/HardSkillTrainer.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "client_src_main",
       "label": "main.jsx",
       "_origin": "ast",
@@ -594,7 +653,7 @@
       "label": "app.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "app.js",
       "source_file": "server/src/app.js",
@@ -605,18 +664,18 @@
       "label": "app",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "app",
       "source_file": "server/src/app.js",
-      "source_location": "L6"
+      "source_location": "L7"
     },
     {
       "id": "server_src_db",
       "label": "db.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "db.js",
       "source_file": "server/src/db.js",
@@ -627,7 +686,7 @@
       "label": "Topic.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "topic.js",
       "source_file": "server/src/models/Topic.js",
@@ -638,7 +697,7 @@
       "label": "reviewHistorySchema",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "reviewhistoryschema",
       "source_file": "server/src/models/Topic.js",
@@ -649,7 +708,7 @@
       "label": "Topic",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "topic",
       "source_file": "server/src/models/Topic.js",
@@ -660,7 +719,7 @@
       "label": "topicSchema",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "topicschema",
       "source_file": "server/src/models/Topic.js",
@@ -671,7 +730,7 @@
       "label": "health.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "health.js",
       "source_file": "server/src/routes/health.js",
@@ -682,18 +741,29 @@
       "label": "healthRouter",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "healthrouter",
       "source_file": "server/src/routes/health.js",
       "source_location": "L4"
     },
     {
+      "id": "server_src_routes_practice_practicerouter",
+      "label": "practiceRouter",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "practicerouter",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L7"
+    },
+    {
       "id": "server_src_routes_topics",
       "label": "topics.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "topics.js",
       "source_file": "server/src/routes/topics.js",
@@ -704,7 +774,7 @@
       "label": "topicsRouter",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "topicsrouter",
       "source_file": "server/src/routes/topics.js",
@@ -715,21 +785,10 @@
       "label": "server.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "server.js",
       "source_file": "server/src/server.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_utils_srscalculator",
-      "label": "srsCalculator.js",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "topics.test.js",
-      "file_type": "code",
-      "norm_label": "srscalculator.js",
-      "source_file": "server/src/utils/srsCalculator.js",
       "source_location": "L1"
     },
     {
@@ -737,21 +796,21 @@
       "label": "health.test.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "health.test.js",
       "source_file": "server/tests/health.test.js",
       "source_location": "L1"
     },
     {
-      "id": "server_tests_srscalculator_test",
-      "label": "srsCalculator.test.js",
+      "id": "server_tests_practice_test",
+      "label": "practice.test.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
-      "norm_label": "srscalculator.test.js",
-      "source_file": "server/tests/srsCalculator.test.js",
+      "norm_label": "practice.test.js",
+      "source_file": "server/tests/practice.test.js",
       "source_location": "L1"
     },
     {
@@ -759,66 +818,66 @@
       "label": "topics.test.js",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "topics.test.js",
       "source_file": "server/tests/topics.test.js",
       "source_location": "L1"
     },
     {
-      "id": "ref_cors",
-      "label": "cors",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "topics.test.js",
-      "file_type": "concept",
-      "norm_label": "cors",
-      "source_file": "server/package.json",
-      "source_location": "L12"
-    },
-    {
       "id": "ref_express",
       "label": "express",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "concept",
       "norm_label": "express",
       "source_file": "server/package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "ref_mongodb_memory_server",
       "label": "mongodb-memory-server",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "concept",
       "norm_label": "mongodb-memory-server",
       "source_file": "server/package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "ref_mongoose",
       "label": "mongoose",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "concept",
       "norm_label": "mongoose",
       "source_file": "server/package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "ref_supertest",
       "label": "supertest",
       "_origin": "ast",
       "community": 12,
-      "community_name": "topics.test.js",
+      "community_name": "app.js",
       "file_type": "concept",
       "norm_label": "supertest",
       "source_file": "server/package.json",
-      "source_location": "L19"
+      "source_location": "L20"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "app.js",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "server/package.json",
+      "source_location": "L21"
     },
     {
       "id": "package",
@@ -1041,6 +1100,17 @@
       "source_location": "L1"
     },
     {
+      "id": "tests_e2e_hard_skills_spec",
+      "label": "hard-skills.spec.js",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "hard-skills.spec.js",
+      "source_file": "tests/e2e/hard-skills.spec.js",
+      "source_location": "L1"
+    },
+    {
       "id": "tests_e2e_smoke_spec",
       "label": "smoke.spec.js",
       "_origin": "ast",
@@ -1192,6 +1262,54 @@
       "norm_label": "6. motor srs y flujo de repaso espaciado (sm-2 adaptado)",
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L102"
+    },
+    {
+      "id": "docs_user_guide_7_1_configuraci\u00f3n_de_gemini_api_gemini_api_key",
+      "label": "7.1 Configuraci\u00f3n de Gemini API (`GEMINI_API_KEY`)",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7.1 configuracion de gemini api (`gemini_api_key`)",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L173"
+    },
+    {
+      "id": "docs_user_guide_7_2_c\u00f3mo_usar_la_interfaz_de_hard_skills",
+      "label": "7.2 C\u00f3mo Usar la Interfaz de Hard Skills",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7.2 como usar la interfaz de hard skills",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L185"
+    },
+    {
+      "id": "docs_user_guide_7_3_qu\u00e9_formato_de_respuesta_espera_la_ia_para_dar_un_5_5",
+      "label": "7.3 Qu\u00e9 Formato de Respuesta Espera la IA para Dar un 5/5",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7.3 que formato de respuesta espera la ia para dar un 5/5",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L199"
+    },
+    {
+      "id": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "label": "7. M\u00f3dulo Hard Skills: Active Recall con Evaluaci\u00f3n por IA",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. modulo hard skills: active recall con evaluacion por ia",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L169"
     },
     {
       "id": "docs_user_guide_consultar_temas_pendientes_de_repaso",
@@ -1445,7 +1563,7 @@
       "file_type": "code",
       "norm_label": "cors",
       "source_file": "server/package.json",
-      "source_location": "L12"
+      "source_location": "L13"
     },
     {
       "id": "server_package_dependencies_dotenv",
@@ -1456,7 +1574,7 @@
       "file_type": "code",
       "norm_label": "dotenv",
       "source_file": "server/package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "server_package_dependencies_express",
@@ -1467,7 +1585,18 @@
       "file_type": "code",
       "norm_label": "express",
       "source_file": "server/package.json",
-      "source_location": "L14"
+      "source_location": "L15"
+    },
+    {
+      "id": "server_package_dependencies_google_genai",
+      "label": "@google/genai",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "server/package.json",
+      "file_type": "code",
+      "norm_label": "@google/genai",
+      "source_file": "server/package.json",
+      "source_location": "L12"
     },
     {
       "id": "server_package_dependencies_mongoose",
@@ -1478,7 +1607,7 @@
       "file_type": "code",
       "norm_label": "mongoose",
       "source_file": "server/package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "server_package_devdependencies",
@@ -1489,7 +1618,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "server/package.json",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "server_package_devdependencies_mongodb_memory_server",
@@ -1500,7 +1629,7 @@
       "file_type": "code",
       "norm_label": "mongodb-memory-server",
       "source_file": "server/package.json",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "server_package_devdependencies_supertest",
@@ -1511,7 +1640,7 @@
       "file_type": "code",
       "norm_label": "supertest",
       "source_file": "server/package.json",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "server_package_devdependencies_vitest",
@@ -1522,7 +1651,7 @@
       "file_type": "code",
       "norm_label": "vitest",
       "source_file": "server/package.json",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "server_package_name",
@@ -1613,6 +1742,17 @@
       "source_location": "L3"
     },
     {
+      "id": "ref_cors",
+      "label": "cors",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "server/package.json",
+      "file_type": "concept",
+      "norm_label": "cors",
+      "source_file": "server/package.json",
+      "source_location": "L13"
+    },
+    {
       "id": "ref_dotenv",
       "label": "dotenv",
       "_origin": "ast",
@@ -1621,25 +1761,102 @@
       "file_type": "concept",
       "norm_label": "dotenv",
       "source_file": "server/package.json",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
-      "id": "server_package_json_ref_vitest",
-      "label": "vitest",
+      "id": "ref_google_genai",
+      "label": "@google/genai",
       "_origin": "ast",
       "community": 17,
       "community_name": "server/package.json",
       "file_type": "concept",
-      "norm_label": "vitest",
+      "norm_label": "@google/genai",
       "source_file": "server/package.json",
-      "source_location": "L20"
+      "source_location": "L12"
+    },
+    {
+      "id": "server_src_models_sessionlog",
+      "label": "SessionLog.js",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "sessionlog.js",
+      "source_file": "server/src/models/SessionLog.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_models_sessionlog_sessionlog",
+      "label": "SessionLog",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "sessionlog",
+      "source_file": "server/src/models/SessionLog.js",
+      "source_location": "L47"
+    },
+    {
+      "id": "server_src_models_sessionlog_sessionlogschema",
+      "label": "sessionLogSchema",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "sessionlogschema",
+      "source_file": "server/src/models/SessionLog.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "server_src_routes_practice",
+      "label": "practice.js",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "practice.js",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_services_geminiservice",
+      "label": "geminiService.js",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "geminiservice.js",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_utils_srscalculator",
+      "label": "srsCalculator.js",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "srscalculator.js",
+      "source_file": "server/src/utils/srsCalculator.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_tests_srscalculator_test",
+      "label": "srsCalculator.test.js",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "practice.js",
+      "file_type": "code",
+      "norm_label": "srscalculator.test.js",
+      "source_file": "server/tests/srsCalculator.test.js",
+      "source_location": "L1"
     },
     {
       "id": "docs_architecture",
       "label": "ARCHITECTURE.md",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "architecture.md",
@@ -1651,7 +1868,7 @@
       "label": "1. Topolog\u00eda del Monorepo",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. topologia del monorepo",
@@ -1663,7 +1880,7 @@
       "label": "2.1 `GET /api/health`",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2.1 `get /api/health`",
@@ -1675,7 +1892,7 @@
       "label": "2.2 `GET /api/topics/due`",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2.2 `get /api/topics/due`",
@@ -1687,7 +1904,7 @@
       "label": "2.3 `POST /api/topics/review`",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2.3 `post /api/topics/review`",
@@ -1695,11 +1912,35 @@
       "source_location": "L74"
     },
     {
+      "id": "docs_architecture_2_4_post_api_practice_hard_skill_generate",
+      "label": "2.4 `POST /api/practice/hard-skill/generate`",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "2. Contratos de API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.4 `post /api/practice/hard-skill/generate`",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L95"
+    },
+    {
+      "id": "docs_architecture_2_5_post_api_practice_hard_skill_evaluate",
+      "label": "2.5 `POST /api/practice/hard-skill/evaluate`",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "2. Contratos de API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.5 `post /api/practice/hard-skill/evaluate`",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L118"
+    },
+    {
       "id": "docs_architecture_2_contratos_de_api",
       "label": "2. Contratos de API",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. contratos de api",
@@ -1711,79 +1952,91 @@
       "label": "3. Modelo de Datos (Mongoose Schemas)",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. modelo de datos (mongoose schemas)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L102"
+      "source_location": "L146"
     },
     {
-      "id": "docs_architecture_4_1_m\u00e1quina_de_estados_del_motor_algor\u00edtmico_srs_sm_2_adaptado",
-      "label": "4.1 M\u00e1quina de Estados del Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
+      "id": "docs_architecture_4_1_flujo_de_active_recall_y_evaluaci\u00f3n_de_hard_skills_gemini_srs",
+      "label": "4.1 Flujo de Active Recall y Evaluaci\u00f3n de Hard Skills (Gemini + SRS)",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.1 maquina de estados del motor algoritmico srs (sm-2 adaptado)",
+      "norm_label": "4.1 flujo de active recall y evaluacion de hard skills (gemini + srs)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L132"
+      "source_location": "L193"
     },
     {
-      "id": "docs_architecture_4_2_flujo_de_arranque_y_healthcheck",
-      "label": "4.2 Flujo de Arranque y Healthcheck",
+      "id": "docs_architecture_4_2_m\u00e1quina_de_estados_del_motor_algor\u00edtmico_srs_sm_2_adaptado",
+      "label": "4.2 M\u00e1quina de Estados del Motor Algor\u00edtmico SRS (SM-2 Adaptado)",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.2 flujo de arranque y healthcheck",
+      "norm_label": "4.2 maquina de estados del motor algoritmico srs (sm-2 adaptado)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L164"
+      "source_location": "L228"
     },
     {
-      "id": "docs_architecture_4_3_harness_de_testing_y_e2e_playwright",
-      "label": "4.3 Harness de Testing y E2E Playwright",
+      "id": "docs_architecture_4_3_flujo_de_arranque_y_healthcheck",
+      "label": "4.3 Flujo de Arranque y Healthcheck",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4.3 harness de testing y e2e playwright",
+      "norm_label": "4.3 flujo de arranque y healthcheck",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L188"
+      "source_location": "L260"
+    },
+    {
+      "id": "docs_architecture_4_4_harness_de_testing_y_e2e_playwright",
+      "label": "4.4 Harness de Testing y E2E Playwright",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "2. Contratos de API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4.4 harness de testing y e2e playwright",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L284"
     },
     {
       "id": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
       "label": "4. Diagramas de Flujo y Arquitectura",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. diagramas de flujo y arquitectura",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L130"
+      "source_location": "L191"
     },
     {
       "id": "docs_architecture_5_evoluci\u00f3n_hacia_las_siguientes_historias",
       "label": "5. Evoluci\u00f3n Hacia las Siguientes Historias",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. evolucion hacia las siguientes historias",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L211"
+      "source_location": "L307"
     },
     {
       "id": "docs_architecture_arquitectura_t\u00e9cnica_del_sistema_devcoach_sparring",
       "label": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "arquitectura tecnica del sistema: devcoach sparring",
@@ -1795,7 +2048,7 @@
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
@@ -1803,11 +2056,35 @@
       "source_location": "L52"
     },
     {
+      "id": "docs_architecture_c\u00f3digos_de_respuesta_109",
+      "label": "C\u00f3digos de Respuesta",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "2. Contratos de API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "codigos de respuesta",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L109"
+    },
+    {
+      "id": "docs_architecture_c\u00f3digos_de_respuesta_134",
+      "label": "C\u00f3digos de Respuesta",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "2. Contratos de API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "codigos de respuesta",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L134"
+    },
+    {
       "id": "docs_architecture_c\u00f3digos_de_respuesta_67",
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
@@ -1819,7 +2096,7 @@
       "label": "C\u00f3digos de Respuesta",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "codigos de respuesta",
@@ -1827,16 +2104,28 @@
       "source_location": "L91"
     },
     {
+      "id": "docs_architecture_modelo_sessionlog_server_src_models_sessionlog_js",
+      "label": "Modelo `SessionLog` (`server/src/models/SessionLog.js`)",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "2. Contratos de API",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "modelo `sessionlog` (`server/src/models/sessionlog.js`)",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L172"
+    },
+    {
       "id": "docs_architecture_modelo_topic_server_src_models_topic_js",
       "label": "Modelo `Topic` (`server/src/models/Topic.js`)",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Arquitectura T\u00e9cnica del Sistema: DevCoach Sparring",
+      "community_name": "2. Contratos de API",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "modelo `topic` (`server/src/models/topic.js`)",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L104"
+      "source_location": "L148"
     },
     {
       "id": "antigravity_context",
@@ -1930,6 +2219,102 @@
       "file_type": "code",
       "norm_label": "postcss.config.js",
       "source_file": "client/postcss.config.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module",
+      "label": "US-03-hard-skills-module.md",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "us-03-hard-skills-module.md",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module_1_descripci\u00f3n",
+      "label": "1. Descripci\u00f3n",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. descripcion",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module_2_criterios_de_aceptaci\u00f3n_ac",
+      "label": "2. Criterios de Aceptaci\u00f3n (AC)",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. criterios de aceptacion (ac)",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module_3_subgrafo_afectado_identificado_con_graphify",
+      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. subgrafo afectado (identificado con graphify)",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L46"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module_tests_e2e_playwright",
+      "label": "Tests E2E (Playwright)",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests e2e (playwright)",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
+      "label": "Tests Unitarios e Integraci\u00f3n (Vitest / Supertest)",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests unitarios e integracion (vitest / supertest)",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L48"
+    },
+    {
+      "id": "tickets_us_03_hard_skills_module_us_03_m\u00f3dulo_hard_skills_active_recall_te\u00f3rico_y_pr\u00e1ctico_con_ia",
+      "label": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "[US-03] M\u00f3dulo Hard Skills: Active Recall Te\u00f3rico y Pr\u00e1ctico con IA",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-03] modulo hard skills: active recall teorico y practico con ia",
+      "source_file": "tickets/US-03-hard-skills-module.md",
       "source_location": "L1"
     },
     {
@@ -2347,21 +2732,21 @@
       "norm_label": "client_src_index",
       "source_file": "",
       "type": "external"
-    },
-    {
-      "id": "ref_vitest",
-      "label": "ref_vitest",
-      "_origin": "semantic",
-      "community": 12,
-      "community_name": "topics.test.js",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_vitest",
-      "source_file": "",
-      "type": "external"
     }
   ],
   "links": [
+    {
+      "source": "client_src_app_app",
+      "target": "client_src_components_hardskilltrainer_hardskilltrainer",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "client/src/App.jsx",
+      "source_location": "L45",
+      "weight": 1.0
+    },
     {
       "source": "server_src_server_bootstrap",
       "target": "server_src_db_connectdb",
@@ -2372,6 +2757,30 @@
       "context": "call",
       "source_file": "server/src/server.js",
       "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_geminiservice_evaluatehardskillsolution",
+      "target": "server_src_services_geminiservice_getclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_geminiservice_generatehardskillchallenge",
+      "target": "server_src_services_geminiservice_getclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -2483,6 +2892,18 @@
       "weight": 1.0
     },
     {
+      "source": "client_src_app",
+      "target": "client_src_components_hardskilltrainer_hardskilltrainer",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "client/src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "client_src_main",
       "target": "client_src_app_app",
       "relation": "imports",
@@ -2520,7 +2941,7 @@
     },
     {
       "source": "server_package",
-      "target": "ref_cors",
+      "target": "ref_google_genai",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2532,7 +2953,7 @@
     },
     {
       "source": "server_package",
-      "target": "ref_dotenv",
+      "target": "ref_cors",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2544,7 +2965,7 @@
     },
     {
       "source": "server_package",
-      "target": "ref_express",
+      "target": "ref_dotenv",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2556,7 +2977,7 @@
     },
     {
       "source": "server_package",
-      "target": "ref_mongoose",
+      "target": "ref_express",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2568,19 +2989,19 @@
     },
     {
       "source": "server_package",
-      "target": "ref_mongodb_memory_server",
+      "target": "ref_mongoose",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/package.json",
-      "source_location": "L18",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
       "source": "server_package",
-      "target": "ref_supertest",
+      "target": "ref_mongodb_memory_server",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2592,7 +3013,7 @@
     },
     {
       "source": "server_package",
-      "target": "server_package_json_ref_vitest",
+      "target": "ref_supertest",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2600,6 +3021,18 @@
       "context": "import",
       "source_file": "server/package.json",
       "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "server_package",
+      "target": "ref_vitest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/package.json",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -2624,6 +3057,78 @@
       "context": "import",
       "source_file": "server/src/app.js",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_app",
+      "target": "server_src_routes_practice_practicerouter",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/app.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_models_topic_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_models_sessionlog_sessionlog",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_utils_srscalculator_calculatenextreview",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_services_geminiservice_evaluatehardskillsolution",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_services_geminiservice_generatehardskillchallenge",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -2708,6 +3213,66 @@
       "context": "import",
       "source_file": "server/tests/health.test.js",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_app_app",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_db_connectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_db_disconnectdb",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_models_topic_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_models_sessionlog_sessionlog",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -2791,6 +3356,42 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "client/src/App.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_app",
+      "target": "client_src_components_hardskilltrainer",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "client/src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_components_hardskilltrainer",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "client/src/components/HardSkillTrainer.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_components_hardskilltrainer",
+      "target": "ref_lucide_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "client/src/components/HardSkillTrainer.jsx",
       "source_location": "L2",
       "weight": 1.0
     },
@@ -2927,6 +3528,18 @@
       "weight": 1.0
     },
     {
+      "source": "server_src_app",
+      "target": "server_src_routes_practice",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/app.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_db",
       "target": "ref_mongoose",
       "relation": "imports_from",
@@ -2935,6 +3548,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "server/src/db.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_models_sessionlog",
+      "target": "ref_mongoose",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/models/SessionLog.js",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -2972,6 +3597,66 @@
       "context": "import",
       "source_file": "server/src/routes/health.js",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "ref_express",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_models_topic",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_models_sessionlog",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_utils_srscalculator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_routes_practice",
+      "target": "server_src_services_geminiservice",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -3047,6 +3732,18 @@
       "weight": 1.0
     },
     {
+      "source": "server_src_services_geminiservice",
+      "target": "ref_google_genai",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "server_tests_health_test",
       "target": "ref_vitest",
       "relation": "imports_from",
@@ -3116,6 +3813,102 @@
       "context": "import",
       "source_file": "server/tests/health.test.js",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "ref_vitest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "ref_supertest",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "ref_mongodb_memory_server",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_app",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_db",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_models_topic",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "server_src_models_sessionlog",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "server_tests_practice_test",
+      "target": "ref_mongoose",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "server/tests/practice.test.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -3224,6 +4017,18 @@
       "context": "import",
       "source_file": "server/tests/topics.test.js",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_e2e_hard_skills_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/e2e/hard-skills.spec.js",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -3807,7 +4612,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "client/src/App.jsx",
-      "source_location": "L4",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_components_hardskilltrainer",
+      "target": "client_src_components_hardskilltrainer_hardskilltrainer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/HardSkillTrainer.jsx",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -3855,6 +4671,39 @@
       "weight": 1.0
     },
     {
+      "source": "docs_architecture_2_4_post_api_practice_hard_skill_generate",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta_109",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_2_5_post_api_practice_hard_skill_evaluate",
+      "target": "docs_architecture_c\u00f3digos_de_respuesta_134",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_2_contratos_de_api",
+      "target": "docs_architecture_2_5_post_api_practice_hard_skill_evaluate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
       "source": "docs_architecture_2_contratos_de_api",
       "target": "docs_architecture_2_1_get_api_health",
       "relation": "contains",
@@ -3888,6 +4737,17 @@
       "weight": 1.0
     },
     {
+      "source": "docs_architecture_2_contratos_de_api",
+      "target": "docs_architecture_2_4_post_api_practice_hard_skill_generate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
       "source": "docs_architecture_3_modelo_de_datos_mongoose_schemas",
       "target": "docs_architecture_modelo_topic_server_src_models_topic_js",
       "relation": "contains",
@@ -3895,40 +4755,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L104",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
-      "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "target": "docs_architecture_4_1_m\u00e1quina_de_estados_del_motor_algor\u00edtmico_srs_sm_2_adaptado",
+      "source": "docs_architecture_3_modelo_de_datos_mongoose_schemas",
+      "target": "docs_architecture_modelo_sessionlog_server_src_models_sessionlog_js",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L132",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "target": "docs_architecture_4_2_flujo_de_arranque_y_healthcheck",
+      "target": "docs_architecture_4_1_flujo_de_active_recall_y_evaluaci\u00f3n_de_hard_skills_gemini_srs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L164",
+      "source_location": "L193",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
-      "target": "docs_architecture_4_3_harness_de_testing_y_e2e_playwright",
+      "target": "docs_architecture_4_2_m\u00e1quina_de_estados_del_motor_algor\u00edtmico_srs_sm_2_adaptado",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L188",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
+      "target": "docs_architecture_4_3_flujo_de_arranque_y_healthcheck",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L260",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture_4_diagramas_de_flujo_y_arquitectura",
+      "target": "docs_architecture_4_4_harness_de_testing_y_e2e_playwright",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -3939,7 +4821,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L102",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -3950,7 +4832,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L130",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -3961,7 +4843,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L211",
+      "source_location": "L307",
       "weight": 1.0
     },
     {
@@ -4053,6 +4935,39 @@
       "weight": 1.0
     },
     {
+      "source": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "target": "docs_user_guide_7_1_configuraci\u00f3n_de_gemini_api_gemini_api_key",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "target": "docs_user_guide_7_2_c\u00f3mo_usar_la_interfaz_de_hard_skills",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "target": "docs_user_guide_7_3_qu\u00e9_formato_de_respuesta_espera_la_ia_para_dar_un_5_5",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L199",
+      "weight": 1.0
+    },
+    {
       "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
       "target": "docs_user_guide_6_motor_srs_y_flujo_de_repaso_espaciado_sm_2_adaptado",
       "relation": "contains",
@@ -4072,6 +4987,17 @@
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
+      "target": "docs_user_guide_7_m\u00f3dulo_hard_skills_active_recall_con_evaluaci\u00f3n_por_ia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -4335,7 +5261,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -4395,7 +5321,7 @@
     },
     {
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_cors",
+      "target": "server_package_dependencies_google_genai",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4406,7 +5332,7 @@
     },
     {
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_dotenv",
+      "target": "server_package_dependencies_cors",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4417,7 +5343,7 @@
     },
     {
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_express",
+      "target": "server_package_dependencies_dotenv",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4428,13 +5354,24 @@
     },
     {
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_mongoose",
+      "target": "server_package_dependencies_express",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
       "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_mongoose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/package.json",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -4445,7 +5382,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -4456,7 +5393,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -4467,7 +5404,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4511,7 +5448,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/src/app.js",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -4534,6 +5471,28 @@
       "confidence_score": 1.0,
       "source_file": "server/src/db.js",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_models_sessionlog",
+      "target": "server_src_models_sessionlog_sessionlogschema",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/models/SessionLog.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_models_sessionlog",
+      "target": "server_src_models_sessionlog_sessionlog",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/models/SessionLog.js",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -4581,6 +5540,17 @@
       "weight": 1.0
     },
     {
+      "source": "server_src_routes_practice",
+      "target": "server_src_routes_practice_practicerouter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/routes/practice.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_routes_topics",
       "target": "server_src_routes_topics_topicsrouter",
       "relation": "contains",
@@ -4600,6 +5570,39 @@
       "confidence_score": 1.0,
       "source_file": "server/src/server.js",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_geminiservice",
+      "target": "server_src_services_geminiservice_generatehardskillchallenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_geminiservice",
+      "target": "server_src_services_geminiservice_getclient",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "server_src_services_geminiservice",
+      "target": "server_src_services_geminiservice_evaluatehardskillsolution",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server/src/services/geminiService.js",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -4878,6 +5881,95 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_03_hard_skills_module",
+      "target": "tickets_us_03_hard_skills_module_us_03_m\u00f3dulo_hard_skills_active_recall_te\u00f3rico_y_pr\u00e1ctico_con_ia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_03_hard_skills_module_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_03_hard_skills_module_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_03_hard_skills_module_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_03_hard_skills_module_tests_e2e_playwright",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_03_hard_skills_module_us_03_m\u00f3dulo_hard_skills_active_recall_te\u00f3rico_y_pr\u00e1ctico_con_ia",
+      "target": "tickets_us_03_hard_skills_module_2_criterios_de_aceptaci\u00f3n_ac",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_03_hard_skills_module_us_03_m\u00f3dulo_hard_skills_active_recall_te\u00f3rico_y_pr\u00e1ctico_con_ia",
+      "target": "tickets_us_03_hard_skills_module_3_subgrafo_afectado_identificado_con_graphify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_03_hard_skills_module_us_03_m\u00f3dulo_hard_skills_active_recall_te\u00f3rico_y_pr\u00e1ctico_con_ia",
+      "target": "tickets_us_03_hard_skills_module_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_03_hard_skills_module_us_03_m\u00f3dulo_hard_skills_active_recall_te\u00f3rico_y_pr\u00e1ctico_con_ia",
+      "target": "tickets_us_03_hard_skills_module_1_descripci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_03_hard_skills_module_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "client_src_components_hardskilltrainer_hardskilltrainer",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "HardSkillTrainer",
+      "source_file": "tickets/US-03-hard-skills-module.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
       "source": "tickets_us_02_srs_engine_and_models_3_subgrafo_afectado_identificado_con_graphify",
       "target": "server_src_utils_srscalculator_calculatenextreview",
       "relation": "references",
@@ -4891,5 +5983,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f8f46efad414502421133ee9ba1046d3f3e3f0d4"
+  "built_at_commit": "606d1eaed83bd8e172c378a9bc537d0e19a862e0"
 }
