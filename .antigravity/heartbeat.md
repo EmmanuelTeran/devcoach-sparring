@@ -1,10 +1,10 @@
 # Heartbeat del Proyecto
 
 - **Última actualización:** 2026-09-30
-- **Historia activa:** US-01 (Scaffolding, Playwright & Mongo)
-- **Rama actual:** feature/US-01-scaffolding-and-tests
+- **Historia activa:** Ninguna (US-01 completada, lista US-02)
+- **Rama actual:** dev
 - **Estado de Tickets:**
-  - [ ] US-01: Scaffolding, Playwright & Mongo (En Progreso)
+  - [x] US-01: Scaffolding, Playwright & Mongo
   - [ ] US-02: Schemas Mongo & Motor SRS
   - [ ] US-03: Módulo Hard Skills
   - [ ] US-04: Módulo Soft Skills (Voz)

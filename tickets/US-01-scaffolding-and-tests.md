@@ -1,9 +1,9 @@
 # [US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)
 
-- **Estado:** Verificado
+- **Estado:** Done
 - **Rama:** `feature/US-01-scaffolding-and-tests`
 - **Fecha de Inicio:** 2026-09-30
-- **Fecha de Cierre:** -
+- **Fecha de Cierre:** 2026-09-30
 
 ## 1. Descripción
 
@@ -75,4 +75,4 @@ Running 1 test using 1 worker
 
 ## 5. Commit de Cierre en dev
 
-`Pendiente`
+`21fe112293ce2a3237f181f3c60106bcb316d831`
