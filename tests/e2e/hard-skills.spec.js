@@ -64,7 +64,12 @@ test.describe('Hard Skills Module - Active Recall E2E Flow', () => {
     // 1. Navegar a la app
     await page.goto('/');
 
-    // 2. Verificar que el módulo de Hard Skills está presente
+    // 2. Cambiar a la pestaña de Hard Skills (o verificarla)
+    const tabHardSkills = page.locator('#tab-hard-skills');
+    await expect(tabHardSkills).toBeVisible();
+    await tabHardSkills.click();
+
+    // 3. Verificar que el módulo de Hard Skills está presente
     const section = page.locator('#hard-skills-section');
     await expect(section).toBeVisible();
     await expect(page.locator('#topic-selector')).toBeVisible();

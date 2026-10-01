@@ -190,8 +190,20 @@ Gestiona el flujo conversacional por turnos. Si es turno intermedio (1 o 2), rep
 | `200 OK (Turno Final)` | Veredicto con SRS y Mongo | `{"isFinalTurn": true, "score": 4, "feedback": "...", "businessClarity": "...", "tradeOffDefense": "...", "assertivenessScore": 4, "missingTradeoffs": [], "strengths": ["..."], "nextReviewAt": "...", "sessionLogId": "..."}` |
 | `400 Bad Request` | Faltan campos requeridos | `{"error": "topicId and userAudioTranscript are required"}` |
 | `404 Not Found` | Topic inexistente | `{"error": "Topic not found"}` |
-| `500 Internal Server Error` | Error de procesamiento | `{"error": "Internal Server Error"}` |
+### 2.8 `GET /api/dashboard/summary`
 
+Consolida en un solo payload las métricas operativas del día, conteos de cola SRS, detección de temas con deficiencias y la recomendación inteligente acoplada.
+
+- **Método:** `GET`
+- **Ruta:** `/api/dashboard/summary`
+- **Headers:** `Accept: application/json`
+
+#### Códigos de Respuesta
+
+| Código HTTP | Escenario | Payload de Ejemplo |
+| :--- | :--- | :--- |
+| `200 OK` | Métricas y recomendación calculadas exitosamente | `{"dueCount": 3, "dueHardSkills": 2, "dueSoftSkills": 1, "criticalTopics": [{"_id": "...", "title": "React Fiber", "lastScore": 1, "srsStage": 0, "nextReviewAt": "..."}], "recommendedNext": {"_id": "...", "title": "React Fiber", "category": "hard_skill", "type": "theory"}}` |
+| `500 Internal Server Error` | Error al consultar la base de datos | `{"error": "Internal Server Error"}` |
 
 ---
 
@@ -402,6 +414,37 @@ sequenceDiagram
     UI-->>Ingeniero: Muestra panel de veredicto con las 3 dimensiones de consultoría y próxima fecha
 ```
 
+### 4.6 Lógica de Recomendación Acoplada (Hard Skills + Soft Skills)
+
+El backend en `GET /api/dashboard/summary` implementa la heurística pedagógica de acoplamiento: si el tema con fecha más vencida es una defensa por voz (Soft Skill), pero su contraparte técnica (misma subcategoría) tiene calificación deficiente (`score < 3`), se antepone el reto técnico:
+
+```mermaid
+flowchart TD
+    Start([Petición GET /api/dashboard/summary]) --> FetchDue[Consultar temas con nextReviewAt <= ahora]
+    FetchDue --> CheckDue{¿Existen temas pendientes en la cola?}
+    
+    CheckDue -- No --> CheckCritOnly{¿Hay áreas críticas registradas?}
+    CheckCritOnly -- Sí --> SuggestCritical[recommendedNext = Tema más deficiente score < 3]
+    CheckCritOnly -- No --> ReturnEmpty[recommendedNext = null]
+    
+    CheckDue -- Sí --> PickEarliest[Ordenar por menor score histórico y fecha más antigua]
+    PickEarliest --> TopCandidate[Candidato más urgente]
+    
+    TopCandidate --> IsSoftSkill{¿El candidato es Soft Skill?}
+    IsSoftSkill -- No --> RecommendCandidate[recommendedNext = Candidato Hard Skill]
+    
+    IsSoftSkill -- Sí --> CheckHardDeficiency{¿Su contraparte técnica o misma área tiene último score < 3?}
+    CheckHardDeficiency -- Sí --> RecommendHardBase[Priorizar reto de Hard Skill para asegurar bases teóricas]
+    CheckHardDeficiency -- No --> RecommendSoft[recommendedNext = Candidato Soft Skill listo para defensa]
+    
+    RecommendHardBase --> BuildResponse[Construir payload: dueCount, dueHard, dueSoft, criticalTopics, recommendedNext]
+    RecommendCandidate --> BuildResponse
+    RecommendSoft --> BuildResponse
+    SuggestCritical --> BuildResponse
+    ReturnEmpty --> BuildResponse
+    BuildResponse --> End([200 OK con métricas consolidadas])
+```
+
 ---
 
 ## 5. Evolución Hacia las Siguientes Historias
@@ -410,7 +453,7 @@ sequenceDiagram
 - [x] **US-02:** Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado).
 - [x] **US-03:** Módulo Hard Skills: Active Recall Teórico y Práctico con IA.
 - [x] **US-04:** Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini).
-- [ ] **US-05:** Dashboard Operativo y Acoplamiento de Habilidades (Cola de Repaso Unificada y visualización integrada).
+- [x] **US-05:** Dashboard Operativo y Acoplamiento de Habilidades (Cola de Repaso Unificada y visualización integrada).
 - [ ] **US-06:** Seed Senior del Roadmap y Validación E2E Total.
 
 

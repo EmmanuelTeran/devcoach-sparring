@@ -11,18 +11,15 @@
   "9": "workflows/graphify.md",
   "10": "heartbeat.md",
   "11": "client/package.json",
-  "12": "app.js",
+  "12": "practice.test.js",
   "13": "package.json",
   "14": "Guía de Usuario: DevCoach Sparring",
   "15": "[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)",
-  "16": "2. Contratos de API",
   "17": "server/package.json",
-  "18": "geminiService.js",
-  "19": "4. Diagramas de Flujo y Arquitectura",
+  "18": "app.js",
+  "19": "2. Contratos de API",
   "20": "tailwind.config.js",
   "21": "postcss.config.js",
-  "22": "[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico con IA",
-  "23": "[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)",
-  "24": "App.jsx",
-  "25": "[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)"
+  "22": "App.jsx",
+  "23": "[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)"
 }
