@@ -92,6 +92,11 @@ Registra el resultado de una sesión de Active Recall o defensa por voz, recompu
 
 | Código HTTP | Escenario | Payload de Ejemplo |
 | :--- | :--- | :--- |
+| `200 OK` | Revisión procesada exitosamente | `{"message": "Review recorded successfully", "topic": {"_id": "...", "title": "React Fiber", "srsStage": 1, "nextReviewAt": "..."}}` |
+| `400 Bad Request` | Faltan campos requeridos o inválidos | `{"error": "topicId and a valid score between 1 and 5 are required"}` |
+| `404 Not Found` | Topic no encontrado | `{"error": "Topic not found"}` |
+| `500 Internal Server Error` | Fallo de base de datos | `{"error": "Internal Server Error"}` |
+
 ### 2.4 `POST /api/practice/hard-skill/generate`
 
 Recibe un `topicId`, consulta el tema en MongoDB y formula un reto de Active Recall conceptual o práctico con `@google/genai` (`gemini-2.5-flash`).
@@ -445,6 +450,59 @@ flowchart TD
     BuildResponse --> End([200 OK con métricas consolidadas])
 ```
 
+### 4.7 Diagrama General del Ecosistema DevCoach Sparring
+
+```mermaid
+graph TB
+    subgraph Cliente ["Frontend SPA (React 18 + Vite + Tailwind CSS)"]
+        UI_Dash["Dashboard Component<br/>(Métricas, Recomendación, Áreas Críticas)"]
+        UI_Hard["HardSkillTrainer Component<br/>(Active Recall + Code Editor)"]
+        UI_Soft["SoftSkillTrainer Component<br/>(Voice Sparring + Web Speech API)"]
+        Audio_API["Web Speech API<br/>(SpeechRecognition & SpeechSynthesis)"]
+        UI_Soft <--> Audio_API
+    end
+
+    subgraph Servidor ["Backend API (Node.js + Express)"]
+        Router_Dash["/api/dashboard<br/>(dashboardController)"]
+        Router_Topics["/api/topics<br/>(due & review endpoints)"]
+        Router_Practice["/api/practice/hard-skill<br/>(generate & evaluate)"]
+        Router_Soft["/api/practice/soft-skill<br/>(start & reply sparrings)"]
+        Engine_SRS["SRS Engine<br/>(SuperMemo 2 Adaptado)"]
+        Seed_Script["Seeding Idempotente<br/>(30 Temas Mid-to-Senior)"]
+    end
+
+    subgraph Inteligencia ["Servicios Cognitivos & IA"]
+        Gemini_AI["Google Gemini 2.5 Flash<br/>(@google/genai SDK)"]
+        Mock_AI["Fallback Heurístico<br/>(Offline / Sin API Key)"]
+    end
+
+    subgraph Persistencia ["Almacenamiento de Datos (MongoDB Mongoose)"]
+        Collection_Topics[("Topics Collection<br/>(SRS Stages, EaseFactor, History)")]
+        Collection_Logs[("SessionLogs Collection<br/>(Puntajes, Missing Trade-offs, Transcripciones)")]
+    end
+
+    UI_Dash --> Router_Dash
+    UI_Hard --> Router_Topics
+    UI_Hard --> Router_Practice
+    UI_Soft --> Router_Soft
+
+    Router_Dash --> Collection_Topics
+    Router_Dash --> Collection_Logs
+    Router_Topics --> Engine_SRS
+    Router_Topics --> Collection_Topics
+    Router_Practice --> Gemini_AI
+    Router_Practice --> Mock_AI
+    Router_Practice --> Engine_SRS
+    Router_Practice --> Collection_Topics
+    Router_Practice --> Collection_Logs
+    Router_Soft --> Gemini_AI
+    Router_Soft --> Mock_AI
+    Router_Soft --> Engine_SRS
+    Router_Soft --> Collection_Topics
+    Router_Soft --> Collection_Logs
+    Seed_Script --> Collection_Topics
+```
+
 ---
 
 ## 5. Evolución Hacia las Siguientes Historias
@@ -454,6 +512,17 @@ flowchart TD
 - [x] **US-03:** Módulo Hard Skills: Active Recall Teórico y Práctico con IA.
 - [x] **US-04:** Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini).
 - [x] **US-05:** Dashboard Operativo y Acoplamiento de Habilidades (Cola de Repaso Unificada y visualización integrada).
-- [ ] **US-06:** Seed Senior del Roadmap y Validación E2E Total.
+- [x] **US-06:** Seed Senior del Roadmap (30 temas Mid-to-Senior) y Validación E2E Total.
+
+---
+
+## 6. Cobertura y Resumen de Validación
+
+| Componente / Suite | Herramienta | Conteo de Tests | Estado |
+| :--- | :--- | :--- | :--- |
+| **Backend Unit & Integration** | Vitest + Supertest + MongoMemoryServer | 41 tests (7 suites) | **100% PASS** |
+| **Frontend & End-to-End** | Playwright (Chromium Headless) | 5 flujos E2E completos | **100% PASS** |
+| **Seeding Idempotente** | Supertest / MongoMemoryServer | 4 tests de idempotencia & categorías | **100% PASS** |
+| **Calidad de Código y Tipos** | ESLint / AST Analysis | 0 regresiones detectadas | **Aprobado** |
 
 

@@ -28,7 +28,19 @@ npm run test:e2e
 
 ---
 
-## 3. Cómo Arrancar la Aplicación en Local
+## 3. Cómo Arrancar la Aplicación en Local (Quickstart Definitivo)
+
+### 3.1 Poblado Inicial de la Base de Datos (Seeding Idempotente)
+
+Para poblar la base de datos con los **30 temas clave Mid-to-Senior** (15 Hard Skills y 15 Soft Skills sin HTML/CSS vanilla):
+
+```bash
+npm run seed
+```
+
+Este script es completamente **idempotente**: utiliza operaciones `bulkWrite` con `$setOnInsert` por `title`. Puedes ejecutarlo en cualquier momento sin riesgo de duplicar temas ni sobreescribir el historial de revisiones ni etapas SRS acumuladas.
+
+### 3.2 Levantamiento Concurrente
 
 Puedes levantar tanto el backend Express como el frontend Vite en paralelo con un único comando:
 
@@ -46,9 +58,40 @@ Si deseas arrancarlos por separado:
 
 ---
 
-## 4. Cómo Verificar el Estado y la Salud del Sistema
+## 4. Protocolo Diario Recomendado: 20 Minutos de Sparring
 
-### 4.1 Comprobación Rápida de Salud (Healthcheck)
+Para maximizar la curva de retención espaciada (SM-2) y desarrollar agilidad mental ante entrevistas técnicas y negociaciones con clientes, sugerimos seguir la siguiente rutina matutina de **20 minutos**:
+
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│               RUTINA DIARIA DE ENTRENAMIENTO (20 MIN)                  │
+├──────────────┬─────────────────────────────┬───────────────────────────┤
+│ Minutos 0-2  │ Revisión en Dashboard       │ Inspección de métricas    │
+│              │ GET /api/dashboard/summary  │ dueCount y Áreas Críticas │
+├──────────────┼─────────────────────────────┼───────────────────────────┤
+│ Minutos 2-10 │ Active Recall Hard Skills   │ Reto Técnico con IA       │
+│ (8 minutos)  │ (1 o 2 temas prioritarios)  │ Código, internals libuv,  │
+│              │                             │ tradeoffs y límites       │
+├──────────────┼─────────────────────────────┼───────────────────────────┤
+│ Minutos 10-18│ Sparring de Voz Soft Skills │ 3 turnos conversacionales │
+│ (8 minutos)  │ (1 simulación con cliente)  │ Defensa verbal, impacto   │
+│              │                             │ de negocio y asertividad  │
+├──────────────┼─────────────────────────────┼───────────────────────────┤
+│ Minutos 18-20│ Análisis de Veredictos      │ Lectura de missing        │
+│ (2 minutos)  │ y Verificación SRS          │ tradeoffs y reprogramación│
+└──────────────┴─────────────────────────────┴───────────────────────────┘
+```
+
+1. **Minutos 0 a 2: Diagnóstico en Dashboard:** Entra a [http://localhost:5173](http://localhost:5173). Revisa el contador de temas pendientes de hoy (`dueCount`) y si existen áreas críticas pendientes de resolver (`Score < 3`).
+2. **Minutos 2 a 10: Bloque Hard Skills (Active Recall Técnico):** Presiona **"Entrenar Ahora"** o dirígete a la pestaña **Hard Skills**. Escribe tu solución detallando el funcionamiento interno del runtime, trade-offs de arquitectura y consideraciones de concurrencia.
+3. **Minutos 10 a 18: Bloque Soft Skills (Defensa Verbal por Voz):** Dirígete a **Soft Skills (Voz & Consultoría)**. Activa el micrófono y enfrenta al stakeholder (Tech Lead o PM). Defiende con firmeza técnica tus decisiones y tradúcelas a impacto de negocio sin capitular.
+4. **Minutos 18 a 20: Cierre y Reprogramación:** Lee con atención los trade-offs omitidos y sugerencias de asertividad arrojados por el evaluador. El motor SRS reprogramará automáticamente las fechas óptimas de repaso.
+
+---
+
+## 5. Cómo Verificar el Estado y la Salud del Sistema
+
+### 5.1 Comprobación Rápida de Salud (Healthcheck)
 
 Accede o haz una petición al endpoint de salud:
 
@@ -82,7 +125,7 @@ En el frontend, el pill superior derecho indicará dinámicamente el estado de l
 
 ---
 
-## 5. Batería de Pruebas Automatizadas
+## 6. Batería de Pruebas Automatizadas
 
 - **Pruebas Unitarias e Integración (Vitest + Supertest + MongoMemoryServer):**
   ```bash
@@ -99,7 +142,7 @@ En el frontend, el pill superior derecho indicará dinámicamente el estado de l
 
 ---
 
-## 6. Motor SRS y Flujo de Repaso Espaciado (SM-2 Adaptado)
+## 7. Motor SRS y Flujo de Repaso Espaciado (SM-2 Adaptado)
 
 DevCoach Sparring implementa una versión adaptada del algoritmo SuperMemo 2 (SM-2) para programar sesiones de Active Recall técnico y defensa por voz.
 
@@ -166,11 +209,11 @@ Respuesta esperada:
 ---
 
 
-## 7. Módulo Hard Skills: Active Recall con Evaluación por IA
+## 8. Módulo Hard Skills: Active Recall con Evaluación por IA
 
 El módulo de Hard Skills permite practicar Active Recall deliberado sobre temas técnicos avanzados del roadmap Fullstack (arquitectura interna de Node.js, reconciliación Fiber de React, indexación y agregaciones de MongoDB, concurrencia, etc.).
 
-### 7.1 Configuración de Gemini API (`GEMINI_API_KEY`)
+### 8.1 Configuración de Gemini API (`GEMINI_API_KEY`)
 
 Para utilizar el modelo de lenguaje de última generación (`gemini-2.5-flash`), configura tu clave de API de Google Gemini en el archivo de entorno del backend:
 
@@ -182,7 +225,7 @@ Para utilizar el modelo de lenguaje de última generación (`gemini-2.5-flash`),
    ```
 2. Si no dispones de una clave de API inmediata, el sistema cuenta con un motor heurístico offline que permite generar y evaluar desafíos sin interrumpir el flujo de desarrollo local ni las pruebas automatizadas.
 
-### 7.2 Cómo Usar la Interfaz de Hard Skills
+### 8.2 Cómo Usar la Interfaz de Hard Skills
 
 1. **Selección del Tema:** En la sección superior del módulo, selecciona un tema pendiente del menú desplegable o haz clic en **"Cargar tema prioritario"**. El sistema consultará la cola priorizada del algoritmo SRS.
 2. **Visualización del Desafío:** La IA formulará un reto incisivo:
@@ -196,7 +239,7 @@ Para utilizar el modelo de lenguaje de última generación (`gemini-2.5-flash`),
    - **Puntos Ciegos / Trade-offs Omitidos:** Aspectos de escalabilidad, límites de recursos o casos de borde que omitiste.
    - **Próximo Repaso SRS:** Fecha reprogramada automáticamente y etapa en la que se encuentra el tópico.
 
-### 7.3 Qué Formato de Respuesta Espera la IA para Dar un 5/5
+### 8.3 Qué Formato de Respuesta Espera la IA para Dar un 5/5
 
 El Evaluador Técnico Senior utiliza criterios estrictos equivalentes a entrevistas para Staff / Principal Engineer. Para obtener una calificación de **5/5**, tu respuesta debe cumplir:
 
@@ -207,11 +250,11 @@ El Evaluador Técnico Senior utiliza criterios estrictos equivalentes a entrevis
 
 ---
 
-## 8. Módulo Soft Skills: Sparring por Voz & Consultoría Técnica
+## 9. Módulo Soft Skills: Sparring por Voz & Consultoría Técnica
 
 El módulo de **Soft Skills** permite entrenar la defensa verbal de decisiones de ingeniería, negociación de deuda técnica y trade-offs ante stakeholders difíciles (Tech Leads escépticos, Product Managers obsesionados con fechas o Clientes no técnicos).
 
-### 8.1 Cómo Conceder Permisos de Micrófono en el Navegador
+### 9.1 Cómo Conceder Permisos de Micrófono en el Navegador
 
 El simulador utiliza la **Web Speech API** nativa (`SpeechRecognition` / `webkitSpeechRecognition`) para transcribir tu voz en tiempo real:
 
@@ -223,7 +266,7 @@ El simulador utiliza la **Web Speech API** nativa (`SpeechRecognition` / `webkit
    - Recarga la pestaña.
 4. **Fallback Manual por Texto:** Si tu sistema o navegador no soporta captura de micrófono (ej. navegadores antiguos o entornos WSL2 sin servidor PulseAudio configurado), puedes redactar tu defensa en el cuadro de texto. La simulación y evaluación funcionan con paridad total del 100%.
 
-### 8.2 Cómo Usar el Simulador de Sparring
+### 9.2 Cómo Usar el Simulador de Sparring
 
 1. **Acceder a la Pestaña:** En la parte superior de la aplicación, haz clic en la pestaña **"Soft Skills (Voz & Consultoría)"**.
 2. **Seleccionar Tema o Escenario:** Elige el tema que deseas defender (o utiliza el tema priorizado por el motor SRS).
@@ -237,7 +280,7 @@ El simulador utiliza la **Web Speech API** nativa (`SpeechRecognition` / `webkit
    - **Turno 1 y 2 (Intermedios):** El stakeholder contraatacará con objeciones financieras o de tiempo ("¿Y si la demanda se triplica?", "¿Por qué no usamos una solución más barata?").
    - **Turno 3 (Final):** Tras tu tercera intervención, la IA convoca al Evaluador Asertivo para generar el veredicto formal.
 
-### 8.3 Qué Evalúa el Simulador de Consultoría
+### 9.3 Qué Evalúa el Simulador de Consultoría
 
 El veredicto final desglosa tu desempeño en tres dimensiones críticas para roles Senior y Staff:
 
@@ -252,11 +295,11 @@ El veredicto final desglosa tu desempeño en tres dimensiones críticas para rol
 
 ---
 
-## 9. Panel de Control y Dashboard Operativo
+## 10. Panel de Control y Dashboard Operativo
 
 El **Dashboard** (`GET /api/dashboard/summary`) es el centro de mando diario de DevCoach Sparring. Consolida en una sola pantalla el estado de retención y la priorización acoplada de práctica técnica y verbal.
 
-### 9.1 Interpretación de Métricas Rápidas
+### 10.1 Interpretación de Métricas Rápidas
 
 1. **Pendientes de Hoy (`dueCount`):**
    - Número total de temas cuya fecha calculada por el algoritmo SRS ha vencido (`nextReviewAt <= ahora`). Si este contador está en 0, tu retención espaciada está al día.
@@ -264,7 +307,7 @@ El **Dashboard** (`GET /api/dashboard/summary`) es el centro de mando diario de 
    - **Hard Skills:** Cantidad de retos de active recall conceptual o diseño técnico que requieren revisión para evitar la curva del olvido.
    - **Soft Skills:** Simulaciones conversacionales de voz pendientes para poner a prueba tu capacidad de argumentación y defensa ante stakeholders.
 
-### 9.2 Priorización Automática: Botón "Entrenar Ahora" (`recommendedNext`)
+### 10.2 Priorización Automática: Botón "Entrenar Ahora" (`recommendedNext`)
 
 El botón principal **"Entrenar Ahora"** utiliza un algoritmo de acoplamiento pedagógico inteligente:
 
@@ -272,7 +315,7 @@ El botón principal **"Entrenar Ahora"** utiliza un algoritmo de acoplamiento pe
   > *Fundamento pedagógico:* No es posible defender con solidez y asertividad una arquitectura ante un Tech Lead si no se dominan primero los conceptos de bajo nivel, latencias y trade-offs teóricos.
 - **Navegación Fluida:** Al presionar "Entrenar Ahora", la interfaz te transfiere inmediatamente a la pestaña correspondiente (`Hard Skills` o `Soft Skills`) con el tema objetivo precargado en el selector para comenzar la sesión sin fricción.
 
-### 9.3 Gestión y Limpieza de Áreas Críticas
+### 10.3 Gestión y Limpieza de Áreas Críticas
 
 La sección **"Áreas Críticas (Score < 3)"** lista de forma visible todos los temas en los que tu última sesión registrada obtuvo una calificación deficiente (Score 1 o 2):
 
