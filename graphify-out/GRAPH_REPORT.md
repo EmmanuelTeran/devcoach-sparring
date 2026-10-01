@@ -1,7 +1,7 @@
 # Graph Report - devcoach-sparring  (2026-09-30)
 
 ## Corpus Check
-- 35 files · ~7,184 words
+- 35 files · ~7,181 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 3 file(s) not represented in the graph (top: (none) 2, .css 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f8f46efa`
+- Built from commit: `a67d867f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,15 +39,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 9 edges
-2. `Guía de Usuario: DevCoach Sparring` - 7 edges
-3. `Grafo de Dependencias` - 7 edges
-4. `Arquitectura Técnica del Sistema: DevCoach Sparring` - 6 edges
-5. `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)` - 6 edges
-6. `[US-XX] {{TITULO_HISTORIA}}` - 6 edges
-7. `mongoose` - 6 edges
-8. `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)` - 6 edges
+2. `Grafo de Dependencias` - 7 edges
+3. `Guía de Usuario: DevCoach Sparring` - 7 edges
+4. `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)` - 6 edges
+5. `[US-XX] {{TITULO_HISTORIA}}` - 6 edges
+6. `mongoose` - 6 edges
+7. `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)` - 6 edges
+8. `Arquitectura Técnica del Sistema: DevCoach Sparring` - 6 edges
 9. `connectDB()` - 5 edges
-10. `Contexto del Proyecto: Entrenador Personal Fullstack (Hard & Soft Skills)` - 5 edges
+10. `scripts` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `calculateNextReview()`  [INFERRED]
@@ -129,7 +129,7 @@ Cohesion: 0.22
 Nodes (8): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify), 4. Evidencia de Pruebas (Completado por verify-user-story), 5. Commit de Cierre en dev, Tests E2E (Playwright), Tests Unitarios e Integración (Vitest / Supertest), [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)
 
 ## Knowledge Gaps
-- **112 isolated node(s):** `Heartbeat del Proyecto`, `1. Topología del Monorepo`, `Códigos de Respuesta`, `Códigos de Respuesta`, `Códigos de Respuesta` (+107 more)
+- **112 isolated node(s):** `Heartbeat del Proyecto`, `1. Descripción`, `2. Criterios de Aceptación (AC)`, `Tests Unitarios e Integración (Vitest / Supertest)`, `Tests E2E (Playwright)` (+107 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 132 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -140,7 +140,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)` to `topics.test.js`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **What connects `Heartbeat del Proyecto`, `1. Topología del Monorepo`, `Códigos de Respuesta` to the rest of the system?**
+- **What connects `Heartbeat del Proyecto`, `1. Descripción`, `2. Criterios de Aceptación (AC)` to the rest of the system?**
   _112 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `client/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.08465608465608465 - nodes in this community are weakly interconnected._

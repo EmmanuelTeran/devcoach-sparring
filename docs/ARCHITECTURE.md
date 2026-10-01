@@ -92,12 +92,56 @@ Registra el resultado de una sesión de Active Recall o defensa por voz, recompu
 
 | Código HTTP | Escenario | Payload de Ejemplo |
 | :--- | :--- | :--- |
-| `200 OK` | Revisión procesada y recalculada | `{"message": "Review recorded successfully", "topic": { ... }}` |
-| `400 Bad Request` | Faltan campos requeridos o score inválido | `{"error": "score must be a number between 1 and 5"}` |
+### 2.4 `POST /api/practice/hard-skill/generate`
+
+Recibe un `topicId`, consulta el tema en MongoDB y formula un reto de Active Recall conceptual o práctico con `@google/genai` (`gemini-2.5-flash`).
+
+- **Método:** `POST`
+- **Ruta:** `/api/practice/hard-skill/generate`
+- **Headers:** `Content-Type: application/json`
+- **Body:**
+  ```json
+  {
+    "topicId": "674c11112222333344445555"
+  }
+  ```
+
+#### Códigos de Respuesta
+
+| Código HTTP | Escenario | Payload de Ejemplo |
+| :--- | :--- | :--- |
+| `200 OK` | Reto generado exitosamente | `{"topicId": "...", "title": "Node.js Event Loop", "type": "theory", "category": "hard_skill", "challenge": "¿Cómo previene Node.js el thread starvation en la fase poll...?"}` |
+| `400 Bad Request` | Falta `topicId` | `{"error": "topicId is required"}` |
 | `404 Not Found` | Topic inexistente | `{"error": "Topic not found"}` |
-| `500 Internal Server Error` | Error al persistir | `{"error": "Internal Server Error"}` |
+| `500 Internal Server Error` | Error al invocar IA o BD | `{"error": "Internal Server Error"}` |
+
+### 2.5 `POST /api/practice/hard-skill/evaluate`
+
+Recibe la solución técnica del usuario, la evalúa con un prompt estricto de Senior Evaluator usando Gemini (`gemini-2.5-flash`), actualiza el estado SRS del `Topic` y guarda un registro en `SessionLog`.
+
+- **Método:** `POST`
+- **Ruta:** `/api/practice/hard-skill/evaluate`
+- **Headers:** `Content-Type: application/json`
+- **Body:**
+  ```json
+  {
+    "topicId": "674c11112222333344445555",
+    "challenge": "¿Cómo previene Node.js el thread starvation en la fase poll...?",
+    "userSolution": "process.nextTick se drena al terminar la operación actual antes de la siguiente fase..."
+  }
+  ```
+
+#### Códigos de Respuesta
+
+| Código HTTP | Escenario | Payload de Ejemplo |
+| :--- | :--- | :--- |
+| `200 OK` | Evaluación procesada exitosamente | `{"score": 5, "feedback": "Excelente dominio...", "missingTradeoffs": ["..."], "strengths": ["..."], "nextReviewAt": "2026-10-02T...", "srsStage": 1, "intervalDays": 1, "sessionLogId": "..."}` |
+| `400 Bad Request` | Faltan campos requeridos | `{"error": "topicId, challenge, and userSolution are required"}` |
+| `404 Not Found` | Topic inexistente | `{"error": "Topic not found"}` |
+| `500 Internal Server Error` | Error en evaluación o BD | `{"error": "Internal Server Error"}` |
 
 ---
+
 
 ## 3. Modelo de Datos (Mongoose Schemas)
 
@@ -125,11 +169,63 @@ interface ITopic {
 }
 ```
 
+### Modelo `SessionLog` (`server/src/models/SessionLog.js`)
+
+```typescript
+interface ISessionLog {
+  topicId: ObjectId;      // Referencia a Topic
+  challenge: string;      // Enunciado generado por IA
+  userSolution: string;   // Solución técnica del usuario
+  score: number;          // Calificación asignada (1 a 5)
+  feedback: string;       // Dictamen técnico del Senior Evaluator
+  missingTradeoffs: string[]; // Puntos ciegos o trade-offs no considerados
+  strengths: string[];    // Fortalezas técnicas identificadas
+  reviewedAt: Date;
+  createdAt: Date;
+  updatedAt: Date;
+}
+```
+
 ---
 
 ## 4. Diagramas de Flujo y Arquitectura
 
-### 4.1 Máquina de Estados del Motor Algorítmico SRS (SM-2 Adaptado)
+### 4.1 Flujo de Active Recall y Evaluación de Hard Skills (Gemini + SRS)
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Usuario
+    participant UI as HardSkillTrainer (React)
+    participant API as Express (practiceRouter)
+    participant Gemini as Gemini SDK (gemini-2.5-flash)
+    participant SRS as srsCalculator (SM-2)
+    participant DB as MongoDB (Topic & SessionLog)
+
+    Usuario->>UI: Selecciona tema prioritario
+    UI->>API: POST /api/practice/hard-skill/generate { topicId }
+    API->>DB: Topic.findById(topicId)
+    DB-->>API: Datos del tema (título, categoría, tipo)
+    API->>Gemini: generateHardSkillChallenge(topic)
+    Gemini-->>API: Desafío técnico formulado
+    API-->>UI: 200 OK { challenge, topicId, title }
+    UI-->>Usuario: Muestra visor del reto y activa editor monoespaciado
+
+    Usuario->>UI: Redacta solución técnica y presiona "Evaluar"
+    UI->>API: POST /api/practice/hard-skill/evaluate { topicId, challenge, userSolution }
+    API->>DB: Topic.findById(topicId)
+    API->>Gemini: evaluateHardSkillSolution (Senior Evaluator prompt)
+    Gemini-->>API: JSON { score, feedback, missingTradeoffs, strengths }
+    API->>SRS: calculateNextReview(currentStage, easeFactor, score, intervalDays)
+    SRS-->>API: { srsStage, easeFactor, intervalDays, nextReviewAt }
+    API->>DB: topic.save() (actualiza SRS + history)
+    API->>DB: SessionLog.create()
+    API-->>UI: 200 OK { score, feedback, missingTradeoffs, strengths, nextReviewAt }
+    UI-->>Usuario: Despliega badge de score, feedback directo, puntos ciegos y fecha de próximo repaso
+```
+
+
+### 4.2 Máquina de Estados del Motor Algorítmico SRS (SM-2 Adaptado)
 
 ```mermaid
 stateDiagram-v2
@@ -161,7 +257,7 @@ stateDiagram-v2
     InReviewAdvanced --> Stage2_Plus: Score 4 o 5\n[Stage=Stage+1, Interval = round(Interval * EF)]
 ```
 
-### 4.2 Flujo de Arranque y Healthcheck
+### 4.3 Flujo de Arranque y Healthcheck
 
 ```mermaid
 sequenceDiagram
@@ -185,7 +281,7 @@ sequenceDiagram
     end
 ```
 
-### 4.3 Harness de Testing y E2E Playwright
+### 4.4 Harness de Testing y E2E Playwright
 
 ```mermaid
 graph TD
@@ -210,5 +306,7 @@ graph TD
 
 ## 5. Evolución Hacia las Siguientes Historias
 
-- **US-03 & US-04:** Conectarán los endpoints de Active Recall y Sparring por voz con el SDK `@google/genai` y la Web Speech API nativa.
+- **US-04:** Módulo Soft Skills (Sparring por Voz con Web Speech API y Gemini).
 - **US-05:** Presentará la cola `/api/topics/due` en el Dashboard de React y enlazará las sesiones con `POST /api/topics/review`.
+- **US-06:** Seed Senior del Roadmap y Validación E2E Total.
+

@@ -1,17 +1,17 @@
 # Graph Report - devcoach-sparring  (2026-09-30)
 
 ## Corpus Check
-- 35 files · ~7,086 words
+- 35 files · ~7,184 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 3 file(s) not represented in the graph (top: (none) 2, .css 1)
 
 ## Summary
-- 205 nodes · 223 edges · 25 communities (20 shown, 5 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 205 nodes · 224 edges · 25 communities (20 shown, 5 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9d631795`
+- Built from commit: `ad850f8b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -36,9 +36,9 @@
 - dependencies
 - scripts
 - Arquitectura Técnica del Sistema: DevCoach Sparring
-- scripts
-- [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)
 - devDependencies
+- [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)
+- scripts
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 9 edges
@@ -53,6 +53,8 @@
 10. `connectDB()` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `calculateNextReview()`  [INFERRED]
+  tickets/US-02-srs-engine-and-models.md → server/src/utils/srsCalculator.js
 - `bootstrap()` --calls--> `connectDB()`  [EXTRACTED]
   server/src/server.js → server/src/db.js
 
@@ -122,39 +124,39 @@ Cohesion: 0.40
 Nodes (5): dependencies, cors, dotenv, express, mongoose
 
 ### Community 18 - "scripts"
-Cohesion: 0.50
-Nodes (4): scripts, dev, start, test
+Cohesion: 0.40
+Nodes (5): scripts, build, dev, preview, test
 
 ### Community 19 - "Arquitectura Técnica del Sistema: DevCoach Sparring"
 Cohesion: 0.12
 Nodes (16): 1. Topología del Monorepo, 2.1 `GET /api/health`, 2.2 `GET /api/topics/due`, 2.3 `POST /api/topics/review`, 2. Contratos de API, 3. Modelo de Datos (Mongoose Schemas), 4.1 Máquina de Estados del Motor Algorítmico SRS (SM-2 Adaptado), 4.2 Flujo de Arranque y Healthcheck (+8 more)
 
-### Community 22 - "scripts"
-Cohesion: 0.40
-Nodes (5): scripts, build, dev, preview, test
+### Community 22 - "devDependencies"
+Cohesion: 0.50
+Nodes (4): devDependencies, mongodb-memory-server, supertest, vitest
 
 ### Community 23 - "[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)"
 Cohesion: 0.22
 Nodes (8): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify), 4. Evidencia de Pruebas (Completado por verify-user-story), 5. Commit de Cierre en dev, Tests E2E (Playwright), Tests Unitarios e Integración (Vitest / Supertest), [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)
 
-### Community 24 - "devDependencies"
+### Community 24 - "scripts"
 Cohesion: 0.50
-Nodes (4): devDependencies, mongodb-memory-server, supertest, vitest
+Nodes (4): scripts, dev, start, test
 
 ## Knowledge Gaps
-- **113 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+108 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 134 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **112 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+107 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 133 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `devDependencies` connect `devDependencies` to `client/package.json`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `server/package.json`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `calculateNextReview()` connect `server/package.json` to `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)` to `server/package.json`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _113 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _112 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `client/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.1067193675889328 - nodes in this community are weakly interconnected._
 - **Should `server/package.json` be split into smaller, more focused modules?**

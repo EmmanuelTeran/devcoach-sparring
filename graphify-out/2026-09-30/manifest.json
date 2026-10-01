@@ -24,8 +24,8 @@
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
-    "mtime": 1790824646.473747,
-    "seen": 1790824821.9138818,
+    "mtime": 1790824873.128601,
+    "seen": 1790824874.3317792,
     "ast_hash": "61e935fb037f789928f5547f42b68f78",
     "semantic_hash": ""
   },
@@ -120,8 +120,8 @@
     "semantic_hash": ""
   },
   "server/src/app.js": {
-    "mtime": 1790824701.6175075,
-    "seen": 1790824821.9138603,
+    "mtime": 1790824873.144601,
+    "seen": 1790824874.331727,
     "ast_hash": "db95056bbd344badaf1a421badb6bf9d",
     "semantic_hash": ""
   },
@@ -168,51 +168,51 @@
     "semantic_hash": ""
   },
   "docs/USER_GUIDE.md": {
-    "mtime": 1790824740.64917,
-    "seen": 1790824821.9138923,
+    "mtime": 1790824873.128601,
+    "seen": 1790824874.331812,
     "ast_hash": "3441f40a552cb69ccee75786f8ff2526",
     "semantic_hash": ""
   },
   "docs/ARCHITECTURE.md": {
-    "mtime": 1790824753.6731336,
-    "seen": 1790824821.913891,
+    "mtime": 1790824873.128601,
+    "seen": 1790824874.3318079,
     "ast_hash": "6e58f9421359b2f8a75eee4b058518f5",
     "semantic_hash": ""
   },
   "server/src/models/Topic.js": {
-    "mtime": 1790824687.0175328,
-    "seen": 1790824821.9138641,
+    "mtime": 1790824873.144601,
+    "seen": 1790824874.3317366,
     "ast_hash": "542c2ab6244c4e054ad06712b8f2762e",
     "semantic_hash": ""
   },
   "server/src/routes/topics.js": {
-    "mtime": 1790824696.6695352,
-    "seen": 1790824821.913867,
+    "mtime": 1790824873.144601,
+    "seen": 1790824874.3317404,
     "ast_hash": "56d550f0da6d7736c69f983646a804b7",
     "semantic_hash": ""
   },
   "server/src/utils/srsCalculator.js": {
-    "mtime": 1790824668.9376333,
-    "seen": 1790824821.9138696,
+    "mtime": 1790824873.148601,
+    "seen": 1790824874.331748,
     "ast_hash": "be6cf0df0934dfbbd7ed485023be30ea",
     "semantic_hash": ""
   },
   "server/tests/srsCalculator.test.js": {
-    "mtime": 1790824654.7417045,
-    "seen": 1790824821.9138722,
+    "mtime": 1790824873.148601,
+    "seen": 1790824874.3317556,
     "ast_hash": "2facede9516ea19a9fa3ba3dd18cadc1",
     "semantic_hash": ""
   },
   "server/tests/topics.test.js": {
-    "mtime": 1790824711.1694386,
-    "seen": 1790824821.9138732,
+    "mtime": 1790824873.148601,
+    "seen": 1790824874.3317592,
     "ast_hash": "55ec692917abdd0bc55b27ec9ee6e33f",
     "semantic_hash": ""
   },
   "tickets/US-02-srs-engine-and-models.md": {
-    "mtime": 1790824641.1097622,
-    "seen": 1790824821.9138947,
-    "ast_hash": "fc03e698d84964b79233bf2e1b31effb",
+    "mtime": 1790824873.148601,
+    "seen": 1790824874.331819,
+    "ast_hash": "df3087f7442b39bb2a8fd396779c39cb",
     "semantic_hash": ""
   }
 }

@@ -1492,48 +1492,59 @@
       "source_location": "L15"
     },
     {
-      "id": "server_package_scripts",
+      "id": "client_package_scripts",
       "label": "scripts",
       "_origin": "ast",
       "community": 18,
       "community_name": "scripts",
       "file_type": "code",
       "norm_label": "scripts",
-      "source_file": "server/package.json",
+      "source_file": "client/package.json",
       "source_location": "L6"
     },
     {
-      "id": "server_package_scripts_dev",
+      "id": "client_package_scripts_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "build",
+      "source_file": "client/package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "client_package_scripts_dev",
       "label": "dev",
       "_origin": "ast",
       "community": 18,
       "community_name": "scripts",
       "file_type": "code",
       "norm_label": "dev",
-      "source_file": "server/package.json",
+      "source_file": "client/package.json",
       "source_location": "L7"
     },
     {
-      "id": "server_package_scripts_start",
-      "label": "start",
+      "id": "client_package_scripts_preview",
+      "label": "preview",
       "_origin": "ast",
       "community": 18,
       "community_name": "scripts",
       "file_type": "code",
-      "norm_label": "start",
-      "source_file": "server/package.json",
-      "source_location": "L8"
+      "norm_label": "preview",
+      "source_file": "client/package.json",
+      "source_location": "L9"
     },
     {
-      "id": "server_package_scripts_test",
+      "id": "client_package_scripts_test",
       "label": "test",
       "_origin": "ast",
       "community": 18,
       "community_name": "scripts",
       "file_type": "code",
       "norm_label": "test",
-      "source_file": "server/package.json",
-      "source_location": "L9"
+      "source_file": "client/package.json",
+      "source_location": "L10"
     },
     {
       "id": "docs_architecture",
@@ -1845,59 +1856,48 @@
       "source_location": "L1"
     },
     {
-      "id": "client_package_scripts",
-      "label": "scripts",
+      "id": "server_package_devdependencies",
+      "label": "devDependencies",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "client/package.json",
-      "source_location": "L6"
+      "norm_label": "devdependencies",
+      "source_file": "server/package.json",
+      "source_location": "L17"
     },
     {
-      "id": "client_package_scripts_build",
-      "label": "build",
+      "id": "server_package_devdependencies_mongodb_memory_server",
+      "label": "mongodb-memory-server",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "build",
-      "source_file": "client/package.json",
-      "source_location": "L8"
+      "norm_label": "mongodb-memory-server",
+      "source_file": "server/package.json",
+      "source_location": "L18"
     },
     {
-      "id": "client_package_scripts_dev",
-      "label": "dev",
+      "id": "server_package_devdependencies_supertest",
+      "label": "supertest",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "dev",
-      "source_file": "client/package.json",
-      "source_location": "L7"
+      "norm_label": "supertest",
+      "source_file": "server/package.json",
+      "source_location": "L19"
     },
     {
-      "id": "client_package_scripts_preview",
-      "label": "preview",
+      "id": "server_package_devdependencies_vitest",
+      "label": "vitest",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
+      "community_name": "devDependencies",
       "file_type": "code",
-      "norm_label": "preview",
-      "source_file": "client/package.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "client_package_scripts_test",
-      "label": "test",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "test",
-      "source_file": "client/package.json",
-      "source_location": "L10"
+      "norm_label": "vitest",
+      "source_file": "server/package.json",
+      "source_location": "L20"
     },
     {
       "id": "tickets_us_02_srs_engine_and_models",
@@ -1969,7 +1969,7 @@
       "node_kind": "heading",
       "norm_label": "5. commit de cierre en dev",
       "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L50"
+      "source_location": "L79"
     },
     {
       "id": "tickets_us_02_srs_engine_and_models_tests_e2e_playwright",
@@ -1981,7 +1981,7 @@
       "node_kind": "heading",
       "norm_label": "tests e2e (playwright)",
       "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L46"
+      "source_location": "L66"
     },
     {
       "id": "tickets_us_02_srs_engine_and_models_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
@@ -2008,48 +2008,48 @@
       "source_location": "L1"
     },
     {
-      "id": "server_package_devdependencies",
-      "label": "devDependencies",
+      "id": "server_package_scripts",
+      "label": "scripts",
       "_origin": "ast",
       "community": 24,
-      "community_name": "devDependencies",
+      "community_name": "scripts",
       "file_type": "code",
-      "norm_label": "devdependencies",
+      "norm_label": "scripts",
       "source_file": "server/package.json",
-      "source_location": "L17"
+      "source_location": "L6"
     },
     {
-      "id": "server_package_devdependencies_mongodb_memory_server",
-      "label": "mongodb-memory-server",
+      "id": "server_package_scripts_dev",
+      "label": "dev",
       "_origin": "ast",
       "community": 24,
-      "community_name": "devDependencies",
+      "community_name": "scripts",
       "file_type": "code",
-      "norm_label": "mongodb-memory-server",
+      "norm_label": "dev",
       "source_file": "server/package.json",
-      "source_location": "L18"
+      "source_location": "L7"
     },
     {
-      "id": "server_package_devdependencies_supertest",
-      "label": "supertest",
+      "id": "server_package_scripts_start",
+      "label": "start",
       "_origin": "ast",
       "community": 24,
-      "community_name": "devDependencies",
+      "community_name": "scripts",
       "file_type": "code",
-      "norm_label": "supertest",
+      "norm_label": "start",
       "source_file": "server/package.json",
-      "source_location": "L19"
+      "source_location": "L8"
     },
     {
-      "id": "server_package_devdependencies_vitest",
-      "label": "vitest",
+      "id": "server_package_scripts_test",
+      "label": "test",
       "_origin": "ast",
       "community": 24,
-      "community_name": "devDependencies",
+      "community_name": "scripts",
       "file_type": "code",
-      "norm_label": "vitest",
+      "norm_label": "test",
       "source_file": "server/package.json",
-      "source_location": "L20"
+      "source_location": "L9"
     },
     {
       "id": "antigravity_skills_document_tech_specs",
@@ -4830,7 +4830,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L46",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -4874,7 +4874,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-02-srs-engine-and-models.md",
-      "source_location": "L50",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -4896,8 +4896,20 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "client/tailwind.config.js"
+    },
+    {
+      "source": "tickets_us_02_srs_engine_and_models_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "server_src_utils_srscalculator_calculatenextreview",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "calculateNextReview()",
+      "source_file": "tickets/US-02-srs-engine-and-models.md",
+      "source_location": "L29",
+      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9d631795e44ba1e3084b82c39051d951fa41b115"
+  "built_at_commit": "ad850f8b50c25f395b97305e7fe1bebd0e6d84fe"
 }
