@@ -1,8 +1,8 @@
 # Heartbeat del Proyecto
 
 - **Última actualización:** 2026-09-30
-- **Historia activa:** Ninguna (US-05 completada, lista US-06)
-- **Rama actual:** dev
+- **Historia activa:** US-06 (Seed Senior & E2E Final)
+- **Rama actual:** feature/US-06-seed-and-e2e-final
 - **Estado de Tickets:**
   - [x] US-01: Scaffolding, Playwright & Mongo
   - [x] US-02: Schemas Mongo & Motor SRS
