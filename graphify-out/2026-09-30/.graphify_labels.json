@@ -11,14 +11,17 @@
   "9": "workflows/graphify.md",
   "10": "heartbeat.md",
   "11": "client/package.json",
-  "12": "topics.test.js",
+  "12": "server/package.json",
   "13": "package.json",
   "14": "Guía de Usuario: DevCoach Sparring",
   "15": "[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)",
   "16": "devDependencies",
-  "17": "server/package.json",
+  "17": "dependencies",
+  "18": "scripts",
   "19": "Arquitectura Técnica del Sistema: DevCoach Sparring",
   "20": "tailwind.config.js",
   "21": "postcss.config.js",
-  "23": "[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)"
+  "22": "scripts",
+  "23": "[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)",
+  "24": "devDependencies"
 }
