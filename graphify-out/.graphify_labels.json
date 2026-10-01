@@ -1,0 +1,13 @@
+{
+  "0": "Grafo de Dependencias",
+  "1": "[US-XX] {{TITULO_HISTORIA}}",
+  "2": "Contexto del Proyecto: Entrenador Personal Fullstack (Hard & Soft Skills)",
+  "3": "Skill: document-tech-specs",
+  "4": "Skill: document-user-guide",
+  "5": "Skill: implement-story",
+  "6": "Skill: new-user-story",
+  "7": "Skill: verify-user-story",
+  "8": "rules/graphify.md",
+  "9": "workflows/graphify.md",
+  "10": "heartbeat.md"
+}
