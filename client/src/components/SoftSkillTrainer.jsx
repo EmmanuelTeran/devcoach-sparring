@@ -22,9 +22,9 @@ import { useVoiceInteraction } from '../hooks/useVoiceInteraction';
 
 const API_BASE = 'http://localhost:5000/api';
 
-export function SoftSkillTrainer() {
+export function SoftSkillTrainer({ initialTopic }) {
   const [topics, setTopics] = useState([]);
-  const [selectedTopicId, setSelectedTopicId] = useState('');
+  const [selectedTopicId, setSelectedTopicId] = useState(initialTopic?._id || '');
   const [loadingTopics, setLoadingTopics] = useState(false);
   const [sessionActive, setSessionActive] = useState(false);
   const [loadingStart, setLoadingStart] = useState(false);
@@ -66,9 +66,17 @@ export function SoftSkillTrainer() {
       const res = await fetch(`${API_BASE}/topics/due`);
       if (!res.ok) throw new Error('Error al cargar temas pendientes');
       const data = await res.json();
-      setTopics(data);
-      if (data.length > 0 && !selectedTopicId) {
-        setSelectedTopicId(data[0]._id);
+      
+      let mergedTopics = [...data];
+      if (initialTopic && !data.some((t) => t._id === initialTopic._id)) {
+        mergedTopics = [initialTopic, ...data];
+      }
+      setTopics(mergedTopics);
+
+      if (initialTopic?._id) {
+        setSelectedTopicId(initialTopic._id);
+      } else if (mergedTopics.length > 0 && !selectedTopicId) {
+        setSelectedTopicId(mergedTopics[0]._id);
       }
     } catch (err) {
       console.error(err);

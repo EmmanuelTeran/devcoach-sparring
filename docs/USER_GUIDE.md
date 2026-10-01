@@ -249,3 +249,34 @@ El veredicto final desglosa tu desempeño en tres dimensiones críticas para rol
    - Califica del 1 al 5 si mantuviste tu criterio profesional ante la insistencia del cliente sin ser agresivo ni tampoco capitular aceptando deuda técnica crítica.
 4. **Puntuación Global (1 a 5) y Reprogramación SRS:**
    - Tu puntaje actualiza automáticamente la próxima fecha de repaso del tema en el algoritmo SRS y queda registrado en `SessionLog` de MongoDB.
+
+---
+
+## 9. Panel de Control y Dashboard Operativo
+
+El **Dashboard** (`GET /api/dashboard/summary`) es el centro de mando diario de DevCoach Sparring. Consolida en una sola pantalla el estado de retención y la priorización acoplada de práctica técnica y verbal.
+
+### 9.1 Interpretación de Métricas Rápidas
+
+1. **Pendientes de Hoy (`dueCount`):**
+   - Número total de temas cuya fecha calculada por el algoritmo SRS ha vencido (`nextReviewAt <= ahora`). Si este contador está en 0, tu retención espaciada está al día.
+2. **Desglose Hard Skills vs Soft Skills (`dueHardSkills` / `dueSoftSkills`):**
+   - **Hard Skills:** Cantidad de retos de active recall conceptual o diseño técnico que requieren revisión para evitar la curva del olvido.
+   - **Soft Skills:** Simulaciones conversacionales de voz pendientes para poner a prueba tu capacidad de argumentación y defensa ante stakeholders.
+
+### 9.2 Priorización Automática: Botón "Entrenar Ahora" (`recommendedNext`)
+
+El botón principal **"Entrenar Ahora"** utiliza un algoritmo de acoplamiento pedagógico inteligente:
+
+- **Regla de Base Teórica Primero:** Si el tema más urgente cronológicamente en la cola de hoy es una simulación de voz (Soft Skill), pero su contraparte técnica (o temas de su misma área conceptual) tiene una calificación deficiente (< 3) o no ha sido consolidada, el sistema **priorizará automáticamente el reto de Hard Skill correspondiente**.
+  > *Fundamento pedagógico:* No es posible defender con solidez y asertividad una arquitectura ante un Tech Lead si no se dominan primero los conceptos de bajo nivel, latencias y trade-offs teóricos.
+- **Navegación Fluida:** Al presionar "Entrenar Ahora", la interfaz te transfiere inmediatamente a la pestaña correspondiente (`Hard Skills` o `Soft Skills`) con el tema objetivo precargado en el selector para comenzar la sesión sin fricción.
+
+### 9.3 Gestión y Limpieza de Áreas Críticas
+
+La sección **"Áreas Críticas (Score < 3)"** lista de forma visible todos los temas en los que tu última sesión registrada obtuvo una calificación deficiente (Score 1 o 2):
+
+- **Orden de Severidad:** Los temas se ordenan ascendentemente por calificación (Score 1 con badge rojo primero, luego Score 2 con badge ámbar).
+- **Botón "Repasar":** Cada fila dispone de un botón directo de repaso que carga el tema problemático en el entrenador correspondiente.
+- **Cómo Limpiar un Área Crítica:** Para que un tema desaparezca de la lista de áreas críticas, debes iniciar un nuevo entrenamiento (sea reto técnico o sesión de sparring) y obtener una calificación de **3 o superior** (≥ 3). Una vez evaluado con éxito, el sistema actualizará su historial y se retirará automáticamente de la lista crítica.
+
