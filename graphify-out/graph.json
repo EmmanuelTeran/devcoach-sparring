@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "runstandaloneseed()",
       "source_file": "server/src/scripts/seed.js",
-      "source_location": "L362"
+      "source_location": "L618"
     },
     {
       "id": "server_src_scripts_seed_seedtopics",
@@ -49,7 +49,7 @@
       "file_type": "code",
       "norm_label": "seedtopics()",
       "source_file": "server/src/scripts/seed.js",
-      "source_location": "L329"
+      "source_location": "L586"
     },
     {
       "id": "server_src_server_bootstrap",
@@ -109,7 +109,7 @@
       "file_type": "code",
       "norm_label": "softskilltrainer()",
       "source_file": "client/src/components/SoftSkillTrainer.jsx",
-      "source_location": "L25"
+      "source_location": "L37"
     },
     {
       "id": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
@@ -313,7 +313,7 @@
       "node_kind": "heading",
       "norm_label": "[us-01] scaffolding, base monorepo y harness de tests (vitest + playwright)",
       "source_file": ".antigravity/graph.md",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "antigravity_graph_us_02_schemas_mongoose_y_motor_algor\u00edtmico_srs_sm_2_adaptado",
@@ -325,7 +325,7 @@
       "node_kind": "heading",
       "norm_label": "[us-02] schemas mongoose y motor algoritmico srs (sm-2 adaptado)",
       "source_file": ".antigravity/graph.md",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "antigravity_graph_us_03_m\u00f3dulo_hard_skills_active_recall_te\u00f3rico_y_pr\u00e1ctico",
@@ -337,7 +337,19 @@
       "node_kind": "heading",
       "norm_label": "[us-03] modulo hard skills: active recall teorico y practico",
       "source_file": ".antigravity/graph.md",
-      "source_location": "L33"
+      "source_location": "L34"
+    },
+    {
+      "id": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "label": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Grafo de Dependencias",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-04] modulo soft skills: sparring por voz (web speech api + gemini)",
+      "source_file": ".antigravity/graph.md",
+      "source_location": "L42"
     },
     {
       "id": "antigravity_graph_us_05_dashboard_operativo_y_acoplamiento_de_habilidades",
@@ -349,7 +361,7 @@
       "node_kind": "heading",
       "norm_label": "[us-05] dashboard operativo y acoplamiento de habilidades",
       "source_file": ".antigravity/graph.md",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "antigravity_graph_us_06_seed_senior_del_roadmap_y_validaci\u00f3n_e2e_total",
@@ -361,7 +373,7 @@
       "node_kind": "heading",
       "norm_label": "[us-06] seed senior del roadmap y validacion e2e total",
       "source_file": ".antigravity/graph.md",
-      "source_location": "L57"
+      "source_location": "L58"
     },
     {
       "id": "antigravity_graph_us_07_niveles_de_progresi\u00f3n_y_andamiaje_pedag\u00f3gico_scaffolding",
@@ -373,7 +385,19 @@
       "node_kind": "heading",
       "norm_label": "[us-07] niveles de progresion y andamiaje pedagogico (scaffolding)",
       "source_file": ".antigravity/graph.md",
-      "source_location": "L67"
+      "source_location": "L68"
+    },
+    {
+      "id": "antigravity_graph_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "label": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Grafo de Dependencias",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-08] catalogo completo multinivel (junior/mid/senior) y sincronizacion ui",
+      "source_file": ".antigravity/graph.md",
+      "source_location": "L82"
     },
     {
       "id": "tickets_templates_ticket_template",
@@ -1319,6 +1343,17 @@
       "file_type": "code",
       "norm_label": "hard-skills.spec.js",
       "source_file": "tests/e2e/hard-skills.spec.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_e2e_multilevel_catalog_spec",
+      "label": "multilevel-catalog.spec.js",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "multilevel-catalog.spec.js",
+      "source_file": "tests/e2e/multilevel-catalog.spec.js",
       "source_location": "L1"
     },
     {
@@ -2388,6 +2423,39 @@
       "source_location": "L1"
     },
     {
+      "id": "client_src_components_softskilltrainer_level_active",
+      "label": "LEVEL_ACTIVE",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "level_active",
+      "source_file": "client/src/components/SoftSkillTrainer.jsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "client_src_components_softskilltrainer_level_colors",
+      "label": "LEVEL_COLORS",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "level_colors",
+      "source_file": "client/src/components/SoftSkillTrainer.jsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "client_src_components_softskilltrainer_level_labels",
+      "label": "LEVEL_LABELS",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "level_labels",
+      "source_file": "client/src/components/SoftSkillTrainer.jsx",
+      "source_location": "L25"
+    },
+    {
       "id": "client_src_hooks_usevoiceinteraction",
       "label": "useVoiceInteraction.js",
       "_origin": "ast",
@@ -2441,18 +2509,6 @@
       "norm_label": "react-dom",
       "source_file": "client/package.json",
       "source_location": "L15"
-    },
-    {
-      "id": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
-      "label": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[us-04] modulo soft skills: sparring por voz (web speech api + gemini)",
-      "source_file": ".antigravity/graph.md",
-      "source_location": "L41"
     },
     {
       "id": "tickets_us_04_soft_skills_voice_3_subgrafo_afectado_identificado_con_graphify",
@@ -3076,22 +3132,11 @@
       "source_location": "L1"
     },
     {
-      "id": "server_src_app",
-      "label": "app.js",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "app.js",
-      "source_file": "server/src/app.js",
-      "source_location": "L1"
-    },
-    {
       "id": "server_src_routes_dashboard",
       "label": "dashboard.js",
       "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
+      "community": 25,
+      "community_name": "dashboardController.js",
       "file_type": "code",
       "norm_label": "dashboard.js",
       "source_file": "server/src/routes/dashboard.js",
@@ -3101,12 +3146,131 @@
       "id": "server_src_routes_dashboard_dashboardrouter",
       "label": "dashboardRouter",
       "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
+      "community": 25,
+      "community_name": "dashboardController.js",
       "file_type": "code",
       "norm_label": "dashboardrouter",
       "source_file": "server/src/routes/dashboard.js",
       "source_location": "L4"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync",
+      "label": "US-08-multilevel-catalog-and-ui-sync.md",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "us-08-multilevel-catalog-and-ui-sync.md",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_1_descripci\u00f3n",
+      "label": "1. Descripci\u00f3n",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. descripcion",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_2_criterios_de_aceptaci\u00f3n_ac",
+      "label": "2. Criterios de Aceptaci\u00f3n (AC)",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. criterios de aceptacion (ac)",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. subgrafo afectado (identificado con graphify)",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L42"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
+      "label": "5. Commit de Cierre en dev",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. commit de cierre en dev",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L102"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_e2e_playwright",
+      "label": "Tests E2E (Playwright)",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests e2e (playwright)",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L76"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
+      "label": "Tests Unitarios e Integraci\u00f3n (Vitest / Supertest)",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests unitarios e integracion (vitest / supertest)",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L44"
+    },
+    {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "label": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-08] catalogo completo multinivel (junior/mid/senior) y sincronizacion ui",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_app",
+      "label": "app.js",
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "app.js",
+      "source_file": "server/src/app.js",
+      "source_location": "L1"
     },
     {
       "id": "server_src_routes_health",
@@ -3905,7 +4069,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "client/src/components/SoftSkillTrainer.jsx",
-      "source_location": "L54",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -3953,7 +4117,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "server/src/scripts/seed.js",
-      "source_location": "L366",
+      "source_location": "L622",
       "weight": 1.0
     },
     {
@@ -3965,7 +4129,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "server/src/scripts/seed.js",
-      "source_location": "L369",
+      "source_location": "L625",
       "weight": 1.0
     },
     {
@@ -3977,7 +4141,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "server/src/scripts/seed.js",
-      "source_location": "L376",
+      "source_location": "L632",
       "weight": 1.0
     },
     {
@@ -6345,6 +6509,18 @@
       "weight": 1.0
     },
     {
+      "source": "tests_e2e_multilevel_catalog_spec",
+      "target": "ref_playwright_test",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/e2e/multilevel-catalog.spec.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "tests_e2e_scaffolding_spec",
       "target": "ref_playwright_test",
       "relation": "imports_from",
@@ -6476,7 +6652,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".antigravity/graph.md",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -6487,7 +6663,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".antigravity/graph.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -6498,7 +6674,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".antigravity/graph.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -6509,7 +6685,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".antigravity/graph.md",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -6520,7 +6696,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".antigravity/graph.md",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -6531,7 +6707,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".antigravity/graph.md",
-      "source_location": "L57",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -6542,7 +6718,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".antigravity/graph.md",
-      "source_location": "L67",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "antigravity_graph_grafo_de_dependencias",
+      "target": "antigravity_graph_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".antigravity/graph.md",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -7053,13 +7240,46 @@
     },
     {
       "source": "client_src_components_softskilltrainer",
-      "target": "client_src_components_softskilltrainer_softskilltrainer",
+      "target": "client_src_components_softskilltrainer_level_labels",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "client/src/components/SoftSkillTrainer.jsx",
       "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_components_softskilltrainer",
+      "target": "client_src_components_softskilltrainer_level_colors",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/SoftSkillTrainer.jsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_components_softskilltrainer",
+      "target": "client_src_components_softskilltrainer_level_active",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/SoftSkillTrainer.jsx",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "client_src_components_softskilltrainer",
+      "target": "client_src_components_softskilltrainer_softskilltrainer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/SoftSkillTrainer.jsx",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -8335,7 +8555,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/src/scripts/seed.js",
-      "source_location": "L329",
+      "source_location": "L586",
       "weight": 1.0
     },
     {
@@ -8346,7 +8566,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server/src/scripts/seed.js",
-      "source_location": "L362",
+      "source_location": "L618",
       "weight": 1.0
     },
     {
@@ -9131,6 +9351,94 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_e2e_playwright",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_2_criterios_de_aceptaci\u00f3n_ac",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_1_descripci\u00f3n",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "server_src_routes_dashboard",
       "target": "server_src_controllers_dashboardcontroller_getdashboardsummary",
       "relation": "indirect_call",
@@ -9179,6 +9487,18 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "client_src_components_hardskilltrainer_hardskilltrainer",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "HardSkillTrainer()",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
       "source": "tickets_us_04_soft_skills_voice_3_subgrafo_afectado_identificado_con_graphify",
       "target": "client_src_components_softskilltrainer_softskilltrainer",
       "relation": "references",
@@ -9188,6 +9508,18 @@
       "context": "SoftSkillTrainer",
       "source_file": "tickets/US-04-soft-skills-voice.md",
       "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "client_src_components_softskilltrainer_softskilltrainer",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "SoftSkillTrainer()",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -9227,6 +9559,30 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "server_src_controllers_dashboardcontroller_getdashboardsummary",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "getDashboardSummary()",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "server_src_scripts_seed_seedtopics",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "seedTopics()",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
       "source": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
       "target": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
       "relation": "references",
@@ -9235,7 +9591,7 @@
       "confidence_score": 0.95,
       "context": "useVoiceInteraction",
       "source_file": ".antigravity/graph.md",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -9252,5 +9608,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "351e727bf972967235b21b16dedb966b17f9cd20"
+  "built_at_commit": "38bd835f8603c9518d4892667276499566fcf529"
 }

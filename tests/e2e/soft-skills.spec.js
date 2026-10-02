@@ -5,7 +5,7 @@ test.describe('Soft Skills Module - Sparring por Voz & Consultoría E2E', () => 
     page,
   }) => {
     // Interceptar llamadas a la API para determinismo E2E
-    await page.route('**/api/topics/due', async (route) => {
+    await page.route('**/api/topics/due**', async (route) => {
       await route.fulfill({
         status: 200,
         contentType: 'application/json',

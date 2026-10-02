@@ -18,15 +18,15 @@
     "semantic_hash": ""
   },
   ".antigravity/graph.md": {
-    "mtime": 1790923460.6186354,
-    "seen": 1790924474.8002884,
-    "ast_hash": "e1f81f5c2eea8e1affba64b83c76a533",
+    "mtime": 1790926745.4986496,
+    "seen": 1790927427.1162055,
+    "ast_hash": "a7a6a8750867bfe4e322b82a83ae840a",
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
-    "mtime": 1790925723.5426247,
-    "seen": 1790925803.0328834,
-    "ast_hash": "cd6d8148889c71a6dbc458e92d502677",
+    "mtime": 1790926898.3986664,
+    "seen": 1790927427.1162066,
+    "ast_hash": "d508173b29fa8d54b2bd471be62a7671",
     "semantic_hash": ""
   },
   ".antigravity/skills/document-tech-specs.md": {
@@ -216,9 +216,9 @@
     "semantic_hash": ""
   },
   "client/src/components/HardSkillTrainer.jsx": {
-    "mtime": 1790925695.8826435,
-    "seen": 1790925698.072826,
-    "ast_hash": "e477e998dc28544e448b540d46a2e855",
+    "mtime": 1790927240.1066117,
+    "seen": 1790927427.116149,
+    "ast_hash": "0b6e55e6477239505b59f47de251b01d",
     "semantic_hash": ""
   },
   "server/src/models/SessionLog.js": {
@@ -258,9 +258,9 @@
     "semantic_hash": ""
   },
   "client/src/components/SoftSkillTrainer.jsx": {
-    "mtime": 1790827998.2759857,
-    "seen": 1790827999.6677182,
-    "ast_hash": "b223a1688d87da4add98c5c4abbd4ef6",
+    "mtime": 1790927229.9626224,
+    "seen": 1790927427.116151,
+    "ast_hash": "6763c7e3f62a59eeec0f3eae433c2364",
     "semantic_hash": ""
   },
   "client/src/hooks/useVoiceInteraction.js": {
@@ -288,9 +288,9 @@
     "semantic_hash": ""
   },
   "tests/e2e/soft-skills.spec.js": {
-    "mtime": 1790826336.8555741,
-    "seen": 1790826349.9500647,
-    "ast_hash": "2cbe7c4658d3e5958fd47fab00d9a2a8",
+    "mtime": 1790927268.6666262,
+    "seen": 1790927427.1162007,
+    "ast_hash": "d4d5b3bf66c5111c0fb8390f3f33558a",
     "semantic_hash": ""
   },
   "tickets/US-04-soft-skills-voice.md": {
@@ -306,9 +306,9 @@
     "semantic_hash": ""
   },
   "server/src/controllers/dashboardController.js": {
-    "mtime": 1790925695.8826435,
-    "seen": 1790925698.07284,
-    "ast_hash": "779edc8b89d3e4d192da78ccdd83e120",
+    "mtime": 1790927251.5546155,
+    "seen": 1790927427.1161644,
+    "ast_hash": "aa86c716ae0f8b33b3f4f5493576e1a6",
     "semantic_hash": ""
   },
   "server/src/routes/dashboard.js": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "server/tests/dashboard.test.js": {
-    "mtime": 1790827998.2839859,
-    "seen": 1790827999.6677847,
-    "ast_hash": "61025b2a6bcc2b3912639499188dbe38",
+    "mtime": 1790927105.1946146,
+    "seen": 1790927427.1161835,
+    "ast_hash": "70ac4c364c64f3651e1081713054f61b",
     "semantic_hash": ""
   },
   "tests/e2e/dashboard.spec.js": {
@@ -336,15 +336,15 @@
     "semantic_hash": ""
   },
   "server/src/scripts/seed.js": {
-    "mtime": 1790925695.8826435,
-    "seen": 1790925698.072852,
-    "ast_hash": "dce55f7e04e90ae9d604301a0975d623",
+    "mtime": 1790927144.4746785,
+    "seen": 1790927427.1161768,
+    "ast_hash": "3021e4157b99ca6ac19c62439e4417eb",
     "semantic_hash": ""
   },
   "server/tests/seed.test.js": {
-    "mtime": 1790925695.8946435,
-    "seen": 1790925698.0728626,
-    "ast_hash": "4b0b82880cec56357f54a4867e4cb2c1",
+    "mtime": 1790927158.8906748,
+    "seen": 1790927427.116188,
+    "ast_hash": "1f9cbf63554532121066ce1329c48a79",
     "semantic_hash": ""
   },
   "tickets/US-06-seed-and-e2e-final.md": {
@@ -369,6 +369,18 @@
     "mtime": 1790925723.4906247,
     "seen": 1790925803.0329335,
     "ast_hash": "eecbf270baba5317bcc857b9b938a8ab",
+    "semantic_hash": ""
+  },
+  "tests/e2e/multilevel-catalog.spec.js": {
+    "mtime": 1790927371.110654,
+    "seen": 1790927427.1161964,
+    "ast_hash": "8f9721d9416fc5685e960238348c7650",
+    "semantic_hash": ""
+  },
+  "tickets/US-08-multilevel-catalog-and-ui-sync.md": {
+    "mtime": 1790927445.150646,
+    "seen": 1790927460.7537172,
+    "ast_hash": "5269d448e00320b18b24765a4bcf93d1",
     "semantic_hash": ""
   }
 }
