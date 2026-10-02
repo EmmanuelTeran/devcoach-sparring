@@ -26,6 +26,7 @@
   "24": "[US-05] Dashboard Operativo y Acoplamiento de Habilidades (Hard + Soft Skills)",
   "25": "[US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI",
   "26": "app.js",
+  "27": "dashboardController.js",
   "28": "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final",
   "29": "[US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)"
 }

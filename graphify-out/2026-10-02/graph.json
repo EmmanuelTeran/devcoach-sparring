@@ -124,54 +124,6 @@
       "source_location": "L7"
     },
     {
-      "id": "server_src_controllers_dashboardcontroller_aretopicsrelated",
-      "label": "areTopicsRelated()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "aretopicsrelated()",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L25"
-    },
-    {
-      "id": "server_src_controllers_dashboardcontroller_extractkeywords",
-      "label": "extractKeywords()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "extractkeywords()",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L9"
-    },
-    {
-      "id": "server_src_controllers_dashboardcontroller_getdashboardsummary",
-      "label": "getDashboardSummary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "getdashboardsummary()",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L56"
-    },
-    {
-      "id": "server_src_controllers_dashboardcontroller_getlastscore",
-      "label": "getLastScore()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "getlastscore()",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L35"
-    },
-    {
       "id": "server_src_services_geminiservice_evaluatehardskillsolution",
       "label": "evaluateHardSkillSolution()",
       "_callable": true,
@@ -266,6 +218,54 @@
       "norm_label": "calculatenextreview()",
       "source_file": "server/src/utils/srsCalculator.js",
       "source_location": "L10"
+    },
+    {
+      "id": "server_src_controllers_dashboardcontroller_aretopicsrelated",
+      "label": "areTopicsRelated()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "aretopicsrelated()",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L25"
+    },
+    {
+      "id": "server_src_controllers_dashboardcontroller_extractkeywords",
+      "label": "extractKeywords()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "extractkeywords()",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "server_src_controllers_dashboardcontroller_getdashboardsummary",
+      "label": "getDashboardSummary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "getdashboardsummary()",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L56"
+    },
+    {
+      "id": "server_src_controllers_dashboardcontroller_getlastscore",
+      "label": "getLastScore()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "getlastscore()",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L35"
     },
     {
       "id": "antigravity_graph",
@@ -1458,6 +1458,54 @@
       "norm_label": "10. panel de control y dashboard operativo",
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L298"
+    },
+    {
+      "id": "docs_user_guide_11_1_distribuci\u00f3n_del_cat\u00e1logo",
+      "label": "11.1 Distribuci\u00f3n del Cat\u00e1logo",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "11.1 distribucion del catalogo",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L332"
+    },
+    {
+      "id": "docs_user_guide_11_2_interacciones_cr\u00edticas_junior_en_soft_skills",
+      "label": "11.2 Interacciones Cr\u00edticas Junior en Soft Skills",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "11.2 interacciones criticas junior en soft skills",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L341"
+    },
+    {
+      "id": "docs_user_guide_11_3_sincronizaci\u00f3n_visual_y_filtros_en_la_plataforma",
+      "label": "11.3 Sincronizaci\u00f3n Visual y Filtros en la Plataforma",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "11.3 sincronizacion visual y filtros en la plataforma",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L356"
+    },
+    {
+      "id": "docs_user_guide_11_cat\u00e1logo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_en_ui_us_08",
+      "label": "11. Cat\u00e1logo Multinivel (Junior, Mid, Senior) y Sincronizaci\u00f3n en UI (US-08)",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Gu\u00eda de Usuario: DevCoach Sparring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "11. catalogo multinivel (junior, mid, senior) y sincronizacion en ui (us-08)",
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L328"
     },
     {
       "id": "docs_user_guide_1_requisitos_previos",
@@ -2895,17 +2943,6 @@
       "source_location": "L1"
     },
     {
-      "id": "tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 20,
-      "community_name": "tailwind.config.js",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "tailwindcss"
-    },
-    {
       "id": "client_tailwind_config",
       "label": "tailwind.config.js",
       "_origin": "ast",
@@ -3335,17 +3372,6 @@
       "source_location": "L1"
     },
     {
-      "id": "server_src_controllers_dashboardcontroller",
-      "label": "dashboardController.js",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "dashboardcontroller.js",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L1"
-    },
-    {
       "id": "server_src_routes_dashboard",
       "label": "dashboard.js",
       "_origin": "ast",
@@ -3520,6 +3546,17 @@
       "norm_label": "express",
       "source_file": "server/package.json",
       "source_location": "L16"
+    },
+    {
+      "id": "server_src_controllers_dashboardcontroller",
+      "label": "dashboardController.js",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "dashboardcontroller.js",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L1"
     },
     {
       "id": "tickets_us_06_seed_and_e2e_final",
@@ -7701,6 +7738,39 @@
       "weight": 1.0
     },
     {
+      "source": "docs_user_guide_11_cat\u00e1logo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_en_ui_us_08",
+      "target": "docs_user_guide_11_1_distribuci\u00f3n_del_cat\u00e1logo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L332",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_11_cat\u00e1logo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_en_ui_us_08",
+      "target": "docs_user_guide_11_2_interacciones_cr\u00edticas_junior_en_soft_skills",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L341",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_11_cat\u00e1logo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_en_ui_us_08",
+      "target": "docs_user_guide_11_3_sincronizaci\u00f3n_visual_y_filtros_en_la_plataforma",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L356",
+      "weight": 1.0
+    },
+    {
       "source": "docs_user_guide_3_c\u00f3mo_arrancar_la_aplicaci\u00f3n_en_local_quickstart_definitivo",
       "target": "docs_user_guide_3_1_poblado_inicial_de_la_base_de_datos_seeding_idempotente",
       "relation": "contains",
@@ -7918,6 +7988,17 @@
       "confidence_score": 1.0,
       "source_file": "docs/USER_GUIDE.md",
       "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_user_guide_gu\u00eda_de_usuario_devcoach_sparring",
+      "target": "docs_user_guide_11_cat\u00e1logo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_en_ui_us_08",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/USER_GUIDE.md",
+      "source_location": "L328",
       "weight": 1.0
     },
     {
@@ -9450,15 +9531,6 @@
       "weight": 1.0
     },
     {
-      "source": "client_tailwind_config",
-      "target": "tailwindcss",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "client/tailwind.config.js"
-    },
-    {
       "source": "server_src_routes_dashboard",
       "target": "server_src_controllers_dashboardcontroller_getdashboardsummary",
       "relation": "indirect_call",
@@ -9628,5 +9700,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0a7b03fdec9a1be54b8df71476ecc3bfa04e518a"
+  "built_at_commit": "05ef1af6ba3f73a31eb1b73a2e67816c0e15a774"
 }
