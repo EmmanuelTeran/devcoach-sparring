@@ -505,7 +505,7 @@ graph TB
 
 ---
 
-## 5. Evolución Hacia las Siguientes Historias
+## 5. Evolución del Sistema y Cierre de Historias
 
 - [x] **US-01:** Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright).
 - [x] **US-02:** Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado).
@@ -513,16 +513,93 @@ graph TB
 - [x] **US-04:** Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini).
 - [x] **US-05:** Dashboard Operativo y Acoplamiento de Habilidades (Cola de Repaso Unificada y visualización integrada).
 - [x] **US-06:** Seed Senior del Roadmap (30 temas Mid-to-Senior) y Validación E2E Total.
+- [x] **US-07:** Niveles de Progresión y Andamiaje Pedagógico (Scaffolding con Pistas Gemini `/hint`).
+- [x] **US-08:** Catálogo Completo Multinivel (Junior/Mid/Senior) de 62 Temas y Sincronización UI Reactiva.
 
 ---
 
-## 6. Cobertura y Resumen de Validación
+## 6. Arquitectura Multinivel y Sincronización UI (US-08)
+
+### 6.1 Modelo de Datos: Campo `level` en `Topic`
+
+El modelo `Topic` (`server/src/models/Topic.js`) categoriza cada tópico en una jerarquía de progresión pedagógica estricta:
+
+```javascript
+level: {
+  type: String,
+  enum: ['junior', 'mid', 'senior'],
+  default: 'junior',
+  index: true,
+}
+```
+
+### 6.2 Flujo de Datos y Sincronización de Nivel en la UI
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Usuario as Desarrollador
+    participant UI as React UI (Dashboard / Trainers)
+    participant API as Express API (/summary & /topics/due)
+    participant DB as MongoDB (Topic Collection)
+
+    Usuario->>UI: Clic en Nivel (ej. "Junior")
+    UI->>API: GET /api/dashboard/summary?level=junior
+    API->>DB: Topic.find({ level: "junior", nextReviewAt: { $lte: now } })
+    DB-->>API: 20 temas junior vencidos (10 Hard, 10 Soft)
+    API-->>UI: { dueCount: 20, dueHardSkills: 10, dueSoftSkills: 10, ... }
+    UI-->>Usuario: Actualiza contadores y badges visuales
+
+    Usuario->>UI: Navega a Soft Skills (Nivel Junior)
+    UI->>API: GET /api/topics/due?level=junior
+    API->>DB: Topic.find({ level: "junior" })
+    DB-->>API: Array de temas de nivel junior
+    API-->>UI: 10 Soft Skills (Daily Standup, Demo PM, Code Review...)
+    UI-->>Usuario: Selector poblado exclusivamente con escenarios Junior
+```
+
+### 6.3 Estrategia de Seeding con `Topic.bulkWrite`
+
+Para garantizar idempotencia y migración transparente de bases de datos preexistentes, `server/src/scripts/seed.js` orquesta un batch `bulkWrite`:
+
+```javascript
+const operations = topics.map((t) => ({
+  updateOne: {
+    filter: { title: t.title },
+    update: {
+      $set: {
+        level: t.level || 'junior',
+        category: t.category,
+        type: t.type,
+      },
+      $setOnInsert: {
+        srsStage: t.srsStage ?? 0,
+        easeFactor: t.easeFactor ?? 2.5,
+        intervalDays: t.intervalDays ?? 0,
+        nextReviewAt: t.nextReviewAt || new Date(),
+        history: t.history || [],
+      },
+    },
+    upsert: true,
+  },
+}));
+```
+
+Esta estrategia asegura que:
+1. Nuevos temas se insertan (`upsert: true`).
+2. Temas existentes actualizan forzosamente su campo `level` sin sobreescribir el historial de revisiones ni la etapa SRS alcanzada por el usuario.
+
+---
+
+## 7. Cobertura y Resumen de Validación
 
 | Componente / Suite | Herramienta | Conteo de Tests | Estado |
 | :--- | :--- | :--- | :--- |
-| **Backend Unit & Integration** | Vitest + Supertest + MongoMemoryServer | 41 tests (7 suites) | **100% PASS** |
-| **Frontend & End-to-End** | Playwright (Chromium Headless) | 5 flujos E2E completos | **100% PASS** |
-| **Seeding Idempotente** | Supertest / MongoMemoryServer | 4 tests de idempotencia & categorías | **100% PASS** |
-| **Calidad de Código y Tipos** | ESLint / AST Analysis | 0 regresiones detectadas | **Aprobado** |
+| **Backend Unit & Integration** | Vitest + Supertest + MongoMemoryServer | 54 tests (8 suites) | **100% PASS** |
+| **Frontend & End-to-End** | Playwright (Chromium Headless) | 14 tests E2E completos (5 suites) | **100% PASS** |
+| **Catálogo Multinivel & Seeding** | Supertest / MongoMemoryServer | 5 tests de verificación de 62 temas y niveles | **100% PASS** |
+| **Sincronización de UI y Contadores** | Playwright E2E (`multilevel-catalog.spec.js`) | 2 tests de sincronización y escenarios junior | **100% PASS** |
+| **Calidad de Código y Tipos** | ESLint / AST Analysis / Graphify | 0 regresiones detectadas | **Aprobado** |
+
 
 

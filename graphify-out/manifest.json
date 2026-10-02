@@ -18,15 +18,15 @@
     "semantic_hash": ""
   },
   ".antigravity/graph.md": {
-    "mtime": 1790926745.4986496,
-    "seen": 1790927427.1162055,
+    "mtime": 1790927473.110681,
+    "seen": 1790927477.7084706,
     "ast_hash": "a7a6a8750867bfe4e322b82a83ae840a",
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
-    "mtime": 1790926898.3986664,
-    "seen": 1790927427.1162066,
-    "ast_hash": "d508173b29fa8d54b2bd471be62a7671",
+    "mtime": 1790927498.8226748,
+    "seen": 1790927557.2583923,
+    "ast_hash": "b5aea39e6e614c4d47db951c06f6f121",
     "semantic_hash": ""
   },
   ".antigravity/skills/document-tech-specs.md": {
@@ -168,15 +168,15 @@
     "semantic_hash": ""
   },
   "docs/USER_GUIDE.md": {
-    "mtime": 1790833494.311079,
-    "seen": 1790833496.7296336,
-    "ast_hash": "47e976c5a27b3b17bdb6a0438f9c9f3c",
+    "mtime": 1790927515.1706746,
+    "seen": 1790927557.2584224,
+    "ast_hash": "d3e37fbf4265d2ba89647744b3406f9b",
     "semantic_hash": ""
   },
   "docs/ARCHITECTURE.md": {
-    "mtime": 1790833494.311079,
-    "seen": 1790833496.7296321,
-    "ast_hash": "5d500e512c8eebf1052cdd3a94691137",
+    "mtime": 1790927541.5706773,
+    "seen": 1790927557.258419,
+    "ast_hash": "8b168c8c783245aac906e262cdfae12a",
     "semantic_hash": ""
   },
   "server/src/models/Topic.js": {
@@ -216,8 +216,8 @@
     "semantic_hash": ""
   },
   "client/src/components/HardSkillTrainer.jsx": {
-    "mtime": 1790927240.1066117,
-    "seen": 1790927427.116149,
+    "mtime": 1790927473.110681,
+    "seen": 1790927477.7084074,
     "ast_hash": "0b6e55e6477239505b59f47de251b01d",
     "semantic_hash": ""
   },
@@ -258,8 +258,8 @@
     "semantic_hash": ""
   },
   "client/src/components/SoftSkillTrainer.jsx": {
-    "mtime": 1790927229.9626224,
-    "seen": 1790927427.116151,
+    "mtime": 1790927473.110681,
+    "seen": 1790927477.7084095,
     "ast_hash": "6763c7e3f62a59eeec0f3eae433c2364",
     "semantic_hash": ""
   },
@@ -288,8 +288,8 @@
     "semantic_hash": ""
   },
   "tests/e2e/soft-skills.spec.js": {
-    "mtime": 1790927268.6666262,
-    "seen": 1790927427.1162007,
+    "mtime": 1790927473.130681,
+    "seen": 1790927477.7084644,
     "ast_hash": "d4d5b3bf66c5111c0fb8390f3f33558a",
     "semantic_hash": ""
   },
@@ -306,8 +306,8 @@
     "semantic_hash": ""
   },
   "server/src/controllers/dashboardController.js": {
-    "mtime": 1790927251.5546155,
-    "seen": 1790927427.1161644,
+    "mtime": 1790927473.130681,
+    "seen": 1790927477.7084234,
     "ast_hash": "aa86c716ae0f8b33b3f4f5493576e1a6",
     "semantic_hash": ""
   },
@@ -318,8 +318,8 @@
     "semantic_hash": ""
   },
   "server/tests/dashboard.test.js": {
-    "mtime": 1790927105.1946146,
-    "seen": 1790927427.1161835,
+    "mtime": 1790927473.130681,
+    "seen": 1790927477.7084446,
     "ast_hash": "70ac4c364c64f3651e1081713054f61b",
     "semantic_hash": ""
   },
@@ -336,14 +336,14 @@
     "semantic_hash": ""
   },
   "server/src/scripts/seed.js": {
-    "mtime": 1790927144.4746785,
-    "seen": 1790927427.1161768,
+    "mtime": 1790927473.130681,
+    "seen": 1790927477.7084374,
     "ast_hash": "3021e4157b99ca6ac19c62439e4417eb",
     "semantic_hash": ""
   },
   "server/tests/seed.test.js": {
-    "mtime": 1790927158.8906748,
-    "seen": 1790927427.116188,
+    "mtime": 1790927473.130681,
+    "seen": 1790927477.708451,
     "ast_hash": "1f9cbf63554532121066ce1329c48a79",
     "semantic_hash": ""
   },
@@ -372,15 +372,15 @@
     "semantic_hash": ""
   },
   "tests/e2e/multilevel-catalog.spec.js": {
-    "mtime": 1790927371.110654,
-    "seen": 1790927427.1161964,
+    "mtime": 1790927473.130681,
+    "seen": 1790927477.70846,
     "ast_hash": "8f9721d9416fc5685e960238348c7650",
     "semantic_hash": ""
   },
   "tickets/US-08-multilevel-catalog-and-ui-sync.md": {
-    "mtime": 1790927445.150646,
-    "seen": 1790927460.7537172,
-    "ast_hash": "5269d448e00320b18b24765a4bcf93d1",
+    "mtime": 1790927490.7506754,
+    "seen": 1790927557.258452,
+    "ast_hash": "01aa9a7d1159efe6e9badf37cc0f705d",
     "semantic_hash": ""
   }
 }

@@ -1,17 +1,17 @@
 # Graph Report - devcoach-sparring  (2026-10-02)
 
 ## Corpus Check
-- 63 files · ~33,159 words
+- 63 files · ~33,699 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 2, .css 1, .example 1)
 
 ## Summary
-- 347 nodes · 487 edges · 29 communities (24 shown, 5 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.94)
+- 347 nodes · 488 edges · 29 communities (24 shown, 5 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a2ec648f`
+- Built from commit: `0a7b03fd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -177,12 +177,12 @@ Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 4. Evidencia de Pr
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `[US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI`, `app.js`, `Topic.js`?**
+  _High betweenness centrality (0.097) - this node is a cross-community bridge._
 - **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `app.js`, `[US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)`?**
-  _High betweenness centrality (0.095) - this node is a cross-community bridge._
-- **Why does `getDashboardSummary()` connect `app.js` to `App.jsx`?**
-  _High betweenness centrality (0.088) - this node is a cross-community bridge._
-- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `[US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI`, `app.js`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `HardSkillTrainer()` connect `App.jsx` to `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico con IA`?**
+  _High betweenness centrality (0.070) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _177 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `client/package.json` be split into smaller, more focused modules?**

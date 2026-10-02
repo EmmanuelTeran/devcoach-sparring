@@ -3273,7 +3273,7 @@
       "node_kind": "heading",
       "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
@@ -3285,7 +3285,7 @@
       "node_kind": "heading",
       "norm_label": "5. commit de cierre en dev",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L51"
+      "source_location": "L102"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_e2e_playwright",
@@ -3297,7 +3297,7 @@
       "node_kind": "heading",
       "norm_label": "tests e2e (playwright)",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L47"
+      "source_location": "L76"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
@@ -3309,7 +3309,7 @@
       "node_kind": "heading",
       "norm_label": "tests unitarios e integracion (vitest / supertest)",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
@@ -9380,7 +9380,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -9391,7 +9391,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L47",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -9424,18 +9435,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L41",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
-      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L51",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -9591,6 +9591,18 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "server_src_scripts_seed_seedtopics",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "seedTopics()",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
       "source": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
       "target": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
       "relation": "references",
@@ -9616,5 +9628,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a2ec648fab4b28274ab71bc9c9937eb020a1f0c7"
+  "built_at_commit": "0a7b03fdec9a1be54b8df71476ecc3bfa04e518a"
 }

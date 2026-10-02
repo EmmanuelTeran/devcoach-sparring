@@ -1,6 +1,6 @@
 # [US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI
 
-- **Estado:** Verificado
+- **Estado:** Done
 - **Rama:** `feature/US-08-multilevel-catalog-and-ui-sync`
 - **Fecha de Inicio:** 2026-10-02
 - **Fecha de Cierre:** 2026-10-02
@@ -101,4 +101,5 @@ Running 14 tests using 2 workers
 
 ## 5. Commit de Cierre en dev
 
-`{{COMMIT_HASH}}`
+`0a7b03f`
+
