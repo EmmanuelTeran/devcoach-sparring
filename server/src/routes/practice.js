@@ -2,7 +2,7 @@ import express from 'express';
 import { Topic } from '../models/Topic.js';
 import { SessionLog } from '../models/SessionLog.js';
 import { calculateNextReview } from '../utils/srsCalculator.js';
-import { generateHardSkillChallenge, evaluateHardSkillSolution } from '../services/geminiService.js';
+import { generateHardSkillChallenge, evaluateHardSkillSolution, generateHint } from '../services/geminiService.js';
 
 export const practiceRouter = express.Router();
 
@@ -115,6 +115,39 @@ practiceRouter.post('/hard-skill/evaluate', async (req, res) => {
     });
   } catch (error) {
     console.error('Error evaluating hard skill solution:', error);
+    return res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+/**
+ * POST /api/practice/hard-skill/hint
+ * Body: { topicId, challenge }
+ * Genera una pista pedagógica socrática (analogía + preguntas guía) sin revelar código ni respuesta.
+ */
+practiceRouter.post('/hard-skill/hint', async (req, res) => {
+  try {
+    const { topicId, challenge } = req.body;
+
+    if (!topicId) {
+      return res.status(400).json({ error: 'topicId is required' });
+    }
+    if (!challenge) {
+      return res.status(400).json({ error: 'challenge is required' });
+    }
+
+    const topic = await Topic.findById(topicId);
+    if (!topic) {
+      return res.status(404).json({ error: 'Topic not found' });
+    }
+
+    const hint = await generateHint({ topic, challenge });
+
+    return res.status(200).json({
+      analogy: hint.analogy,
+      guidingQuestions: hint.guidingQuestions,
+    });
+  } catch (error) {
+    console.error('Error generating hint:', error);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 });

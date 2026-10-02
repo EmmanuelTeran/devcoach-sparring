@@ -177,3 +177,97 @@ Evalúa la respuesta y devuelve el JSON estricto:`;
     };
   }
 }
+
+/**
+ * Genera una pista pedagógica (Socratic hint) para el usuario.
+ * NUNCA revela código directo ni la respuesta. Solo usa analogías y preguntas guía.
+ *
+ * @param {Object} params
+ * @param {Object} params.topic - Objeto del tópico (con title, level)
+ * @param {string} params.challenge - Texto del desafío presentado al usuario
+ * @returns {Promise<{ analogy: string, guidingQuestions: string[] }>}
+ */
+export async function generateHint({ topic, challenge }) {
+  const levelLabel = topic.level === 'senior' ? 'Senior' : topic.level === 'mid' ? 'Mid-level' : 'Junior';
+
+  const systemInstruction = `Eres un tutor técnico socrático especializado en preparación para entrevistas de ingeniería de software Fullstack.
+Tu misión es guiar al candidato de nivel ${levelLabel} sin revelar la respuesta directa ni escribir código funcional.
+
+REGLAS ESTRICTAS:
+- NO escribas código funcional, pseudocódigo detallado ni soluciones directas.
+- NO respondas la pregunta del desafío directamente.
+- Usa UNA analogía del mundo real que conecte el concepto con algo cotidiano.
+- Formula entre 2 y 3 preguntas guía que lleven al candidato a descubrir la respuesta por sí mismo.
+- El tono debe ser de tutor que acompaña, no de evaluador que juzga.
+
+RESPONDE EXCLUSIVAMENTE con un JSON válido (sin markdown):
+{
+  "analogy": "<analogía del mundo real clara y memorable>",
+  "guidingQuestions": ["<pregunta 1>", "<pregunta 2>", "<pregunta 3 opcional>"]
+}`;
+
+  const prompt = `TEMA: ${topic.title}
+NIVEL: ${levelLabel}
+DESAFÍO AL CANDIDATO:
+${challenge}
+
+Genera la pista pedagógica ahora:`;
+
+  const client = getClient();
+  if (!client) {
+    // Fallback offline: pistas deterministas genéricas por nivel
+    const analogies = {
+      junior: `Imagina que ${topic.title} es como organizar una cocina: tienes que saber dónde va cada cosa antes de empezar a cocinar.`,
+      mid: `Piensa en ${topic.title} como el sistema de tuberías de un edificio: entender el flujo completo te evita problemas cuando hay una fuga.`,
+      senior: `${topic.title} es análogo a diseñar una red de distribución eléctrica: las decisiones de arquitectura afectan la resiliencia y el costo de toda la red.`,
+    };
+    return {
+      analogy: analogies[topic.level] || analogies.junior,
+      guidingQuestions: [
+        `¿Cuál es el comportamiento fundamental de "${topic.title}" cuando el sistema está bajo presión?`,
+        `¿Qué trade-off tendrías que aceptar si optimizas para velocidad en lugar de consistencia aquí?`,
+        `¿Cómo cambia tu respuesta si el sistema necesita escalar a 10x el tráfico actual?`,
+      ],
+    };
+  }
+
+  const response = await client.models.generateContent({
+    model: DEFAULT_MODEL,
+    contents: prompt,
+    config: {
+      systemInstruction,
+      temperature: 0.5,
+      responseMimeType: 'application/json',
+    },
+  });
+
+  const text = (response.text || '').trim();
+
+  try {
+    const parsed = JSON.parse(text);
+    return {
+      analogy: String(parsed.analogy || ''),
+      guidingQuestions: Array.isArray(parsed.guidingQuestions) ? parsed.guidingQuestions : [],
+    };
+  } catch {
+    const match = text.match(/\{[\s\S]*\}/);
+    if (match) {
+      try {
+        const parsed = JSON.parse(match[0]);
+        return {
+          analogy: String(parsed.analogy || ''),
+          guidingQuestions: Array.isArray(parsed.guidingQuestions) ? parsed.guidingQuestions : [],
+        };
+      } catch {
+        // ignore
+      }
+    }
+    return {
+      analogy: `Reflexiona sobre los fundamentos de "${topic.title}" y cómo se comporta bajo distintas condiciones de carga.`,
+      guidingQuestions: [
+        '¿Cuál es el comportamiento por defecto y cuándo cambia?',
+        '¿Qué trade-offs implica la decisión de diseño más común en este tema?',
+      ],
+    };
+  }
+}

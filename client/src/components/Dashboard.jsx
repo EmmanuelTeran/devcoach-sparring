@@ -13,20 +13,39 @@ import {
   Layers,
   ChevronRight,
   Flame,
+  GraduationCap,
 } from 'lucide-react';
 
 const API_BASE = 'http://localhost:5000/api';
+
+const LEVEL_LABELS = { all: 'Todos', junior: 'Junior', mid: 'Mid', senior: 'Senior' };
+const LEVEL_STYLES = {
+  all: 'bg-slate-700 text-slate-300 border-slate-600 hover:bg-slate-600',
+  junior: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500/30',
+  mid: 'bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30',
+  senior: 'bg-purple-500/20 text-purple-300 border-purple-500/30 hover:bg-purple-500/30',
+};
+const LEVEL_ACTIVE = {
+  all: 'bg-slate-500 text-white border-slate-400',
+  junior: 'bg-emerald-600 text-white border-emerald-500',
+  mid: 'bg-blue-600 text-white border-blue-500',
+  senior: 'bg-purple-600 text-white border-purple-500',
+};
 
 export function Dashboard({ onStartTraining }) {
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [selectedLevel, setSelectedLevel] = useState('all');
 
-  const fetchSummary = async () => {
+  const fetchSummary = async (level = selectedLevel) => {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch(`${API_BASE}/dashboard/summary`);
+      const url = level && level !== 'all'
+        ? `${API_BASE}/dashboard/summary?level=${level}`
+        : `${API_BASE}/dashboard/summary`;
+      const res = await fetch(url);
       if (!res.ok) throw new Error('Error al cargar métricas del dashboard');
       const data = await res.json();
       setSummary(data);
@@ -38,8 +57,14 @@ export function Dashboard({ onStartTraining }) {
     }
   };
 
+  const handleLevelChange = (level) => {
+    setSelectedLevel(level);
+    fetchSummary(level);
+  };
+
   useEffect(() => {
-    fetchSummary();
+    fetchSummary(selectedLevel);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleTrainNow = () => {
@@ -97,24 +122,49 @@ export function Dashboard({ onStartTraining }) {
   return (
     <div id="dashboard-view" className="w-full space-y-6">
       {/* Encabezado y botón de refrescar */}
-      <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
-        <div>
-          <h3 className="text-xl font-bold text-white flex items-center gap-2">
-            <Flame className="w-5 h-5 text-amber-400" />
-            Panel de Control Diario
-          </h3>
-          <p className="text-xs text-slate-400">
-            Métricas de retención espaciada (SRS) y priorización acoplada de sparring.
-          </p>
+      <div className="flex flex-col gap-4 border-b border-slate-800/80 pb-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              <Flame className="w-5 h-5 text-amber-400" />
+              Panel de Control Diario
+            </h3>
+            <p className="text-xs text-slate-400">
+              Métricas de retención espaciada (SRS) y priorización acoplada de sparring.
+            </p>
+          </div>
+          <button
+            id="btn-refresh-dashboard"
+            onClick={() => fetchSummary(selectedLevel)}
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-slate-200 transition"
+            title="Actualizar métricas"
+          >
+            <RefreshCw className="w-4 h-4" />
+          </button>
         </div>
-        <button
-          id="btn-refresh-dashboard"
-          onClick={fetchSummary}
-          className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-slate-200 transition"
-          title="Actualizar métricas"
-        >
-          <RefreshCw className="w-4 h-4" />
-        </button>
+
+        {/* Selector de Nivel de Progresión (AC-5) */}
+        <div>
+          <p className="text-xs text-slate-400 mb-2 font-medium uppercase tracking-wider flex items-center gap-1.5">
+            <GraduationCap className="w-3.5 h-3.5" /> Filtrar por Nivel
+          </p>
+          <div id="level-selector-dashboard" className="flex flex-wrap gap-2">
+            {['all', 'junior', 'mid', 'senior'].map((lvl) => (
+              <button
+                key={lvl}
+                id={`level-btn-${lvl}-dashboard`}
+                onClick={() => handleLevelChange(lvl)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
+                  selectedLevel === lvl
+                    ? LEVEL_ACTIVE[lvl] + ' shadow-md'
+                    : LEVEL_STYLES[lvl]
+                }`}
+              >
+                {LEVEL_LABELS[lvl]}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Grid de Tarjetas de Métricas Rápidas */}

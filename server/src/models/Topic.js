@@ -59,6 +59,11 @@ const topicSchema = new mongoose.Schema(
       default: Date.now,
       index: true,
     },
+    level: {
+      type: String,
+      enum: ['junior', 'mid', 'senior'],
+      default: 'junior',
+    },
     history: [reviewHistorySchema],
   },
   {

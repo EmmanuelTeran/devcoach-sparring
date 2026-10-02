@@ -13,9 +13,15 @@ export const topicsRouter = express.Router();
 topicsRouter.get('/due', async (req, res) => {
   try {
     const now = new Date();
+    const { level } = req.query;
+
+    const validLevels = ['junior', 'mid', 'senior'];
+    const levelFilter = level && validLevels.includes(level) ? { level } : {};
+
     // Filtramos tópicos cuya fecha de próxima revisión sea menor o igual a ahora
     const dueTopics = await Topic.find({
       nextReviewAt: { $lte: now },
+      ...levelFilter,
     }).lean();
 
     // Ordenamiento por prioridad:
