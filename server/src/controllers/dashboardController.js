@@ -56,10 +56,16 @@ function getLastScore(topic, sessionLogsByTopic = {}) {
 export async function getDashboardSummary(req, res) {
   try {
     const now = new Date();
+    const { level } = req.query;
 
-    // 1. Obtener todos los temas pendientes para hoy (nextReviewAt <= now)
+    // Validar nivel si se proporciona
+    const validLevels = ['junior', 'mid', 'senior'];
+    const levelFilter = level && validLevels.includes(level) ? { level } : {};
+
+    // 1. Obtener todos los temas pendientes para hoy (nextReviewAt <= now), con filtro opcional por nivel
     const dueTopics = await Topic.find({
       nextReviewAt: { $lte: now },
+      ...levelFilter,
     }).lean();
 
     // Conteo total y desglose
@@ -72,8 +78,8 @@ export async function getDashboardSummary(req, res) {
       (t) => t.category === 'soft_skill' && t.type === 'practice'
     ).length;
 
-    // 2. Obtener todos los tópicos para evaluar áreas críticas (scores < 3)
-    const allTopics = await Topic.find({}).lean();
+    // 2. Obtener todos los tópicos para evaluar áreas críticas (scores < 3), con filtro opcional por nivel
+    const allTopics = await Topic.find({ ...levelFilter }).lean();
 
     // Obtener los últimos logs de sesiones para temas que tal vez no tengan history en Topic
     const recentSessions = await SessionLog.aggregate([

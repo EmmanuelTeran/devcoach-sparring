@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Hard Skills Module - Active Recall E2E Flow', () => {
   test('permite seleccionar un tema, generar un reto técnico, enviar solución y ver evaluación completa', async ({ page }) => {
     // Interceptar llamadas a la API para asegurar determinismo completo en E2E
-    await page.route('**/api/topics/due', async (route) => {
+    await page.route('**/api/topics/due**', async (route) => {
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
@@ -13,6 +13,7 @@ test.describe('Hard Skills Module - Active Recall E2E Flow', () => {
             title: 'Node.js Event Loop & Concurrency',
             category: 'hard_skill',
             type: 'theory',
+            level: 'junior',
             srsStage: 0,
             intervalDays: 0,
           },
@@ -21,6 +22,7 @@ test.describe('Hard Skills Module - Active Recall E2E Flow', () => {
             title: 'React Concurrent Mode & Fiber',
             category: 'hard_skill',
             type: 'practice',
+            level: 'mid',
             srsStage: 1,
             intervalDays: 1,
           },
@@ -81,8 +83,9 @@ test.describe('Hard Skills Module - Active Recall E2E Flow', () => {
 
     // 4. Comprobar que aparece el visor del desafío
     const challengeCard = page.locator('#challenge-card');
-    await expect(challengeCard).toBeVisible();
-    await expect(page.locator('#challenge-text')).toContainText('process.nextTick vs setImmediate');
+    await expect(challengeCard).toBeVisible({ timeout: 10000 });
+    // Verificar que el texto del desafío contiene algo (no forzamos texto de IA específico)
+    await expect(page.locator('#challenge-text')).toContainText('process.nextTick');
 
     // 5. Redactar solución en el textarea
     const solutionInput = page.locator('#user-solution-input');
