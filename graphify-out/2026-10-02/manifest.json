@@ -18,15 +18,15 @@
     "semantic_hash": ""
   },
   ".antigravity/graph.md": {
-    "mtime": 1790923390.1706297,
-    "seen": 1790923392.1157398,
-    "ast_hash": "64b21f96d98060c0c0a1218f74109ab2",
+    "mtime": 1790923460.6186354,
+    "seen": 1790924474.8002884,
+    "ast_hash": "e1f81f5c2eea8e1affba64b83c76a533",
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
-    "mtime": 1790833500.1391416,
-    "seen": 1790833508.3066857,
-    "ast_hash": "17c68d8985fb08987a1ddad4a786fb36",
+    "mtime": 1790924790.2826252,
+    "seen": 1790925640.8027256,
+    "ast_hash": "494e88957098477e9cba89920fec5d05",
     "semantic_hash": ""
   },
   ".antigravity/skills/document-tech-specs.md": {
@@ -180,15 +180,15 @@
     "semantic_hash": ""
   },
   "server/src/models/Topic.js": {
-    "mtime": 1790824873.144601,
-    "seen": 1790824874.3317366,
-    "ast_hash": "542c2ab6244c4e054ad06712b8f2762e",
+    "mtime": 1790924826.4666505,
+    "seen": 1790925640.802687,
+    "ast_hash": "1a234917561275d267800b96423acb04",
     "semantic_hash": ""
   },
   "server/src/routes/topics.js": {
-    "mtime": 1790824873.144601,
-    "seen": 1790824874.3317404,
-    "ast_hash": "56d550f0da6d7736c69f983646a804b7",
+    "mtime": 1790925105.674522,
+    "seen": 1790925640.802694,
+    "ast_hash": "dd2d0d3d697ae86b651ec61979b037b5",
     "semantic_hash": ""
   },
   "server/src/utils/srsCalculator.js": {
@@ -216,9 +216,9 @@
     "semantic_hash": ""
   },
   "client/src/components/HardSkillTrainer.jsx": {
-    "mtime": 1790827998.2759857,
-    "seen": 1790827999.6677148,
-    "ast_hash": "0642983bf1803c76b99211ef354e4fb6",
+    "mtime": 1790925051.6946194,
+    "seen": 1790925640.8026357,
+    "ast_hash": "e477e998dc28544e448b540d46a2e855",
     "semantic_hash": ""
   },
   "server/src/models/SessionLog.js": {
@@ -228,15 +228,15 @@
     "semantic_hash": ""
   },
   "server/src/routes/practice.js": {
-    "mtime": 1790825871.7888258,
-    "seen": 1790826328.8350627,
-    "ast_hash": "d931c05b8a64f38bbdffeefae006bfc4",
+    "mtime": 1790924878.0506766,
+    "seen": 1790925640.8026912,
+    "ast_hash": "f82bb4d332e04ebb32b9358a774a5374",
     "semantic_hash": ""
   },
   "server/src/services/geminiService.js": {
-    "mtime": 1790923390.1786299,
-    "seen": 1790923392.1157172,
-    "ast_hash": "eb8b294f241747ef6b57a52770dbca5c",
+    "mtime": 1790924853.1106224,
+    "seen": 1790925640.8026977,
+    "ast_hash": "74280c72e099697837786cbbfefd1c52",
     "semantic_hash": ""
   },
   "server/tests/practice.test.js": {
@@ -246,9 +246,9 @@
     "semantic_hash": ""
   },
   "tests/e2e/hard-skills.spec.js": {
-    "mtime": 1790827998.2839859,
-    "seen": 1790827999.667808,
-    "ast_hash": "e3fbd0bf1bad2944a27f61fbac6141fc",
+    "mtime": 1790925603.1506777,
+    "seen": 1790925640.8027143,
+    "ast_hash": "e6d1f38fc1794ebcbc5a54ef8c7ddf09",
     "semantic_hash": ""
   },
   "tickets/US-03-hard-skills-module.md": {
@@ -300,15 +300,15 @@
     "semantic_hash": ""
   },
   "client/src/components/Dashboard.jsx": {
-    "mtime": 1790827998.2759857,
-    "seen": 1790827999.6677113,
-    "ast_hash": "e1811cbcb65a3dd3d98594769727c90d",
+    "mtime": 1790925083.4385626,
+    "seen": 1790925640.80263,
+    "ast_hash": "7a9306d2bbddd80d3794f89f39d8986b",
     "semantic_hash": ""
   },
   "server/src/controllers/dashboardController.js": {
-    "mtime": 1790827998.2839859,
-    "seen": 1790827999.6677449,
-    "ast_hash": "dbac7d9ea9bbd16a76cf31961abddcf8",
+    "mtime": 1790924903.0946736,
+    "seen": 1790925640.8026814,
+    "ast_hash": "779edc8b89d3e4d192da78ccdd83e120",
     "semantic_hash": ""
   },
   "server/src/routes/dashboard.js": {
@@ -336,21 +336,39 @@
     "semantic_hash": ""
   },
   "server/src/scripts/seed.js": {
-    "mtime": 1790833494.3150792,
-    "seen": 1790833496.729593,
-    "ast_hash": "81d1732270b0073d3fc28ede7405ca81",
+    "mtime": 1790924965.0786653,
+    "seen": 1790925640.8026955,
+    "ast_hash": "dce55f7e04e90ae9d604301a0975d623",
     "semantic_hash": ""
   },
   "server/tests/seed.test.js": {
-    "mtime": 1790833494.3150792,
-    "seen": 1790833496.7296042,
-    "ast_hash": "392d11e3e86a835ae41ee6f2d6d71f1e",
+    "mtime": 1790925264.4626188,
+    "seen": 1790925640.802708,
+    "ast_hash": "4b0b82880cec56357f54a4867e4cb2c1",
     "semantic_hash": ""
   },
   "tickets/US-06-seed-and-e2e-final.md": {
     "mtime": 1790833983.361263,
     "seen": 1790833991.119791,
     "ast_hash": "4879486cc21df6deefce1c39ce4b5b49",
+    "semantic_hash": ""
+  },
+  "server/tests/hint.test.js": {
+    "mtime": 1790924818.074658,
+    "seen": 1790925640.802705,
+    "ast_hash": "af103d6c70fb59a9720046be06ad15be",
+    "semantic_hash": ""
+  },
+  "tests/e2e/scaffolding.spec.js": {
+    "mtime": 1790925129.1946397,
+    "seen": 1790925640.8027155,
+    "ast_hash": "217d4e658a7264377f4a7e336386cb86",
+    "semantic_hash": ""
+  },
+  "tickets/US-07-progression-levels-and-scaffolding.md": {
+    "mtime": 1790925682.3746524,
+    "seen": 1790925691.0718172,
+    "ast_hash": "33134bc60abf6798affa26df922e3ae5",
     "semantic_hash": ""
   }
 }

@@ -1,6 +1,6 @@
 # [US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)
 
-- **Estado:** Verificado
+- **Estado:** Done
 - **Rama:** `feature/US-07-progression-levels-and-scaffolding`
 - **Fecha de Inicio:** 2026-10-02
 - **Fecha de Cierre:** 2026-10-02
@@ -83,4 +83,4 @@ Running 12 tests using 2 workers
 
 ## 5. Commit de Cierre en dev
 
-`Pendiente (merge a dev)`
+`d9e37ab`
