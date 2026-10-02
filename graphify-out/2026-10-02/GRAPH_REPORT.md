@@ -1,17 +1,17 @@
-# Graph Report - devcoach-sparring  (2026-10-02)
+# Graph Report - devcoach-sparring  (2026-09-30)
 
 ## Corpus Check
-- 58 files · ~27,206 words
+- 58 files · ~27,037 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 2, .css 1, .example 1)
 
 ## Summary
-- 314 nodes · 439 edges · 29 communities (24 shown, 5 thin omitted)
+- 313 nodes · 438 edges · 28 communities (23 shown, 5 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2e183d76`
+- Built from commit: `2447ec39`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,7 +28,7 @@
 - workflows/graphify.md
 - heartbeat.md
 - client/package.json
-- app.js
+- Topic.js
 - package.json
 - Guía de Usuario: DevCoach Sparring
 - [US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)
@@ -39,8 +39,7 @@
 - [US-03] Módulo Hard Skills: Active Recall Teórico y Práctico con IA
 - [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)
 - [US-05] Dashboard Operativo y Acoplamiento de Habilidades (Hard + Soft Skills)
-- dashboardController.js
-- softSkillSparringService.js
+- app.js
 - [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)
 - [US-06] Seed Senior (30 Temas Clave) y Suite E2E Final
 
@@ -52,8 +51,8 @@
 5. `scripts` - 10 edges
 6. `disconnectDB()` - 9 edges
 7. `2. Contratos de API` - 9 edges
-8. `Grafo de Dependencias` - 8 edges
-9. `4. Diagramas de Flujo y Arquitectura` - 8 edges
+8. `4. Diagramas de Flujo y Arquitectura` - 8 edges
+9. `Grafo de Dependencias` - 7 edges
 10. `app` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -71,11 +70,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (29 total, 5 thin omitted)
+## Communities (28 total, 5 thin omitted)
 
 ### Community 0 - "Grafo de Dependencias"
-Cohesion: 0.20
-Nodes (9): Grafo de Dependencias, Grafo de Implementación: DevCoach Sparring, [US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright), [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado), [US-03] Módulo Hard Skills: Active Recall Teórico y Práctico, [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini), [US-05] Dashboard Operativo y Acoplamiento de Habilidades, [US-06] Seed Senior del Roadmap y Validación E2E Total (+1 more)
+Cohesion: 0.22
+Nodes (8): Grafo de Dependencias, Grafo de Implementación: DevCoach Sparring, [US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright), [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado), [US-03] Módulo Hard Skills: Active Recall Teórico y Práctico, [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini), [US-05] Dashboard Operativo y Acoplamiento de Habilidades, [US-06] Seed Senior del Roadmap y Validación E2E Total
 
 ### Community 1 - "[US-XX] {{TITULO_HISTORIA}}"
 Cohesion: 0.22
@@ -109,9 +108,9 @@ Nodes (3): Pasos de Ejecución, Propósito, Skill: verify-user-story
 Cohesion: 0.07
 Nodes (27): dependencies, lucide-react, react, react-dom, devDependencies, autoprefixer, postcss, tailwindcss (+19 more)
 
-### Community 12 - "app.js"
-Cohesion: 0.17
-Nodes (22): dotenv, express, mongodb-memory-server, mongoose, supertest, app, connectDB(), disconnectDB() (+14 more)
+### Community 12 - "Topic.js"
+Cohesion: 0.25
+Nodes (16): dotenv, mongodb-memory-server, mongoose, supertest, app, connectDB(), disconnectDB(), SessionLog (+8 more)
 
 ### Community 13 - "package.json"
 Cohesion: 0.07
@@ -131,7 +130,7 @@ Nodes (17): 2.1 `GET /api/health`, 2.2 `GET /api/topics/due`, 2.3 `POST /api/top
 
 ### Community 17 - "server/package.json"
 Cohesion: 0.09
-Nodes (21): cors, dependencies, cors, dotenv, express, @google/genai, mongoose, devDependencies (+13 more)
+Nodes (22): cors, @google/genai, dependencies, cors, dotenv, express, @google/genai, mongoose (+14 more)
 
 ### Community 18 - "App.jsx"
 Cohesion: 0.30
@@ -153,13 +152,9 @@ Nodes (8): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afecta
 Cohesion: 0.25
 Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify), 4. Evidencia de Pruebas (Completado por verify-user-story), Tests End-to-End (Playwright), Tests Unitarios e Integración Backend (Vitest / Supertest), [US-05] Dashboard Operativo y Acoplamiento de Habilidades (Hard + Soft Skills)
 
-### Community 25 - "dashboardController.js"
-Cohesion: 0.48
-Nodes (5): areTopicsRelated(), extractKeywords(), getDashboardSummary(), getLastScore(), dashboardRouter
-
-### Community 26 - "softSkillSparringService.js"
-Cohesion: 0.29
-Nodes (8): @google/genai, evaluateHardSkillSolution(), generateHardSkillChallenge(), getClient(), getClient(), replySoftSkillSparring(), SPARRING_ROLES, startSoftSkillSparring()
+### Community 26 - "app.js"
+Cohesion: 0.14
+Nodes (18): express, areTopicsRelated(), extractKeywords(), getDashboardSummary(), getLastScore(), dashboardRouter, healthRouter, practiceRouter (+10 more)
 
 ### Community 27 - "[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)"
 Cohesion: 0.29
@@ -170,8 +165,8 @@ Cohesion: 0.25
 Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify), 4. Evidencia de Pruebas (Completado por verify-user-story), Pruebas E2E (Playwright), Tests Unitarios e Integración Backend (Vitest / Supertest), [US-06] Seed Senior (30 Temas Clave) y Suite E2E Final
 
 ## Knowledge Gaps
-- **157 isolated node(s):** `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`, `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico`, `[US-05] Dashboard Operativo y Acoplamiento de Habilidades`, `[US-06] Seed Senior del Roadmap y Validación E2E Total` (+152 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 184 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **156 isolated node(s):** `Heartbeat del Proyecto`, `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`, `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico`, `[US-05] Dashboard Operativo y Acoplamiento de Habilidades` (+151 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 183 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -179,12 +174,12 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `calculateNextReview()` connect `app.js` to `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `useVoiceInteraction()` connect `App.jsx` to `Grafo de Dependencias`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Why does `react` connect `App.jsx` to `client/package.json`?**
+- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)` to `app.js`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **What connects `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`, `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico` to the rest of the system?**
-  _157 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `useVoiceInteraction()` connect `App.jsx` to `Grafo de Dependencias`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **What connects `Heartbeat del Proyecto`, `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)` to the rest of the system?**
+  _156 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `client/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**

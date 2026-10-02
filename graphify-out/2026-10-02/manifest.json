@@ -18,9 +18,9 @@
     "semantic_hash": ""
   },
   ".antigravity/graph.md": {
-    "mtime": 1790923243.1986382,
-    "seen": 1790923355.1602309,
-    "ast_hash": "e1f81f5c2eea8e1affba64b83c76a533",
+    "mtime": 1790818321.6902254,
+    "seen": 1790822448.8978667,
+    "ast_hash": "64b21f96d98060c0c0a1218f74109ab2",
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "server/src/services/geminiService.js": {
-    "mtime": 1790919520.5266669,
-    "seen": 1790923355.1602073,
-    "ast_hash": "f2b9ed4af528f9990b04bfb099d10e7d",
+    "mtime": 1790825871.7888258,
+    "seen": 1790826328.8350718,
+    "ast_hash": "eb8b294f241747ef6b57a52770dbca5c",
     "semantic_hash": ""
   },
   "server/tests/practice.test.js": {
