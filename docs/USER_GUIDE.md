@@ -323,3 +323,43 @@ La sección **"Áreas Críticas (Score < 3)"** lista de forma visible todos los 
 - **Botón "Repasar":** Cada fila dispone de un botón directo de repaso que carga el tema problemático en el entrenador correspondiente.
 - **Cómo Limpiar un Área Crítica:** Para que un tema desaparezca de la lista de áreas críticas, debes iniciar un nuevo entrenamiento (sea reto técnico o sesión de sparring) y obtener una calificación de **3 o superior** (≥ 3). Una vez evaluado con éxito, el sistema actualizará su historial y se retirará automáticamente de la lista crítica.
 
+---
+
+## 11. Catálogo Multinivel (Junior, Mid, Senior) y Sincronización en UI (US-08)
+
+DevCoach Sparring cuenta con un catálogo exhaustivo de **62 temas especializados** divididos en tres niveles de seniority, sincronizados de forma reactiva en toda la interfaz (Dashboard, Hard Skills y Soft Skills).
+
+### 11.1 Distribución del Catálogo
+
+| Nivel | Hard Skills | Soft Skills (Sparring) | Total | Enfoque Pedagógico |
+| :--- | :--- | :--- | :--- | :--- |
+| **Junior** | 10 temas | 10 interacciones críticas | **20 temas** | Fundamentos de JavaScript, ciclo de vida React, CRUD con Express/Mongo y comunicación asertiva temprana (Dailies, pedir ayuda, code reviews). |
+| **Mid** | 6 temas | 6 temas | **12 temas** | Custom hooks, arquitectura en capas, JWT, estado global (Context/Zustand), negociación de deuda técnica y refactorizaciones seguras. |
+| **Senior** | 15 temas | 15 temas | **30 temas** | Internals de Node.js/libuv, Fiber reconciler, concurrencia, índices compuestos, CAP theorem, escalabilidad y defensa ante directores y stakeholders C-level. |
+| **Total** | **31 Hard Skills** | **31 Soft Skills** | **62 temas** | Cobertura completa de la progresión técnica del desarrollador. |
+
+### 11.2 Interacciones Críticas Junior en Soft Skills
+
+Para desarrolladores Junior, el simulador de Soft Skills ofrece escenarios realistas de situaciones cotidianas en un equipo ágil:
+
+1. **Daily Standup:** Entrena comunicar "qué hice, qué haré y qué me bloquea" vinculando tareas a valor del negocio y alertando bloqueos a tiempo.
+2. **Pedir Ayuda:** Formular preguntas estructuradas a un Senior demostrando hipótesis previas e intentos ya realizados en lugar de transferir el problema.
+3. **Demo de Ticket a PM:** Explicar qué aporta tu Pull Request al producto final sin sobrecargar con jerga innecesaria.
+4. **Code Review:** Defender decisiones técnicas con argumentos objetivos y recibir observaciones constructivas sin tomarlas como ataques personales.
+5. **Aclaración de Requerimientos:** Solicitar criterios de aceptación y casos de borde antes de asumir y escribir código innecesario.
+6. **Estimación de Tareas Pequeñas:** Desglosar tareas en subtareas atómicas y defender la estimación con base técnica.
+7. **Manejo de Errores en Staging:** Notificar bugs propios de manera transparente con plan de mitigación inmediato.
+8. **Entrega con Documentación:** Explicar a QA cómo reproducir y probar los edge cases del desarrollo.
+9. **Priorización de Interrupciones:** Gestionar pedidos urgentes a mitad de sprint protegiendo el foco del equipo.
+10. **Alineación con Diseño:** Negociar limitaciones técnicas con UI/UX de forma constructiva y asertiva.
+
+### 11.3 Sincronización Visual y Filtros en la Plataforma
+
+Toda la aplicación está conectada con el filtro de nivel activo:
+
+- **Dashboard:** Al seleccionar **Junior**, **Mid**, **Senior** o **Todos**, los contadores de pendientes (`dueCount`, `dueHardSkills`, `dueSoftSkills`) y la tarjeta de recomendación se recalculan estrictamente para ese nivel.
+- **Hard Skills:** El selector de nivel actualiza la cola de retos disponibles y resetea el desafío activo para adaptarse al nivel elegido.
+- **Soft Skills:** El selector de nivel filtra el menú desplegable de escenarios, mostrando de inmediato los temas relevantes del nivel (por ejemplo, al pulsar "Junior", el combo ofrece Dailies, Code Review y Demos).
+- **Sembrado y Actualización Idempotente:** El script `npm run seed` ejecuta operaciones `Topic.bulkWrite` con `upsert: true` y `$set: { level, category, type }`, asegurando que cualquier base de datos preexistente actualice sus niveles de inmediato sin perder historial ni métricas SRS previas.
+
+
