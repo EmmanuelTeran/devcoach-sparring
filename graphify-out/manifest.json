@@ -24,9 +24,9 @@
     "semantic_hash": ""
   },
   ".antigravity/heartbeat.md": {
-    "mtime": 1790925695.8786435,
-    "seen": 1790925698.0728796,
-    "ast_hash": "494e88957098477e9cba89920fec5d05",
+    "mtime": 1790925723.5426247,
+    "seen": 1790925803.0328834,
+    "ast_hash": "cd6d8148889c71a6dbc458e92d502677",
     "semantic_hash": ""
   },
   ".antigravity/skills/document-tech-specs.md": {
@@ -366,9 +366,9 @@
     "semantic_hash": ""
   },
   "tickets/US-07-progression-levels-and-scaffolding.md": {
-    "mtime": 1790925695.8946435,
-    "seen": 1790925698.072898,
-    "ast_hash": "33134bc60abf6798affa26df922e3ae5",
+    "mtime": 1790925723.4906247,
+    "seen": 1790925803.0329335,
+    "ast_hash": "eecbf270baba5317bcc857b9b938a8ab",
     "semantic_hash": ""
   }
 }
