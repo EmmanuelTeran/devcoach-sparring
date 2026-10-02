@@ -9,6 +9,7 @@
 └──> [US-04: Módulo Soft Skills (Defensa por Voz con Gemini)]
 └──> [US-05: Dashboard & Cola Diaria de Práctica]
 └──> [US-06: Seed de 30 Desafíos & E2E Final]
+└──> [US-07: Niveles de Progresión y Andamiaje Pedagógico]
 
 ---
 
@@ -60,3 +61,17 @@
   1. Script `npm run seed` con al menos 25 tópicos del roadmap.sh listos para entrenar (teóricos y prácticos en React/Node/Mongo).
   2. Suite completa de Playwright corriendo en verde sin advertencias.
   3. Ejecución de `document-user-guide` y `document-tech-specs` dejando el repo listo para uso diario.
+
+---
+
+### [US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)
+
+- **Dependencias:** US-06
+- **Criterios de Aceptación (AC):**
+  1. Modelo `server/src/models/Topic.js` actualizado con el campo `level`: enum `['junior', 'mid', 'senior']`, default `'junior'`.
+  2. Endpoint backend `POST /api/practice/hard-skill/hint`: recibe `{ topicId, challenge }`, consulta a Gemini con rol pedagógico y retorna `{ analogy: String, guidingQuestions: [String] }` sin revelar código ni respuestas directas.
+  3. Endpoint `GET /api/dashboard/summary` con soporte para filtro `?level=junior|mid|senior`, priorizando recomendaciones del nivel seleccionado.
+  4. Script `npm run seed` actualizado: distribuye temas en 3 niveles (Junior: bases JS, async/await, CRUD Express; Mid: custom hooks, JWT, relaciones Mongo; Senior: libuv/event loop, concurrencia, índices compuestos, trade-offs).
+  5. Frontend: selector visual de nivel (Junior / Mid / Senior) en Dashboard y Hard Skills.
+  6. Frontend: botón interactivo **"💡 Dame una pista / Modelo Mental"** en `HardSkillTrainer.jsx` que despliega la analogía y preguntas guía.
+  7. Suite de tests: prueba unitaria con mock para hints (`server/tests/hint.test.js`) y prueba E2E en Playwright (`tests/e2e/scaffolding.spec.js`) pasando 100% en verde.
