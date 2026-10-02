@@ -1,17 +1,17 @@
 # Graph Report - devcoach-sparring  (2026-10-02)
 
 ## Corpus Check
-- 63 files · ~33,159 words
+- 63 files · ~33,699 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 2, .css 1, .example 1)
 
 ## Summary
-- 347 nodes · 487 edges · 29 communities (24 shown, 5 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.94)
+- 346 nodes · 487 edges · 30 communities (25 shown, 5 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a2ec648f`
+- Built from commit: `38bd835f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,8 +39,9 @@
 - [US-03] Módulo Hard Skills: Active Recall Teórico y Práctico con IA
 - [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)
 - [US-05] Dashboard Operativo y Acoplamiento de Habilidades (Hard + Soft Skills)
-- [US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI
+- dashboardController.js
 - app.js
+- [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)
 - [US-06] Seed Senior (30 Temas Clave) y Suite E2E Final
 - [US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)
 
@@ -50,32 +51,32 @@
 3. `connectDB()` - 11 edges
 4. `Guía de Usuario: DevCoach Sparring` - 11 edges
 5. `scripts` - 10 edges
-6. `disconnectDB()` - 9 edges
-7. `Grafo de Dependencias` - 9 edges
+6. `Grafo de Dependencias` - 9 edges
+7. `disconnectDB()` - 9 edges
 8. `2. Contratos de API` - 9 edges
-9. `@playwright/test` - 8 edges
+9. `app` - 8 edges
 10. `mongodb-memory-server` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)` --references--> `useVoiceInteraction()`  [INFERRED]
+  .antigravity/graph.md → client/src/hooks/useVoiceInteraction.js
 - `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `HardSkillTrainer()`  [INFERRED]
   tickets/US-03-hard-skills-module.md → client/src/components/HardSkillTrainer.jsx
 - `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `calculateNextReview()`  [INFERRED]
   tickets/US-02-srs-engine-and-models.md → server/src/utils/srsCalculator.js
-- `[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)` --references--> `useVoiceInteraction()`  [INFERRED]
-  .antigravity/graph.md → client/src/hooks/useVoiceInteraction.js
-- `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `getDashboardSummary()`  [INFERRED]
-  tickets/US-07-progression-levels-and-scaffolding.md → server/src/controllers/dashboardController.js
-- `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `getDashboardSummary()`  [INFERRED]
-  tickets/US-08-multilevel-catalog-and-ui-sync.md → server/src/controllers/dashboardController.js
+- `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `HardSkillTrainer()`  [INFERRED]
+  tickets/US-08-multilevel-catalog-and-ui-sync.md → client/src/components/HardSkillTrainer.jsx
+- `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `SoftSkillTrainer()`  [INFERRED]
+  tickets/US-08-multilevel-catalog-and-ui-sync.md → client/src/components/SoftSkillTrainer.jsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (29 total, 5 thin omitted)
+## Communities (30 total, 5 thin omitted)
 
 ### Community 0 - "Grafo de Dependencias"
-Cohesion: 0.20
-Nodes (9): Grafo de Dependencias, Grafo de Implementación: DevCoach Sparring, [US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright), [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado), [US-03] Módulo Hard Skills: Active Recall Teórico y Práctico, [US-05] Dashboard Operativo y Acoplamiento de Habilidades, [US-06] Seed Senior del Roadmap y Validación E2E Total, [US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding) (+1 more)
+Cohesion: 0.18
+Nodes (10): Grafo de Dependencias, Grafo de Implementación: DevCoach Sparring, [US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright), [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado), [US-03] Módulo Hard Skills: Active Recall Teórico y Práctico, [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini), [US-05] Dashboard Operativo y Acoplamiento de Habilidades, [US-06] Seed Senior del Roadmap y Validación E2E Total (+2 more)
 
 ### Community 1 - "[US-XX] {{TITULO_HISTORIA}}"
 Cohesion: 0.22
@@ -134,8 +135,8 @@ Cohesion: 0.09
 Nodes (22): cors, @google/genai, dependencies, cors, dotenv, express, @google/genai, mongoose (+14 more)
 
 ### Community 18 - "App.jsx"
-Cohesion: 0.09
-Nodes (27): [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini), App(), Dashboard(), LEVEL_ACTIVE, LEVEL_LABELS, LEVEL_STYLES, HardSkillTrainer(), LEVEL_ACTIVE (+19 more)
+Cohesion: 0.14
+Nodes (19): App(), Dashboard(), LEVEL_ACTIVE, LEVEL_LABELS, LEVEL_STYLES, HardSkillTrainer(), LEVEL_ACTIVE, LEVEL_COLORS (+11 more)
 
 ### Community 19 - "4. Diagramas de Flujo y Arquitectura"
 Cohesion: 0.12
@@ -153,13 +154,17 @@ Nodes (8): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afecta
 Cohesion: 0.25
 Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify), 4. Evidencia de Pruebas (Completado por verify-user-story), Tests End-to-End (Playwright), Tests Unitarios e Integración Backend (Vitest / Supertest), [US-05] Dashboard Operativo y Acoplamiento de Habilidades (Hard + Soft Skills)
 
-### Community 25 - "[US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI"
-Cohesion: 0.25
-Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 4. Evidencia de Pruebas (Completado por verify-user-story), 5. Commit de Cierre en dev, Tests E2E (Playwright), Tests Unitarios e Integración (Vitest / Supertest), [US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI
+### Community 25 - "dashboardController.js"
+Cohesion: 0.16
+Nodes (13): areTopicsRelated(), extractKeywords(), getDashboardSummary(), getLastScore(), dashboardRouter, 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify) (+5 more)
 
 ### Community 26 - "app.js"
-Cohesion: 0.14
-Nodes (19): express, areTopicsRelated(), extractKeywords(), getDashboardSummary(), getLastScore(), dashboardRouter, healthRouter, practiceRouter (+11 more)
+Cohesion: 0.18
+Nodes (14): express, healthRouter, practiceRouter, softSkillPracticeRouter, topicsRouter, evaluateHardSkillSolution(), generateHardSkillChallenge(), generateHint() (+6 more)
+
+### Community 27 - "[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)"
+Cohesion: 0.29
+Nodes (6): 1. Descripción, 2. Criterios de Aceptación (AC), 4. Evidencia de Pruebas (Completado por verify-user-story), Tests End-to-End Frontend (Playwright), Tests Unitarios e Integración Backend (Vitest / Supertest), [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)
 
 ### Community 28 - "[US-06] Seed Senior (30 Temas Clave) y Suite E2E Final"
 Cohesion: 0.25
@@ -170,20 +175,20 @@ Cohesion: 0.25
 Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 4. Evidencia de Pruebas (Completado por verify-user-story), 5. Commit de Cierre en dev, Tests E2E (Playwright), Tests Unitarios e Integración (Vitest / Supertest), [US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)
 
 ## Knowledge Gaps
-- **177 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+172 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 209 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **177 isolated node(s):** `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`, `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico`, `[US-05] Dashboard Operativo y Acoplamiento de Habilidades`, `[US-06] Seed Senior del Roadmap y Validación E2E Total` (+172 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 208 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `app.js`, `[US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)`?**
-  _High betweenness centrality (0.095) - this node is a cross-community bridge._
-- **Why does `getDashboardSummary()` connect `app.js` to `App.jsx`?**
-  _High betweenness centrality (0.088) - this node is a cross-community bridge._
-- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `[US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI`, `app.js`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `private` to the rest of the system?**
+- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `dashboardController.js` to `App.jsx`, `Topic.js`?**
+  _High betweenness centrality (0.098) - this node is a cross-community bridge._
+- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `dashboardController.js`, `app.js`, `[US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)`?**
+  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+- **Why does `HardSkillTrainer()` connect `App.jsx` to `dashboardController.js`, `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico con IA`?**
+  _High betweenness centrality (0.070) - this node is a cross-community bridge._
+- **What connects `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`, `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico` to the rest of the system?**
   _177 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `client/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

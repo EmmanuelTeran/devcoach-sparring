@@ -128,8 +128,8 @@
       "label": "areTopicsRelated()",
       "_callable": true,
       "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
+      "community": 25,
+      "community_name": "dashboardController.js",
       "file_type": "code",
       "norm_label": "aretopicsrelated()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -140,8 +140,8 @@
       "label": "extractKeywords()",
       "_callable": true,
       "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
+      "community": 25,
+      "community_name": "dashboardController.js",
       "file_type": "code",
       "norm_label": "extractkeywords()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -152,8 +152,8 @@
       "label": "getDashboardSummary()",
       "_callable": true,
       "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
+      "community": 25,
+      "community_name": "dashboardController.js",
       "file_type": "code",
       "norm_label": "getdashboardsummary()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -164,8 +164,8 @@
       "label": "getLastScore()",
       "_callable": true,
       "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
+      "community": 25,
+      "community_name": "dashboardController.js",
       "file_type": "code",
       "norm_label": "getlastscore()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -338,6 +338,18 @@
       "norm_label": "[us-03] modulo hard skills: active recall teorico y practico",
       "source_file": ".antigravity/graph.md",
       "source_location": "L34"
+    },
+    {
+      "id": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "label": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "Grafo de Dependencias",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-04] modulo soft skills: sparring por voz (web speech api + gemini)",
+      "source_file": ".antigravity/graph.md",
+      "source_location": "L42"
     },
     {
       "id": "antigravity_graph_us_05_dashboard_operativo_y_acoplamiento_de_habilidades",
@@ -2499,54 +2511,6 @@
       "source_location": "L15"
     },
     {
-      "id": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
-      "label": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[us-04] modulo soft skills: sparring por voz (web speech api + gemini)",
-      "source_file": ".antigravity/graph.md",
-      "source_location": "L42"
-    },
-    {
-      "id": "tickets_us_04_soft_skills_voice",
-      "label": "US-04-soft-skills-voice.md",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "us-04-soft-skills-voice.md",
-      "source_file": "tickets/US-04-soft-skills-voice.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "tickets_us_04_soft_skills_voice_1_descripci\u00f3n",
-      "label": "1. Descripci\u00f3n",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. descripcion",
-      "source_file": "tickets/US-04-soft-skills-voice.md",
-      "source_location": "L8"
-    },
-    {
-      "id": "tickets_us_04_soft_skills_voice_2_criterios_de_aceptaci\u00f3n_ac",
-      "label": "2. Criterios de Aceptaci\u00f3n (AC)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. criterios de aceptacion (ac)",
-      "source_file": "tickets/US-04-soft-skills-voice.md",
-      "source_location": "L12"
-    },
-    {
       "id": "tickets_us_04_soft_skills_voice_3_subgrafo_afectado_identificado_con_graphify",
       "label": "3. Subgrafo Afectado (Identificado con Graphify)",
       "_origin": "ast",
@@ -2559,54 +2523,6 @@
       "source_location": "L25"
     },
     {
-      "id": "tickets_us_04_soft_skills_voice_4_evidencia_de_pruebas_completado_por_verify_user_story",
-      "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
-      "source_file": "tickets/US-04-soft-skills-voice.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "tickets_us_04_soft_skills_voice_tests_end_to_end_frontend_playwright",
-      "label": "Tests End-to-End Frontend (Playwright)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests end-to-end frontend (playwright)",
-      "source_file": "tickets/US-04-soft-skills-voice.md",
-      "source_location": "L69"
-    },
-    {
-      "id": "tickets_us_04_soft_skills_voice_tests_unitarios_e_integraci\u00f3n_backend_vitest_supertest",
-      "label": "Tests Unitarios e Integraci\u00f3n Backend (Vitest / Supertest)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "tests unitarios e integracion backend (vitest / supertest)",
-      "source_file": "tickets/US-04-soft-skills-voice.md",
-      "source_location": "L43"
-    },
-    {
-      "id": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
-      "label": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[us-04] modulo soft skills: sparring por voz (web speech api + gemini)",
-      "source_file": "tickets/US-04-soft-skills-voice.md",
-      "source_location": "L1"
-    },
-    {
       "id": "tickets_us_07_progression_levels_and_scaffolding_3_subgrafo_afectado_identificado_con_graphify",
       "label": "3. Subgrafo Afectado (Identificado con Graphify)",
       "_origin": "ast",
@@ -2617,18 +2533,6 @@
       "norm_label": "3. subgrafo afectado (identificado con graphify)",
       "source_file": "tickets/US-07-progression-levels-and-scaffolding.md",
       "source_location": "L22"
-    },
-    {
-      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
-      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "App.jsx",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. subgrafo afectado (identificado con graphify)",
-      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L29"
     },
     {
       "id": "docs_architecture",
@@ -2893,17 +2797,6 @@
       "norm_label": "contexto del proyecto: entrenador personal fullstack (hard & soft skills)",
       "source_file": ".antigravity/context.md",
       "source_location": "L1"
-    },
-    {
-      "id": "tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 20,
-      "community_name": "tailwind.config.js",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "tailwindcss"
     },
     {
       "id": "client_tailwind_config",
@@ -3228,11 +3121,44 @@
       "source_location": "L1"
     },
     {
+      "id": "server_src_controllers_dashboardcontroller",
+      "label": "dashboardController.js",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "dashboardcontroller.js",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_routes_dashboard",
+      "label": "dashboard.js",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "dashboard.js",
+      "source_file": "server/src/routes/dashboard.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "server_src_routes_dashboard_dashboardrouter",
+      "label": "dashboardRouter",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "code",
+      "norm_label": "dashboardrouter",
+      "source_file": "server/src/routes/dashboard.js",
+      "source_location": "L4"
+    },
+    {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync",
       "label": "US-08-multilevel-catalog-and-ui-sync.md",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "us-08-multilevel-catalog-and-ui-sync.md",
@@ -3244,7 +3170,7 @@
       "label": "1. Descripci\u00f3n",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. descripcion",
@@ -3256,7 +3182,7 @@
       "label": "2. Criterios de Aceptaci\u00f3n (AC)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. criterios de aceptacion (ac)",
@@ -3264,59 +3190,71 @@
       "source_location": "L12"
     },
     {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "dashboardController.js",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. subgrafo afectado (identificado con graphify)",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L29"
+    },
+    {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_4_evidencia_de_pruebas_completado_por_verify_user_story",
       "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
       "label": "5. Commit de Cierre en dev",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. commit de cierre en dev",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L51"
+      "source_location": "L102"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_e2e_playwright",
       "label": "Tests E2E (Playwright)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tests e2e (playwright)",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L47"
+      "source_location": "L76"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_tests_unitarios_e_integraci\u00f3n_vitest_supertest",
       "label": "Tests Unitarios e Integraci\u00f3n (Vitest / Supertest)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tests unitarios e integracion (vitest / supertest)",
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
       "label": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "_origin": "ast",
       "community": 25,
-      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
+      "community_name": "dashboardController.js",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "[us-08] catalogo completo multinivel (junior/mid/senior) y sincronizacion ui",
@@ -3333,39 +3271,6 @@
       "norm_label": "app.js",
       "source_file": "server/src/app.js",
       "source_location": "L1"
-    },
-    {
-      "id": "server_src_controllers_dashboardcontroller",
-      "label": "dashboardController.js",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "dashboardcontroller.js",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_routes_dashboard",
-      "label": "dashboard.js",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "dashboard.js",
-      "source_file": "server/src/routes/dashboard.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "server_src_routes_dashboard_dashboardrouter",
-      "label": "dashboardRouter",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "app.js",
-      "file_type": "code",
-      "norm_label": "dashboardrouter",
-      "source_file": "server/src/routes/dashboard.js",
-      "source_location": "L4"
     },
     {
       "id": "server_src_routes_health",
@@ -3520,6 +3425,90 @@
       "norm_label": "express",
       "source_file": "server/package.json",
       "source_location": "L16"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice",
+      "label": "US-04-soft-skills-voice.md",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "us-04-soft-skills-voice.md",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_1_descripci\u00f3n",
+      "label": "1. Descripci\u00f3n",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. descripcion",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_2_criterios_de_aceptaci\u00f3n_ac",
+      "label": "2. Criterios de Aceptaci\u00f3n (AC)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. criterios de aceptacion (ac)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_4_evidencia_de_pruebas_completado_por_verify_user_story",
+      "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_tests_end_to_end_frontend_playwright",
+      "label": "Tests End-to-End Frontend (Playwright)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests end-to-end frontend (playwright)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_tests_unitarios_e_integraci\u00f3n_backend_vitest_supertest",
+      "label": "Tests Unitarios e Integraci\u00f3n Backend (Vitest / Supertest)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tests unitarios e integracion backend (vitest / supertest)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "tickets_us_04_soft_skills_voice_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
+      "label": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "[US-04] M\u00f3dulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[us-04] modulo soft skills: sparring por voz (web speech api + gemini)",
+      "source_file": "tickets/US-04-soft-skills-voice.md",
+      "source_location": "L1"
     },
     {
       "id": "tickets_us_06_seed_and_e2e_final",
@@ -9380,7 +9369,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -9391,7 +9380,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L47",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
+      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -9424,18 +9424,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L41",
-      "weight": 1.0
-    },
-    {
-      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_us_08_cat\u00e1logo_completo_multinivel_junior_mid_senior_y_sincronizaci\u00f3n_ui",
-      "target": "tickets_us_08_multilevel_catalog_and_ui_sync_5_commit_de_cierre_en_dev",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L51",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -9448,15 +9437,6 @@
       "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
       "source_location": "L8",
       "weight": 1.0
-    },
-    {
-      "source": "client_tailwind_config",
-      "target": "tailwindcss",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "client/tailwind.config.js"
     },
     {
       "source": "server_src_routes_dashboard",
@@ -9591,6 +9571,18 @@
       "weight": 1.0
     },
     {
+      "source": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "target": "server_src_scripts_seed_seedtopics",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "seedTopics()",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
       "source": "antigravity_graph_us_04_m\u00f3dulo_soft_skills_sparring_por_voz_web_speech_api_gemini",
       "target": "client_src_hooks_usevoiceinteraction_usevoiceinteraction",
       "relation": "references",
@@ -9616,5 +9608,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a2ec648fab4b28274ab71bc9c9937eb020a1f0c7"
+  "built_at_commit": "38bd835f8603c9518d4892667276499566fcf529"
 }
