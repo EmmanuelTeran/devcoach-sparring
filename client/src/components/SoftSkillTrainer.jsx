@@ -22,9 +22,22 @@ import { useVoiceInteraction } from '../hooks/useVoiceInteraction';
 
 const API_BASE = 'http://localhost:5000/api';
 
+const LEVEL_LABELS = { junior: 'Junior', mid: 'Mid', senior: 'Senior' };
+const LEVEL_COLORS = {
+  junior: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500/30',
+  mid: 'bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30',
+  senior: 'bg-purple-500/20 text-purple-300 border-purple-500/30 hover:bg-purple-500/30',
+};
+const LEVEL_ACTIVE = {
+  junior: 'bg-emerald-600 text-white border-emerald-500 shadow-emerald-500/25',
+  mid: 'bg-blue-600 text-white border-blue-500 shadow-blue-500/25',
+  senior: 'bg-purple-600 text-white border-purple-500 shadow-purple-500/25',
+};
+
 export function SoftSkillTrainer({ initialTopic }) {
   const [topics, setTopics] = useState([]);
   const [selectedTopicId, setSelectedTopicId] = useState(initialTopic?._id || '');
+  const [selectedLevel, setSelectedLevel] = useState(initialTopic?.level || 'junior');
   const [loadingTopics, setLoadingTopics] = useState(false);
   const [sessionActive, setSessionActive] = useState(false);
   const [loadingStart, setLoadingStart] = useState(false);
@@ -58,25 +71,32 @@ export function SoftSkillTrainer({ initialTopic }) {
     },
   });
 
-  // Cargar temas pendientes para práctica de soft skills
-  const fetchDueTopics = async () => {
+  // Cargar temas pendientes para práctica de soft skills filtrados por nivel
+  const fetchDueTopics = async (level = selectedLevel) => {
     setLoadingTopics(true);
     setErrorMessage('');
     try {
-      const res = await fetch(`${API_BASE}/topics/due`);
+      const url = `${API_BASE}/topics/due${level ? `?level=${level}` : ''}`;
+      const res = await fetch(url);
       if (!res.ok) throw new Error('Error al cargar temas pendientes');
       const data = await res.json();
-      
-      let mergedTopics = [...data];
-      if (initialTopic && !data.some((t) => t._id === initialTopic._id)) {
-        mergedTopics = [initialTopic, ...data];
+
+      // Filtrar sólo temas de soft_skill si existen en el payload
+      const softSkills = data.filter((t) => t.category === 'soft_skill' || t.type === 'practice');
+      const candidateList = softSkills.length > 0 ? softSkills : data;
+
+      let mergedTopics = [...candidateList];
+      if (initialTopic && !candidateList.some((t) => t._id === initialTopic._id)) {
+        mergedTopics = [initialTopic, ...candidateList];
       }
       setTopics(mergedTopics);
 
-      if (initialTopic?._id) {
+      if (initialTopic?._id && mergedTopics.some((t) => t._id === initialTopic._id)) {
         setSelectedTopicId(initialTopic._id);
-      } else if (mergedTopics.length > 0 && !selectedTopicId) {
+      } else if (mergedTopics.length > 0) {
         setSelectedTopicId(mergedTopics[0]._id);
+      } else {
+        setSelectedTopicId('');
       }
     } catch (err) {
       console.error(err);
@@ -86,8 +106,18 @@ export function SoftSkillTrainer({ initialTopic }) {
     }
   };
 
+  const handleLevelChange = (newLevel) => {
+    setSelectedLevel(newLevel);
+    setSessionActive(false);
+    setRoleData(null);
+    setConversation([]);
+    setVerdictResult(null);
+    setTextFallbackInput('');
+    fetchDueTopics(newLevel);
+  };
+
   useEffect(() => {
-    fetchDueTopics();
+    fetchDueTopics(selectedLevel);
   }, []);
 
   // Scroll automático en el chat al agregar mensajes
@@ -312,7 +342,7 @@ export function SoftSkillTrainer({ initialTopic }) {
 
             <button
               id="btn-refresh-topics"
-              onClick={fetchDueTopics}
+              onClick={() => fetchDueTopics(selectedLevel)}
               disabled={loadingTopics}
               title="Refrescar cola"
               className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition"
@@ -336,6 +366,28 @@ export function SoftSkillTrainer({ initialTopic }) {
             >
               {useAudioOutput ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
             </button>
+          </div>
+        </div>
+
+        {/* Selector de Nivel de Progresión (AC-2) */}
+        <div className="mt-4 pt-4 border-t border-slate-800/60">
+          <p className="text-xs text-slate-400 mb-2 font-medium uppercase tracking-wider">Nivel de Progresión</p>
+          <div id="level-selector-soft-skills" className="flex gap-2">
+            {['junior', 'mid', 'senior'].map((lvl) => (
+              <button
+                key={lvl}
+                id={`level-btn-${lvl}-soft-skills`}
+                onClick={() => handleLevelChange(lvl)}
+                disabled={sessionActive && !verdictResult}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
+                  selectedLevel === lvl
+                    ? LEVEL_ACTIVE[lvl] + ' shadow-md'
+                    : LEVEL_COLORS[lvl]
+                }`}
+              >
+                {LEVEL_LABELS[lvl]}
+              </button>
+            ))}
           </div>
         </div>
 

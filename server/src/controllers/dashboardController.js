@@ -70,12 +70,12 @@ export async function getDashboardSummary(req, res) {
 
     // Conteo total y desglose
     const dueCount = dueTopics.length;
-    // Categorización estándar: hard skills (category: 'hard_skill' o type: 'theory'), soft skills (category: 'soft_skill' o type: 'practice')
+    // Categorización estándar: hard skills (category: 'hard_skill' o type: 'theory' si no tiene categoría), soft skills (category: 'soft_skill' o type: 'practice' si no tiene categoría)
     const dueHardSkills = dueTopics.filter(
-      (t) => t.category === 'hard_skill' || t.type === 'theory'
+      (t) => t.category === 'hard_skill' || (!t.category && t.type === 'theory')
     ).length;
     const dueSoftSkills = dueTopics.filter(
-      (t) => t.category === 'soft_skill' && t.type === 'practice'
+      (t) => t.category === 'soft_skill' || (!t.category && t.type === 'practice')
     ).length;
 
     // 2. Obtener todos los tópicos para evaluar áreas críticas (scores < 3), con filtro opcional por nivel

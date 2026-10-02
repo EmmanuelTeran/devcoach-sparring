@@ -180,4 +180,113 @@ describe('Dashboard API Integration Tests - GET /api/dashboard/summary', () => {
     expect(res.body.recommendedNext).not.toBeNull();
     expect(res.body.recommendedNext._id.toString()).toBe(softSkillTopic._id.toString());
   });
+
+  it('AC-3: calcula conteos aislados de dueCount, dueHardSkills y dueSoftSkills con filtro ?level=...', async () => {
+    const pastTime = new Date(Date.now() - 3600 * 1000);
+
+    // Junior: 2 hard skills, 1 soft skill
+    await Topic.create({
+      title: 'Variables y Scope en JS',
+      category: 'hard_skill',
+      type: 'theory',
+      level: 'junior',
+      nextReviewAt: pastTime,
+    });
+    await Topic.create({
+      title: 'CRUD con Express',
+      category: 'hard_skill',
+      type: 'practice',
+      level: 'junior',
+      nextReviewAt: pastTime,
+    });
+    await Topic.create({
+      title: 'Daily Standup Efectivo',
+      category: 'soft_skill',
+      type: 'practice',
+      level: 'junior',
+      nextReviewAt: pastTime,
+    });
+
+    // Mid: 1 hard skill, 2 soft skills
+    await Topic.create({
+      title: 'Custom Hooks Avanzados',
+      category: 'hard_skill',
+      type: 'theory',
+      level: 'mid',
+      nextReviewAt: pastTime,
+    });
+    await Topic.create({
+      title: 'Negociación de Deuda Técnica Mid',
+      category: 'soft_skill',
+      type: 'practice',
+      level: 'mid',
+      nextReviewAt: pastTime,
+    });
+    await Topic.create({
+      title: 'Refactorización Segura Mid',
+      category: 'soft_skill',
+      type: 'practice',
+      level: 'mid',
+      nextReviewAt: pastTime,
+    });
+
+    // Senior: 3 hard skills, 1 soft skill
+    await Topic.create({
+      title: 'Event Loop libuv',
+      category: 'hard_skill',
+      type: 'theory',
+      level: 'senior',
+      nextReviewAt: pastTime,
+    });
+    await Topic.create({
+      title: 'Node.js Memory Leak Profiling',
+      category: 'hard_skill',
+      type: 'theory',
+      level: 'senior',
+      nextReviewAt: pastTime,
+    });
+    await Topic.create({
+      title: 'Índices Compuestos y Query Planner',
+      category: 'hard_skill',
+      type: 'theory',
+      level: 'senior',
+      nextReviewAt: pastTime,
+    });
+    await Topic.create({
+      title: 'Rechazo Asertivo de Microservicios Senior',
+      category: 'soft_skill',
+      type: 'practice',
+      level: 'senior',
+      nextReviewAt: pastTime,
+    });
+
+    // 1. Filtrar por Junior
+    const resJunior = await request(app).get('/api/dashboard/summary?level=junior');
+    expect(resJunior.status).toBe(200);
+    expect(resJunior.body.dueCount).toBe(3);
+    expect(resJunior.body.dueHardSkills).toBe(2);
+    expect(resJunior.body.dueSoftSkills).toBe(1);
+
+    // 2. Filtrar por Mid
+    const resMid = await request(app).get('/api/dashboard/summary?level=mid');
+    expect(resMid.status).toBe(200);
+    expect(resMid.body.dueCount).toBe(3);
+    expect(resMid.body.dueHardSkills).toBe(1);
+    expect(resMid.body.dueSoftSkills).toBe(2);
+
+    // 3. Filtrar por Senior
+    const resSenior = await request(app).get('/api/dashboard/summary?level=senior');
+    expect(resSenior.status).toBe(200);
+    expect(resSenior.body.dueCount).toBe(4);
+    expect(resSenior.body.dueHardSkills).toBe(3);
+    expect(resSenior.body.dueSoftSkills).toBe(1);
+
+    // 4. Sin filtro (Todos los niveles)
+    const resAll = await request(app).get('/api/dashboard/summary');
+    expect(resAll.status).toBe(200);
+    expect(resAll.body.dueCount).toBe(10);
+    expect(resAll.body.dueHardSkills).toBe(6);
+    expect(resAll.body.dueSoftSkills).toBe(4);
+  });
 });
+

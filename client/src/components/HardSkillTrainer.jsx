@@ -57,10 +57,14 @@ export function HardSkillTrainer({ initialTopic }) {
       if (!res.ok) throw new Error('Error al cargar temas pendientes');
       const data = await res.json();
 
+      // Filtrar sólo hard_skill si existen en el payload
+      const hardSkills = data.filter((t) => t.category === 'hard_skill' || t.type === 'theory');
+      const candidateList = hardSkills.length > 0 ? hardSkills : data;
+
       // Si recibimos initialTopic del nivel correcto y no está en la lista, lo agregamos al inicio
-      let mergedTopics = [...data];
-      if (initialTopic && !data.some((t) => t._id === initialTopic._id)) {
-        mergedTopics = [initialTopic, ...data];
+      let mergedTopics = [...candidateList];
+      if (initialTopic && !candidateList.some((t) => t._id === initialTopic._id)) {
+        mergedTopics = [initialTopic, ...candidateList];
       }
       setTopics(mergedTopics);
 

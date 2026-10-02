@@ -1,17 +1,17 @@
 # Graph Report - devcoach-sparring  (2026-10-02)
 
 ## Corpus Check
-- 61 files · ~30,514 words
+- 61 files · ~30,508 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 2, .css 1, .example 1)
 
 ## Summary
-- 333 nodes · 471 edges · 30 communities (25 shown, 5 thin omitted)
+- 332 nodes · 470 edges · 30 communities (25 shown, 5 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 10 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d9e37ab7`
+- Built from commit: `351e727b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,7 +28,7 @@
 - workflows/graphify.md
 - heartbeat.md
 - client/package.json
-- app.js
+- Topic.js
 - package.json
 - Guía de Usuario: DevCoach Sparring
 - [US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)
@@ -40,7 +40,7 @@
 - [US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)
 - [US-05] Dashboard Operativo y Acoplamiento de Habilidades (Hard + Soft Skills)
 - dashboardController.js
-- practice.js
+- app.js
 - [US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)
 - [US-06] Seed Senior (30 Temas Clave) y Suite E2E Final
 - [US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)
@@ -53,21 +53,21 @@
 5. `scripts` - 10 edges
 6. `disconnectDB()` - 9 edges
 7. `2. Contratos de API` - 9 edges
-8. `mongodb-memory-server` - 8 edges
+8. `Grafo de Dependencias` - 8 edges
 9. `app` - 8 edges
-10. `Grafo de Dependencias` - 8 edges
+10. `mongodb-memory-server` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `HardSkillTrainer()`  [INFERRED]
   tickets/US-03-hard-skills-module.md → client/src/components/HardSkillTrainer.jsx
 - `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `calculateNextReview()`  [INFERRED]
   tickets/US-02-srs-engine-and-models.md → server/src/utils/srsCalculator.js
-- `[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)` --references--> `useVoiceInteraction()`  [INFERRED]
-  .antigravity/graph.md → client/src/hooks/useVoiceInteraction.js
 - `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `getDashboardSummary()`  [INFERRED]
   tickets/US-07-progression-levels-and-scaffolding.md → server/src/controllers/dashboardController.js
 - `3. Subgrafo Afectado (Identificado con Graphify)` --references--> `generateHint()`  [INFERRED]
   tickets/US-07-progression-levels-and-scaffolding.md → server/src/services/geminiService.js
+- `[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)` --references--> `useVoiceInteraction()`  [INFERRED]
+  .antigravity/graph.md → client/src/hooks/useVoiceInteraction.js
 
 ## Import Cycles
 - None detected.
@@ -110,7 +110,7 @@ Nodes (3): Pasos de Ejecución, Propósito, Skill: verify-user-story
 Cohesion: 0.07
 Nodes (26): dependencies, lucide-react, react, react-dom, devDependencies, autoprefixer, postcss, tailwindcss (+18 more)
 
-### Community 12 - "app.js"
+### Community 12 - "Topic.js"
 Cohesion: 0.25
 Nodes (16): dotenv, mongodb-memory-server, mongoose, supertest, app, connectDB(), disconnectDB(), SessionLog (+8 more)
 
@@ -155,12 +155,12 @@ Cohesion: 0.25
 Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify), 4. Evidencia de Pruebas (Completado por verify-user-story), Tests End-to-End (Playwright), Tests Unitarios e Integración Backend (Vitest / Supertest), [US-05] Dashboard Operativo y Acoplamiento de Habilidades (Hard + Soft Skills)
 
 ### Community 25 - "dashboardController.js"
-Cohesion: 0.48
-Nodes (5): areTopicsRelated(), extractKeywords(), getDashboardSummary(), getLastScore(), dashboardRouter
+Cohesion: 0.70
+Nodes (4): areTopicsRelated(), extractKeywords(), getDashboardSummary(), getLastScore()
 
-### Community 26 - "practice.js"
-Cohesion: 0.16
-Nodes (14): express, healthRouter, practiceRouter, softSkillPracticeRouter, topicsRouter, evaluateHardSkillSolution(), generateHardSkillChallenge(), generateHint() (+6 more)
+### Community 26 - "app.js"
+Cohesion: 0.17
+Nodes (15): express, dashboardRouter, healthRouter, practiceRouter, softSkillPracticeRouter, topicsRouter, evaluateHardSkillSolution(), generateHardSkillChallenge() (+7 more)
 
 ### Community 27 - "[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)"
 Cohesion: 0.29
@@ -175,20 +175,20 @@ Cohesion: 0.25
 Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 4. Evidencia de Pruebas (Completado por verify-user-story), 5. Commit de Cierre en dev, Tests E2E (Playwright), Tests Unitarios e Integración (Vitest / Supertest), [US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)
 
 ## Knowledge Gaps
-- **168 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+163 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 198 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **168 isolated node(s):** `Heartbeat del Proyecto`, `1. Descripción`, `2. Criterios de Aceptación (AC)`, `Tests Unitarios e Integración (Vitest / Supertest)`, `Tests E2E (Playwright)` (+163 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 197 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `dashboardController.js`, `practice.js`, `[US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)`?**
-  _High betweenness centrality (0.149) - this node is a cross-community bridge._
-- **Why does `generateHint()` connect `practice.js` to `App.jsx`?**
-  _High betweenness centrality (0.090) - this node is a cross-community bridge._
+- **Why does `3. Subgrafo Afectado (Identificado con Graphify)` connect `App.jsx` to `dashboardController.js`, `app.js`, `[US-07] Niveles de Progresión y Andamiaje Pedagógico (Scaffolding)`?**
+  _High betweenness centrality (0.150) - this node is a cross-community bridge._
+- **Why does `generateHint()` connect `app.js` to `App.jsx`?**
+  _High betweenness centrality (0.091) - this node is a cross-community bridge._
 - **Why does `HardSkillTrainer()` connect `App.jsx` to `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico con IA`?**
-  _High betweenness centrality (0.083) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `private` to the rest of the system?**
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
+- **What connects `Heartbeat del Proyecto`, `1. Descripción`, `2. Criterios de Aceptación (AC)` to the rest of the system?**
   _168 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `client/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

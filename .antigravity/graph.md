@@ -10,6 +10,7 @@
 └──> [US-05: Dashboard & Cola Diaria de Práctica]
 └──> [US-06: Seed de 30 Desafíos & E2E Final]
 └──> [US-07: Niveles de Progresión y Andamiaje Pedagógico]
+└──> [US-08: Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI]
 
 ---
 
@@ -75,3 +76,34 @@
   5. Frontend: selector visual de nivel (Junior / Mid / Senior) en Dashboard y Hard Skills.
   6. Frontend: botón interactivo **"💡 Dame una pista / Modelo Mental"** en `HardSkillTrainer.jsx` que despliega la analogía y preguntas guía.
   7. Suite de tests: prueba unitaria con mock para hints (`server/tests/hint.test.js`) y prueba E2E en Playwright (`tests/e2e/scaffolding.spec.js`) pasando 100% en verde.
+
+---
+
+### [US-08] Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI
+
+- **Dependencias:** US-07
+- **Criterios de Aceptación (AC):**
+  1. **Script de Seeding Robusto (`server/src/scripts/seed.js`):**
+     - Actualizar los 30 temas originales de US-06 asegurando `level: 'senior'`.
+     - Añadir **10 Hard Skills Junior:** Métodos de arrays (map/filter/reduce), Async/Await vs Callbacks, CRUD básico en Express, Códigos de estado HTTP, Scopes y closures, useState inmutabilidad, useEffect dependencias y cleanup, Validación de inputs con schemas simples, Queries básicas en Mongo (filtros, proyecciones), Renderizado condicional en React.
+     - Añadir **10 Soft Skills Junior (Interacciones Críticas):**
+       - _Daily Standup:_ Estructura "qué hice, qué haré, qué me bloquea" con impacto concreto.
+       - _Pedir Ayuda:_ Cómo formular dudas a un Senior demostrando hipótesis previas.
+       - _Demo de Ticket a PM:_ Explicar qué aporta tu PR al producto sin jerga innecesaria.
+       - _Code Review:_ Argumentar técnicamente sin tomar el feedback como ataque personal.
+       - _Aclaración de Requerimientos:_ Preguntar criterios de aceptación antes de asumir y picar código.
+       - _Estimación de Tareas Pequeñas:_ Desglosar subtareas y justificar tiempos ante el equipo.
+       - _Manejo de Errores en Staging:_ Reportar un bug propio con transparencia y solución propuesta.
+       - _Entrega con Documentación:_ Explicar a QA cómo probar los edge cases de tu desarrollo.
+       - _Priorización de Interrupciones:_ Qué responder cuando alguien pide algo urgente a mitad de un sprint.
+       - _Alineación con el Diseño:_ Comunicar a UI/UX limitaciones técnicas de forma asertiva.
+     - Añadir **6 Hard Skills y 6 Soft Skills Mid:** Manejo de Custom Hooks, Context API vs Zustand, Índices simples en Mongo, Arquitectura en capas, Negociación de deuda técnica en sprint, Refactorización sin romper contratos.
+     - Usar `Topic.bulkWrite` con `upsert: true` para que sobreescriba y actualice el campo `level` de los documentos ya existentes en MongoDB.
+  2. **Sincronización en Frontend (`SoftSkillTrainer.jsx` y `HardSkillTrainer.jsx`):**
+     - Ambos componentes deben reflejar el filtro de nivel activo (Junior / Mid / Senior) para que la lista de temas cargue solo los del nivel seleccionado.
+     - Si se selecciona "Junior", el combo de Soft Skills debe mostrar los nuevos escenarios de Daily, Demos y Feedback.
+  3. **Backend (`dashboardController.js`):**
+     - Al filtrar `?level=junior`, los conteos de `dueCount`, `dueHardSkills` y `dueSoftSkills` deben calcularse únicamente sobre los temas de ese nivel.
+  4. **Suite de Tests:**
+     - Actualizar `server/tests/seed.test.js` y tests de dashboard comprobando que cada nivel tenga al menos 10 tópicos y responda métricas aisladas.
+     - Playwright E2E verificando que al hacer clic en "Junior", los contadores cambien de 0 al total sembrado y carguen los escenarios de junior.
