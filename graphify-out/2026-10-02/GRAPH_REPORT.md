@@ -1,17 +1,17 @@
-# Graph Report - devcoach-sparring  (2026-10-02)
+# Graph Report - devcoach-sparring  (2026-09-30)
 
 ## Corpus Check
-- 58 files · ~27,035 words
+- 58 files · ~27,037 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 2, .css 1, .example 1)
 
 ## Summary
-- 314 nodes · 439 edges · 28 communities (23 shown, 5 thin omitted)
+- 313 nodes · 438 edges · 28 communities (23 shown, 5 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `47acec9e`
+- Built from commit: `2447ec39`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,8 +52,8 @@
 6. `disconnectDB()` - 9 edges
 7. `2. Contratos de API` - 9 edges
 8. `4. Diagramas de Flujo y Arquitectura` - 8 edges
-9. `react` - 7 edges
-10. `express` - 7 edges
+9. `Grafo de Dependencias` - 7 edges
+10. `app` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `[US-04] Módulo Soft Skills: Sparring por Voz (Web Speech API + Gemini)` --references--> `useVoiceInteraction()`  [INFERRED]
@@ -165,8 +165,8 @@ Cohesion: 0.25
 Nodes (7): 1. Descripción, 2. Criterios de Aceptación (AC), 3. Subgrafo Afectado (Identificado con Graphify), 4. Evidencia de Pruebas (Completado por verify-user-story), Pruebas E2E (Playwright), Tests Unitarios e Integración Backend (Vitest / Supertest), [US-06] Seed Senior (30 Temas Clave) y Suite E2E Final
 
 ## Knowledge Gaps
-- **156 isolated node(s):** `name`, `version`, `private`, `type`, `dev` (+151 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 184 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **156 isolated node(s):** `Heartbeat del Proyecto`, `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)`, `[US-03] Módulo Hard Skills: Active Recall Teórico y Práctico`, `[US-05] Dashboard Operativo y Acoplamiento de Habilidades` (+151 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 183 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -178,7 +178,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `useVoiceInteraction()` connect `App.jsx` to `Grafo de Dependencias`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `private` to the rest of the system?**
+- **What connects `Heartbeat del Proyecto`, `[US-01] Scaffolding, Base Monorepo y Harness de Tests (Vitest + Playwright)`, `[US-02] Schemas Mongoose y Motor Algorítmico SRS (SM-2 Adaptado)` to the rest of the system?**
   _156 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `client/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._

@@ -2619,17 +2619,6 @@
       "source_location": "L1"
     },
     {
-      "id": "tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 20,
-      "community_name": "tailwind.config.js",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "tailwindcss"
-    },
-    {
       "id": "client_tailwind_config",
       "label": "tailwind.config.js",
       "_origin": "ast",
@@ -8602,15 +8591,6 @@
       "weight": 1.0
     },
     {
-      "source": "client_tailwind_config",
-      "target": "tailwindcss",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "client/tailwind.config.js"
-    },
-    {
       "source": "server_src_routes_dashboard",
       "target": "server_src_controllers_dashboardcontroller_getdashboardsummary",
       "relation": "indirect_call",
@@ -8684,5 +8664,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "47acec9eea43a66ed7f5d26468ffd630f08f2a59"
+  "built_at_commit": "2447ec3999d3b495a78b13e11f59690910e6e2c2"
 }
