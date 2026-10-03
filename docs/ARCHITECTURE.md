@@ -591,15 +591,127 @@ Esta estrategia asegura que:
 
 ---
 
-## 7. Cobertura y Resumen de Validación
+## 7. Arquitectura de Prompts Estratificados y UI Dinámica (US-09)
+
+Para garantizar un andamiaje pedagógico coherente, la generación de contenido por IA y los criterios de evaluación se estratifican en backend según `topic.level` (`'junior' | 'mid' | 'senior'`), evitando exigir liderazgo senior o análisis de bajo nivel en perfiles formativos.
+
+### 7.1 Catálogo de Roles Estratificados (`SPARRING_ROLES_BY_LEVEL`)
+
+```javascript
+export const SPARRING_ROLES_BY_LEVEL = {
+  junior: [
+    {
+      roleId: 'senior_peer_mentor',
+      roleName: 'Compañero Senior de Equipo',
+      roleDescription: 'Tu compañero Senior en una sesión de 1:1 o revisión de código',
+      avatar: '🧑‍💻',
+      attitude: 'Accesible, pedagógico y constructivo; exige orden y que demuestres análisis previo.',
+    },
+    {
+      roleId: 'accessible_scrum_pm',
+      roleName: 'Scrum Master / PM de Equipo',
+      roleDescription: 'Scrum Master / PM en el Daily Standup matutino',
+      avatar: '📋',
+      attitude: 'Empático y pragmático; requiere actualización concisa (qué hice, qué haré, bloqueos).',
+    },
+    {
+      roleId: 'code_reviewer_peer',
+      roleName: 'Revisor de Pull Request',
+      roleDescription: 'Compañero revisando tu Pull Request en GitHub',
+      avatar: '🔍',
+      attitude: 'Pregunta con amabilidad el por qué de la solución y sugiere mejoras de legibilidad.',
+    },
+  ],
+  mid: [
+    {
+      roleId: 'pragmatic_tech_lead',
+      roleName: 'Tech Lead Pragmático',
+      roleDescription: 'Tech Lead priorizando deuda técnica y entregables del sprint',
+      avatar: '🛡️',
+      attitude: 'Equilibrio entre clean code y velocidad de entrega.',
+    },
+    {
+      roleId: 'tight_deadlines_pm',
+      roleName: 'Product Manager con Fechas Ajustadas',
+      roleDescription: 'Product Manager negociando alcance para cumplir la fecha de release',
+      avatar: '💼',
+      attitude: 'Preocupado por fechas de lanzamiento y recorte de alcance negociable.',
+    },
+    {
+      roleId: 'qa_lead',
+      roleName: 'Líder de QA / Calidad',
+      roleDescription: 'Líder de QA revisando cobertura de pruebas y edge cases',
+      avatar: '🧪',
+      attitude: 'Exige saber cómo probar edge cases y prevenir regresiones en staging.',
+    },
+  ],
+  senior: [
+    {
+      roleId: 'skeptical_cto',
+      roleName: 'CTO Escéptico',
+      roleDescription: 'CTO de la empresa en revisión de arquitectura y costos',
+      avatar: '👔',
+      attitude: 'Exige justificaciones profundas de arquitectura, resiliencia y costos cloud.',
+    },
+    {
+      roleId: 'demanding_enterprise_client',
+      roleName: 'Director de Negocio / Cliente Corporativo',
+      roleDescription: 'Director Corporativo evaluando ROI y plazos de entrega',
+      avatar: '🏢',
+      attitude: 'Enfocado en ventas y métricas financieras; cuestiona gasto técnico y exige SLA.',
+    },
+    {
+      roleId: 'security_auditor',
+      roleName: 'Auditor de Seguridad y Cumplimiento',
+      roleDescription: 'Auditor de Seguridad evaluando riesgos críticos y gobernanza',
+      avatar: '🔒',
+      attitude: 'Desconfía de dependencias externas, exige cifrado y planes de contingencia.',
+    },
+  ],
+};
+```
+
+### 7.2 Diagrama de Flujo de Estratificación de Prompts
+
+```mermaid
+flowchart TD
+    Req([Petición con topicId]) --> GetTopic[Consultar Topic en Mongo]
+    GetTopic --> LevelCheck{Evaluar topic.level}
+
+    subgraph Hard Skills (geminiService.js)
+        LevelCheck -->|junior| JrHard[Prompt Junior: Sintaxis cotidiana, inmutabilidad y bases funcionales]
+        LevelCheck -->|mid| MidHard[Prompt Mid: Patrones, modularización, clean code y asincronía]
+        LevelCheck -->|senior| SrHard[Prompt Senior: Arquitectura interna, fases libuv, trade-offs y resiliencia]
+    end
+
+    subgraph Soft Skills (softSkillSparringService.js)
+        LevelCheck -->|junior| JrSoft[Rol Cercano: Peer Senior / Scrum PM / PR Reviewer<br/>Tono constructivo, sin exigencia de ROI]
+        LevelCheck -->|mid| MidSoft[Rol Técnico de Sprint: Tech Lead Pragmático / PM Ajustado<br/>Negociación de alcance y deuda técnica]
+        LevelCheck -->|senior| SrSoft[Rol Ejecutivo: CTO / Cliente Corporativo / Auditor<br/>Exigencia de SLA, costos cloud y tolerancia a fallos]
+    end
+```
+
+### 7.3 Badges Dinámicos en Frontend
+
+Los componentes `HardSkillTrainer.jsx` y `SoftSkillTrainer.jsx` sincronizan dinámicamente sus estados para reflejar el nivel activo:
+- `#dynamic-level-badge-hard-skills` y `#dynamic-level-badge-soft-skills` exhiben `NIVEL JUNIOR`, `NIVEL MID` o `NIVEL SENIOR`.
+- En Soft Skills, la tarjeta de interlocutor activo (`#client-role-banner`) proyecta el avatar contextual, el badge del nivel (`#client-role-level-badge`) y la descripción explícita del rol (`#client-role-description`).
+- Los badges de calificación en ambas interfaces adaptan el texto (`Score 5/5 - Nivel Junior Sólido`) evitando asignar títulos de Staff/Senior a respuestas correctas de nivel Junior.
+
+---
+
+## 8. Cobertura y Resumen de Validación
 
 | Componente / Suite | Herramienta | Conteo de Tests | Estado |
 | :--- | :--- | :--- | :--- |
-| **Backend Unit & Integration** | Vitest + Supertest + MongoMemoryServer | 54 tests (8 suites) | **100% PASS** |
-| **Frontend & End-to-End** | Playwright (Chromium Headless) | 14 tests E2E completos (5 suites) | **100% PASS** |
-| **Catálogo Multinivel & Seeding** | Supertest / MongoMemoryServer | 5 tests de verificación de 62 temas y niveles | **100% PASS** |
-| **Sincronización de UI y Contadores** | Playwright E2E (`multilevel-catalog.spec.js`) | 2 tests de sincronización y escenarios junior | **100% PASS** |
-| **Calidad de Código y Tipos** | ESLint / AST Analysis / Graphify | 0 regresiones detectadas | **Aprobado** |
+| **Backend Unit & Integration** | Vitest + Supertest + MongoMemoryServer | 59 tests (8 suites) | **100% PASS** |
+| **Frontend & End-to-End** | Playwright (Chromium Headless) | 16 tests E2E completos (6 suites) | **100% PASS** |
+| **Estratificación Hard Skills** | Vitest / Supertest (`practice.test.js`) | 9 tests de generación y evaluación estratificada | **100% PASS** |
+| **Estratificación Soft Skills** | Vitest / Supertest (`softSkillPractice.test.js`) | 8 tests de roles, réplicas y veredicto adaptado | **100% PASS** |
+| **UI Badges y Roles Dinámicos** | Playwright E2E (`stratified-prompts.spec.js`) | 2 tests E2E verificando badges y rol description | **100% PASS** |
+| **Catálogo Multinivel & Seeding** | Supertest / MongoMemoryServer (`seed.test.js`) | 5 tests de verificación de 62 temas y niveles | **100% PASS** |
+| **Calidad de Código y Tipos** | AST Analysis / Graphify / ESLint | 0 regresiones | **Aprobado** |
+
 
 
 
