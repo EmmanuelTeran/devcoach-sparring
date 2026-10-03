@@ -1,6 +1,6 @@
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI } from "@google/genai";
 
-const DEFAULT_MODEL = 'gemini-2.5-flash';
+const DEFAULT_MODEL = "gemini-3.5-flash-lite";
 
 function getClient() {
   const apiKey = process.env.GEMINI_API_KEY;
@@ -16,71 +16,85 @@ function getClient() {
 export const SPARRING_ROLES_BY_LEVEL = {
   junior: [
     {
-      roleId: 'senior_peer_mentor',
-      roleName: 'Compañero Senior de Equipo',
-      roleDescription: 'Tu compañero Senior en una sesión de 1:1 o revisión de código',
-      avatar: '🧑‍💻',
-      attitude: 'Accesible, pedagógico y constructivo, pero exige claridad, que expliques qué investigaste antes de pedir ayuda y que no tomes el feedback de forma personal.',
+      roleId: "senior_peer_mentor",
+      roleName: "Compañero Senior de Equipo",
+      roleDescription:
+        "Tu compañero Senior en una sesión de 1:1 o revisión de código",
+      avatar: "🧑‍💻",
+      attitude:
+        "Accesible, pedagógico y constructivo, pero exige claridad, que expliques qué investigaste antes de pedir ayuda y que no tomes el feedback de forma personal.",
     },
     {
-      roleId: 'accessible_scrum_pm',
-      roleName: 'Scrum Master / PM de Equipo',
-      roleDescription: 'Scrum Master / PM en el Daily Standup matutino',
-      avatar: '📋',
-      attitude: 'Pragmático y empático; necesita una actualización concisa estructurada en qué hiciste, qué harás hoy y qué te bloquea, sin rodeos.',
+      roleId: "accessible_scrum_pm",
+      roleName: "Scrum Master / PM de Equipo",
+      roleDescription: "Scrum Master / PM en el Daily Standup matutino",
+      avatar: "📋",
+      attitude:
+        "Pragmático y empático; necesita una actualización concisa estructurada en qué hiciste, qué harás hoy y qué te bloquea, sin rodeos.",
     },
     {
-      roleId: 'code_reviewer_peer',
-      roleName: 'Revisor de Pull Request',
-      roleDescription: 'Compañero revisando tu Pull Request en GitHub',
-      avatar: '🔍',
-      attitude: 'Pregunta con amabilidad por qué elegiste cierta solución y sugiere mejoras de legibilidad y buenas prácticas.',
+      roleId: "code_reviewer_peer",
+      roleName: "Revisor de Pull Request",
+      roleDescription: "Compañero revisando tu Pull Request en GitHub",
+      avatar: "🔍",
+      attitude:
+        "Pregunta con amabilidad por qué elegiste cierta solución y sugiere mejoras de legibilidad y buenas prácticas.",
     },
   ],
   mid: [
     {
-      roleId: 'pragmatic_tech_lead',
-      roleName: 'Tech Lead Pragmático',
-      roleDescription: 'Tech Lead priorizando deuda técnica y entregables del sprint',
-      avatar: '🛡️',
-      attitude: 'Busca equilibrio entre calidad de código y velocidad de entrega. Pregunta si una refactorización realmente justifica el esfuerzo del sprint.',
+      roleId: "pragmatic_tech_lead",
+      roleName: "Tech Lead Pragmático",
+      roleDescription:
+        "Tech Lead priorizando deuda técnica y entregables del sprint",
+      avatar: "🛡️",
+      attitude:
+        "Busca equilibrio entre calidad de código y velocidad de entrega. Pregunta si una refactorización realmente justifica el esfuerzo del sprint.",
     },
     {
-      roleId: 'tight_deadlines_pm',
-      roleName: 'Product Manager con Fechas Ajustadas',
-      roleDescription: 'Product Manager negociando alcance para cumplir la fecha de release',
-      avatar: '💼',
-      attitude: 'Preocupado por las fechas de lanzamiento, pide negociar el alcance de los tickets para no retrasar el release del cliente.',
+      roleId: "tight_deadlines_pm",
+      roleName: "Product Manager con Fechas Ajustadas",
+      roleDescription:
+        "Product Manager negociando alcance para cumplir la fecha de release",
+      avatar: "💼",
+      attitude:
+        "Preocupado por las fechas de lanzamiento, pide negociar el alcance de los tickets para no retrasar el release del cliente.",
     },
     {
-      roleId: 'qa_lead',
-      roleName: 'Líder de QA / Calidad',
-      roleDescription: 'Líder de QA revisando cobertura de pruebas y edge cases',
-      avatar: '🧪',
-      attitude: 'Exige saber cómo probar los edge cases del ticket y cómo evitar regresiones en staging.',
+      roleId: "qa_lead",
+      roleName: "Líder de QA / Calidad",
+      roleDescription:
+        "Líder de QA revisando cobertura de pruebas y edge cases",
+      avatar: "🧪",
+      attitude:
+        "Exige saber cómo probar los edge cases del ticket y cómo evitar regresiones en staging.",
     },
   ],
   senior: [
     {
-      roleId: 'skeptical_cto',
-      roleName: 'CTO Escéptico',
-      roleDescription: 'CTO de la empresa en revisión de arquitectura y costos',
-      avatar: '👔',
-      attitude: 'Exige justificaciones profundas de arquitectura, resiliencia ante caídas masivas y control de costos en infraestructura cloud.',
+      roleId: "skeptical_cto",
+      roleName: "CTO Escéptico",
+      roleDescription: "CTO de la empresa en revisión de arquitectura y costos",
+      avatar: "👔",
+      attitude:
+        "Exige justificaciones profundas de arquitectura, resiliencia ante caídas masivas y control de costos en infraestructura cloud.",
     },
     {
-      roleId: 'demanding_enterprise_client',
-      roleName: 'Director de Negocio / Cliente Corporativo',
-      roleDescription: 'Director Corporativo evaluando ROI y plazos de entrega',
-      avatar: '🏢',
-      attitude: 'Enfocado en ventas y métricas financieras; cuestiona el gasto en infraestructura técnica y exige garantías de SLA.',
+      roleId: "demanding_enterprise_client",
+      roleName: "Director de Negocio / Cliente Corporativo",
+      roleDescription: "Director Corporativo evaluando ROI y plazos de entrega",
+      avatar: "🏢",
+      attitude:
+        "Enfocado en ventas y métricas financieras; cuestiona el gasto en infraestructura técnica y exige garantías de SLA.",
     },
     {
-      roleId: 'security_auditor',
-      roleName: 'Auditor de Seguridad y Cumplimiento',
-      roleDescription: 'Auditor de Seguridad evaluando riesgos críticos y gobernanza',
-      avatar: '🔒',
-      attitude: 'Desconfía de dependencias externas, exige cifrado estricto y planes de mitigación ante desastres.',
+      roleId: "security_auditor",
+      roleName: "Auditor de Seguridad y Cumplimiento",
+      roleDescription:
+        "Auditor de Seguridad evaluando riesgos críticos y gobernanza",
+      avatar: "🔒",
+      attitude:
+        "Desconfía de dependencias externas, exige cifrado estricto y planes de mitigación ante desastres.",
     },
   ],
 };
@@ -99,13 +113,15 @@ export const SPARRING_ROLES = [
  * @returns {Promise<{ role: string, roleDescription: string, avatar: string, scenario: string, initialQuestion: string }>}
  */
 export async function startSoftSkillSparring(topic) {
-  const level = topic?.level || 'junior';
-  const rolesForLevel = SPARRING_ROLES_BY_LEVEL[level] || SPARRING_ROLES_BY_LEVEL.junior;
-  const selectedRole = rolesForLevel[Math.floor(Math.random() * rolesForLevel.length)];
+  const level = topic?.level || "junior";
+  const rolesForLevel =
+    SPARRING_ROLES_BY_LEVEL[level] || SPARRING_ROLES_BY_LEVEL.junior;
+  const selectedRole =
+    rolesForLevel[Math.floor(Math.random() * rolesForLevel.length)];
 
-  let systemInstruction = '';
+  let systemInstruction = "";
 
-  if (level === 'junior') {
+  if (level === "junior") {
     systemInstruction = `Eres un actor de rol simulando a un colega o líder cercano en una interacción cotidiana de equipo de desarrollo de software.
 Tu personaje actual: "${selectedRole.roleName}" (${selectedRole.attitude}).
 El rol exacto es: "${selectedRole.roleDescription}".
@@ -127,7 +143,7 @@ REGLAS ESTRICTAS:
   "scenario": "<breve descripción del contexto cotidiano de equipo>",
   "initialQuestion": "<tu pregunta o planteamiento para abrir la conversación>"
 }`;
-  } else if (level === 'mid') {
+  } else if (level === "mid") {
     systemInstruction = `Eres un actor de rol simulando a un stakeholder o líder técnico en un sprint de desarrollo.
 Tu personaje actual: "${selectedRole.roleName}" (${selectedRole.attitude}).
 El rol exacto es: "${selectedRole.roleDescription}".
@@ -179,7 +195,7 @@ Genera el escenario inicial y tu primera pregunta:`;
 
   const client = getClient();
   if (!client) {
-    if (level === 'junior') {
+    if (level === "junior") {
       return {
         role: selectedRole.roleName,
         roleDescription: selectedRole.roleDescription,
@@ -188,7 +204,7 @@ Genera el escenario inicial y tu primera pregunta:`;
         initialQuestion: `Hola! Respecto a "${topic.title}", ¿podrías darme un resumen claro de tu estado, qué investigaste y en qué punto necesitas alineación o ayuda?`,
       };
     }
-    if (level === 'mid') {
+    if (level === "mid") {
       return {
         role: selectedRole.roleName,
         roleDescription: selectedRole.roleDescription,
@@ -214,11 +230,11 @@ Genera el escenario inicial y tu primera pregunta:`;
       config: {
         systemInstruction,
         temperature: 0.6,
-        responseMimeType: 'application/json',
+        responseMimeType: "application/json",
       },
     });
 
-    const parsed = JSON.parse(response.text || '{}');
+    const parsed = JSON.parse(response.text || "{}");
     return {
       role: selectedRole.roleName,
       roleDescription: selectedRole.roleDescription,
@@ -226,19 +242,19 @@ Genera el escenario inicial y tu primera pregunta:`;
       scenario: parsed.scenario || `Interacción sobre ${topic.title}`,
       initialQuestion:
         parsed.initialQuestion ||
-        (level === 'junior'
+        (level === "junior"
           ? `Hola! Cuéntame cuál es el avance y tus dudas sobre ${topic.title}.`
           : `¿Por qué debemos invertir tanto tiempo y dinero en ${topic.title} cuando podríamos lanzar una solución rápida?`),
     };
   } catch (error) {
-    console.error('Error starting soft skill sparring with Gemini:', error);
+    console.error("Error starting soft skill sparring with Gemini:", error);
     return {
       role: selectedRole.roleName,
       roleDescription: selectedRole.roleDescription,
       avatar: selectedRole.avatar,
       scenario: `Revisión técnica de ${topic.title} con ${selectedRole.roleName}.`,
       initialQuestion:
-        level === 'junior'
+        level === "junior"
           ? `¿Podrías explicarme tu razonamiento para abordar ${topic.title}?`
           : `¿Qué garantías de negocio y estabilidad me das para convencerme de no recortar el alcance de ${topic.title}?`,
     };
@@ -260,34 +276,35 @@ export async function replySoftSkillSparring({
   topic,
   conversationHistory = [],
   userAudioTranscript,
-  role = 'Stakeholder del Cliente',
+  role = "Stakeholder del Cliente",
   roleDescription,
 }) {
-  const level = topic?.level || 'junior';
-  const userTurnsCount = conversationHistory.filter((m) => m.speaker === 'user').length + 1;
+  const level = topic?.level || "junior";
+  const userTurnsCount =
+    conversationHistory.filter((m) => m.speaker === "user").length + 1;
   const isFinalTurn = userTurnsCount >= 3;
 
   const client = getClient();
 
   if (!isFinalTurn) {
-    let systemInstruction = '';
-    if (level === 'junior') {
+    let systemInstruction = "";
+    if (level === "junior") {
       systemInstruction = `Eres un compañero de equipo Senior o Scrum Master accesible pero riguroso ("${role}").
-Estás interactuando con un Desarrollador Junior que te explica su avance, duda o decisión sobre "${topic?.title || 'la tarea'}".
+Estás interactuando con un Desarrollador Junior que te explica su avance, duda o decisión sobre "${topic?.title || "la tarea"}".
 Tu objetivo es ayudarlo a estructurar su respuesta: pídele que sea específico, pregúntale qué hipótesis probó, o qué pasos seguirá a continuación.
 REGLAS:
 - Responde en 2 a 3 oraciones concisas y constructivas en primera persona.
 - NO exijas métricas financieras de ROI empresarial ni proyecciones de costos cloud de gran escala.
 - Pide claridad sobre el 'qué', 'por qué' y 'siguiente paso'.`;
-    } else if (level === 'mid') {
-      systemInstruction = `Eres un Tech Lead pragmático o Product Manager ("${role}") conversando sobre "${topic?.title || 'la tarea'}".
+    } else if (level === "mid") {
+      systemInstruction = `Eres un Tech Lead pragmático o Product Manager ("${role}") conversando sobre "${topic?.title || "la tarea"}".
 Estás dialogando con un Desarrollador Mid-level.
 Tu objetivo es cuestionar el balance entre tiempo de desarrollo, calidad de código y cumplimiento del sprint.
 REGLAS:
 - Responde en 2 a 3 oraciones concisas en primera persona manteniendo tu rol.`;
     } else {
       // Senior
-      systemInstruction = `Eres un stakeholder escéptico ("${role}") discutiendo la decisión técnica de "${topic?.title || 'Arquitectura'}".
+      systemInstruction = `Eres un stakeholder escéptico ("${role}") discutiendo la decisión técnica de "${topic?.title || "Arquitectura"}".
 Estás interactuando con un Ingeniero de Software que intenta convencerte.
 Tu objetivo es cuestionar su respuesta previa con escepticismo técnico o financiero ("¿Y si falla?", "¿Por qué no otra alternativa más económica?", "¿Cómo justificas los tiempos ante la dirección?").
 REGLAS:
@@ -296,8 +313,8 @@ REGLAS:
     }
 
     const formattedHistory = conversationHistory
-      .map((m) => `${m.speaker === 'user' ? 'Ingeniero' : role}: ${m.text}`)
-      .join('\n');
+      .map((m) => `${m.speaker === "user" ? "Ingeniero" : role}: ${m.text}`)
+      .join("\n");
 
     const prompt = `Nivel de la práctica: ${level}
 Historial de la conversación:
@@ -307,10 +324,10 @@ Ingeniero (última respuesta por voz): ${userAudioTranscript}
 Responde como ${role} con una contrapregunta adecuada al nivel:`;
 
     if (!client) {
-      let reply = '';
-      if (level === 'junior') {
+      let reply = "";
+      if (level === "junior") {
         reply = `Te escucho, pero cuéntame: ¿qué alternativas probaste antes o cómo planeas verificar que esta solución resuelve el bloqueo sin generar efectos secundarios?`;
-      } else if (level === 'mid') {
+      } else if (level === "mid") {
         reply = `Entiendo la justificación técnica, pero el sprint cierra pronto. ¿Cómo podemos acotar el alcance de esta solución para asegurar la entrega sin acumular deuda técnica inmanejable?`;
       } else {
         reply = `Entiendo lo que dices sobre la arquitectura, pero sigues sin aclararme qué pasa si la demanda se triplica el próximo mes. ¿Qué garantías de costo y disponibilidad real me das frente a una solución más simple?`;
@@ -336,16 +353,16 @@ Responde como ${role} con una contrapregunta adecuada al nivel:`;
       isFinalTurn: false,
       role,
       roleDescription,
-      reply: (response.text || '').trim(),
+      reply: (response.text || "").trim(),
     };
   }
 
   // Turno final (3er turno de usuario): Evaluación formal y veredicto estratificado
-  let systemInstruction = '';
+  let systemInstruction = "";
 
-  if (level === 'junior') {
+  if (level === "junior") {
     systemInstruction = `Eres un Evaluador Pedagógico y Mentor de Ingeniería de Software.
-Acabas de presenciar una conversación de interacción cotidiana de equipo entre un Desarrollador Junior y su interlocutor ("${role}") sobre "${topic?.title || 'la tarea'}".
+Acabas de presenciar una conversación de interacción cotidiana de equipo entre un Desarrollador Junior y su interlocutor ("${role}") sobre "${topic?.title || "la tarea"}".
 
 EVALÚA AL DESARROLLADOR EN ESTAS 3 DIMENSIONES (ADAPTADAS A NIVEL JUNIOR):
 1. Estructura y Claridad (Structure & Clarity): ¿Explicó con orden su situación (qué hizo, por qué o cuál es la duda) de forma clara y sin divagar?
@@ -373,9 +390,9 @@ DEBES RESPONDER EXCLUSIVAMENTE CON UN OBJETO JSON VÁLIDO con esta estructura ex
   "missingTradeoffs": ["<aspecto de comunicación o contexto que faltó precisar>"],
   "strengths": ["<fortaleza identificada en su comunicación>"]
 }`;
-  } else if (level === 'mid') {
+  } else if (level === "mid") {
     systemInstruction = `Eres un Evaluador Senior de Habilidades de Comunicación y Negociación Técnica.
-Acabas de presenciar un diálogo entre un Ingeniero Mid y su interlocutor ("${role}") sobre "${topic?.title || 'la tarea'}".
+Acabas de presenciar un diálogo entre un Ingeniero Mid y su interlocutor ("${role}") sobre "${topic?.title || "la tarea"}".
 
 EVALÚA EN ESTAS 3 DIMENSIONES:
 1. Claridad de Alcance y Tiempos: ¿Explicó el impacto en los plazos y el sprint con realismo?
@@ -393,7 +410,7 @@ DEBES RESPONDER EXCLUSIVAMENTE CON UN OBJETO JSON VÁLIDO con la misma estructur
   } else {
     // Senior
     systemInstruction = `Eres un Evaluador Senior de Habilidades de Consultoría Técnica, Comunicación y Liderazgo de Ingeniería.
-Acabas de presenciar un sparring de consultoría técnica entre un Ingeniero y un Stakeholder ("${role}") sobre "${topic?.title || 'Arquitectura'}".
+Acabas de presenciar un sparring de consultoría técnica entre un Ingeniero y un Stakeholder ("${role}") sobre "${topic?.title || "Arquitectura"}".
 
 EVALÚA AL INGENIERO EN ESTAS 3 DIMENSIONES:
 1. Claridad de Negocio (Business Clarity): ¿Explicó el impacto en ROI, costos, riesgos o usuarios finales sin caer en jerga incomprensible?
@@ -421,12 +438,12 @@ DEBES RESPONDER EXCLUSIVAMENTE CON UN OBJETO JSON VÁLIDO con esta estructura ex
 
   const allHistory = [
     ...conversationHistory,
-    { speaker: 'user', text: userAudioTranscript },
+    { speaker: "user", text: userAudioTranscript },
   ];
 
   const conversationText = allHistory
-    .map((m) => `${m.speaker === 'user' ? 'Ingeniero' : role}: ${m.text}`)
-    .join('\n');
+    .map((m) => `${m.speaker === "user" ? "Ingeniero" : role}: ${m.text}`)
+    .join("\n");
 
   const prompt = `NIVEL: ${level}
 Conversación completa mantenida:
@@ -435,7 +452,7 @@ ${conversationText}
 Emite el veredicto en formato JSON estricto:`;
 
   if (!client) {
-    if (level === 'junior') {
+    if (level === "junior") {
       return {
         isFinalTurn: true,
         role,
@@ -443,16 +460,22 @@ Emite el veredicto en formato JSON estricto:`;
         evaluation: {
           score: 4,
           feedback:
-            'Excelente comunicación en la interacción cotidiana de equipo. Estructuraste tu mensaje con orden, claridad y mostraste una actitud proactiva y colaborativa.',
-          businessClarity: 'Mensaje sintetizado y claro, fácil de entender para tu equipo sin rodeos innecesarios.',
-          tradeOffDefense: 'Explicaste adecuadamente el contexto y tus dudas demostrando análisis previo.',
+            "Excelente comunicación en la interacción cotidiana de equipo. Estructuraste tu mensaje con orden, claridad y mostraste una actitud proactiva y colaborativa.",
+          businessClarity:
+            "Mensaje sintetizado y claro, fácil de entender para tu equipo sin rodeos innecesarios.",
+          tradeOffDefense:
+            "Explicaste adecuadamente el contexto y tus dudas demostrando análisis previo.",
           assertivenessScore: 4,
-          missingTradeoffs: ['Podrías anticipar el siguiente paso concreto al terminar tu intervención.'],
-          strengths: ['Actitud colaborativa y orden al comunicar el estado de tu tarea.'],
+          missingTradeoffs: [
+            "Podrías anticipar el siguiente paso concreto al terminar tu intervención.",
+          ],
+          strengths: [
+            "Actitud colaborativa y orden al comunicar el estado de tu tarea.",
+          ],
         },
       };
     }
-    if (level === 'mid') {
+    if (level === "mid") {
       return {
         isFinalTurn: true,
         role,
@@ -460,12 +483,16 @@ Emite el veredicto en formato JSON estricto:`;
         evaluation: {
           score: 4,
           feedback:
-            'Buena negociación de sprint. Equilibraste la necesidad de mantener el código limpio con los compromisos de entrega del equipo.',
-          businessClarity: 'Explicación realista del tiempo requerido y el impacto en el sprint.',
-          tradeOffDefense: 'Defendiste adecuadamente el balance entre refactorización y avance de features.',
+            "Buena negociación de sprint. Equilibraste la necesidad de mantener el código limpio con los compromisos de entrega del equipo.",
+          businessClarity:
+            "Explicación realista del tiempo requerido y el impacto en el sprint.",
+          tradeOffDefense:
+            "Defendiste adecuadamente el balance entre refactorización y avance de features.",
           assertivenessScore: 4,
-          missingTradeoffs: ['Se pudo proponer una fase 2 para la refactorización más compleja.'],
-          strengths: ['Negociación constructiva y enfoque pragmático.'],
+          missingTradeoffs: [
+            "Se pudo proponer una fase 2 para la refactorización más compleja.",
+          ],
+          strengths: ["Negociación constructiva y enfoque pragmático."],
         },
       };
     }
@@ -477,12 +504,19 @@ Emite el veredicto en formato JSON estricto:`;
       evaluation: {
         score: 4,
         feedback:
-          'Defendiste la posición técnica con calma y asertividad. Tradujiste conceptos complejos en beneficios claros de estabilidad y control de costos para el cliente.',
-        businessClarity: 'Excelente traducción de métricas técnicas a impacto directo en el negocio.',
-        tradeOffDefense: 'Se argumentó correctamente la relación entre tiempo de desarrollo y resiliencia.',
+          "Defendiste la posición técnica con calma y asertividad. Tradujiste conceptos complejos en beneficios claros de estabilidad y control de costos para el cliente.",
+        businessClarity:
+          "Excelente traducción de métricas técnicas a impacto directo en el negocio.",
+        tradeOffDefense:
+          "Se argumentó correctamente la relación entre tiempo de desarrollo y resiliencia.",
         assertivenessScore: 4,
-        missingTradeoffs: ['No se cuantificó el impacto exacto en dólares o SLAs'],
-        strengths: ['Firmeza ante la presión de fechas sin ser confrontativo', 'Lenguaje comprensible'],
+        missingTradeoffs: [
+          "No se cuantificó el impacto exacto en dólares o SLAs",
+        ],
+        strengths: [
+          "Firmeza ante la presión de fechas sin ser confrontativo",
+          "Lenguaje comprensible",
+        ],
       },
     };
   }
@@ -493,11 +527,11 @@ Emite el veredicto en formato JSON estricto:`;
     config: {
       systemInstruction,
       temperature: 0.2,
-      responseMimeType: 'application/json',
+      responseMimeType: "application/json",
     },
   });
 
-  const text = (response.text || '').trim();
+  const text = (response.text || "").trim();
 
   try {
     const parsed = JSON.parse(text);
@@ -507,11 +541,22 @@ Emite el veredicto en formato JSON estricto:`;
       roleDescription,
       evaluation: {
         score: Math.max(1, Math.min(5, Math.round(Number(parsed.score) || 3))),
-        feedback: String(parsed.feedback || 'Evaluación de sparring completada.'),
-        businessClarity: String(parsed.businessClarity || 'Nivel de claridad adecuado.'),
-        tradeOffDefense: String(parsed.tradeOffDefense || 'Defensa de compromisos evaluada.'),
-        assertivenessScore: Math.max(1, Math.min(5, Math.round(Number(parsed.assertivenessScore) || 3))),
-        missingTradeoffs: Array.isArray(parsed.missingTradeoffs) ? parsed.missingTradeoffs : [],
+        feedback: String(
+          parsed.feedback || "Evaluación de sparring completada.",
+        ),
+        businessClarity: String(
+          parsed.businessClarity || "Nivel de claridad adecuado.",
+        ),
+        tradeOffDefense: String(
+          parsed.tradeOffDefense || "Defensa de compromisos evaluada.",
+        ),
+        assertivenessScore: Math.max(
+          1,
+          Math.min(5, Math.round(Number(parsed.assertivenessScore) || 3)),
+        ),
+        missingTradeoffs: Array.isArray(parsed.missingTradeoffs)
+          ? parsed.missingTradeoffs
+          : [],
         strengths: Array.isArray(parsed.strengths) ? parsed.strengths : [],
       },
     };
@@ -525,12 +570,26 @@ Emite el veredicto en formato JSON estricto:`;
           role,
           roleDescription,
           evaluation: {
-            score: Math.max(1, Math.min(5, Math.round(Number(parsed.score) || 3))),
-            feedback: String(parsed.feedback || 'Evaluación de sparring completada.'),
-            businessClarity: String(parsed.businessClarity || 'Nivel de claridad adecuado.'),
-            tradeOffDefense: String(parsed.tradeOffDefense || 'Defensa de compromisos evaluada.'),
-            assertivenessScore: Math.max(1, Math.min(5, Math.round(Number(parsed.assertivenessScore) || 3))),
-            missingTradeoffs: Array.isArray(parsed.missingTradeoffs) ? parsed.missingTradeoffs : [],
+            score: Math.max(
+              1,
+              Math.min(5, Math.round(Number(parsed.score) || 3)),
+            ),
+            feedback: String(
+              parsed.feedback || "Evaluación de sparring completada.",
+            ),
+            businessClarity: String(
+              parsed.businessClarity || "Nivel de claridad adecuado.",
+            ),
+            tradeOffDefense: String(
+              parsed.tradeOffDefense || "Defensa de compromisos evaluada.",
+            ),
+            assertivenessScore: Math.max(
+              1,
+              Math.min(5, Math.round(Number(parsed.assertivenessScore) || 3)),
+            ),
+            missingTradeoffs: Array.isArray(parsed.missingTradeoffs)
+              ? parsed.missingTradeoffs
+              : [],
             strengths: Array.isArray(parsed.strengths) ? parsed.strengths : [],
           },
         };
@@ -545,9 +604,9 @@ Emite el veredicto en formato JSON estricto:`;
       roleDescription,
       evaluation: {
         score: 3,
-        feedback: text || 'Veredicto generado.',
-        businessClarity: 'Comunicación funcional con áreas de oportunidad.',
-        tradeOffDefense: 'Mención de compromisos aceptable.',
+        feedback: text || "Veredicto generado.",
+        businessClarity: "Comunicación funcional con áreas de oportunidad.",
+        tradeOffDefense: "Mención de compromisos aceptable.",
         assertivenessScore: 3,
         missingTradeoffs: [],
         strengths: [],
