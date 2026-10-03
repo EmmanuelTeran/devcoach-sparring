@@ -11,6 +11,7 @@
 └──> [US-06: Seed de 30 Desafíos & E2E Final]
 └──> [US-07: Niveles de Progresión y Andamiaje Pedagógico]
 └──> [US-08: Catálogo Completo Multinivel (Junior/Mid/Senior) y Sincronización UI]
+└──> [US-09: Prompts de IA Estratificados por Nivel y UI Badges Dinámicos]
 
 ---
 
@@ -107,3 +108,27 @@
   4. **Suite de Tests:**
      - Actualizar `server/tests/seed.test.js` y tests de dashboard comprobando que cada nivel tenga al menos 10 tópicos y responda métricas aisladas.
      - Playwright E2E verificando que al hacer clic en "Junior", los contadores cambien de 0 al total sembrado y carguen los escenarios de junior.
+
+---
+
+### [US-09] Estratificación Integral por Niveles (Hard Skills, Soft Skills y Sparring de Voz)
+
+- **Dependencias:** US-08
+- **Criterios de Aceptación (AC):**
+  1. **Estratificación de Hard Skills (`server/src/services/geminiService.js`):**
+     - Retos y evaluaciones adaptados al `topic.level`:
+       - **Junior:** Sintaxis, inmutabilidad, depuración de errores comunes, lógica cotidiana y código funcional sin hablar de bajo nivel ni internals de V8.
+       - **Mid:** Patrones, modularización, clean code y manejo de asincronía.
+       - **Senior:** Arquitectura, concurrencia masiva, trade-offs y resiliencia.
+  2. **Estratificación de Soft Skills y Sparring (`server/src/services/softSkillSparringService.js`):**
+     - Roles y tono de los interlocutores adaptados al `topic.level`:
+       - **Junior:** Interlocutor = Compañero Senior o PM accesible. Escenarios: reportar avances en Daily, explicar dudas en un ticket, recibir feedback en PR. Tono constructivo pero que exige orden y claridad.
+       - **Mid:** Interlocutor = PM con fechas ajustadas o Tech Lead pragmático. Escenarios: negociar alcance, justificar refactorización.
+       - **Senior:** Interlocutor = CTO escéptico o Cliente corporativo. Escenarios: incidentes de producción, costos cloud, arquitectura.
+     - Criterios de evaluación adaptados: en nivel Junior evalúa estructuración (qué, por qué, qué sigue), capacidad de síntesis y actitud proactiva; no exige métricas financieras ni impacto de negocio avanzado.
+  3. **Sincronización en Frontend (`HardSkillTrainer.jsx` y `SoftSkillTrainer.jsx`):**
+     - Badges dinámicos de nivel en ambas interfaces (`NIVEL JUNIOR`, `NIVEL MID`, `NIVEL SENIOR`).
+     - En Soft Skills, mostrar claramente el rol del interlocutor según el nivel (ej. "Rol: Tu compañero Senior en una sesión de 1:1" vs "Rol: CTO de la empresa").
+  4. **Suite de Pruebas:**
+     - Tests en `server/tests/softSkillPractice.test.js` y `server/tests/practice.test.js` validando que los prompts generados para Junior en ambos servicios no contengan exigencias de Senior.
+     - Pruebas E2E de Playwright verificando la carga correcta de escenarios y badges en ambos módulos.

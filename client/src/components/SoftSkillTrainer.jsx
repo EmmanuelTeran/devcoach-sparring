@@ -165,8 +165,10 @@ export function SoftSkillTrainer({ initialTopic }) {
       const data = await res.json();
       setRoleData({
         role: data.role,
+        roleDescription: data.roleDescription,
         avatar: data.avatar,
         scenario: data.scenario,
+        level: data.level || selectedLevel,
       });
 
       const initialMessage = {
@@ -224,6 +226,7 @@ export function SoftSkillTrainer({ initialTopic }) {
         body: JSON.stringify({
           topicId: selectedTopicId,
           role: roleData?.role,
+          roleDescription: roleData?.roleDescription,
           conversationHistory: conversation, // enviamos el historial antes de este mensaje
           userAudioTranscript: userText,
         }),
@@ -262,12 +265,15 @@ export function SoftSkillTrainer({ initialTopic }) {
     }
   };
 
+  const activeLevel = roleData?.level || selectedLevel;
+
   const getScoreBadge = (score) => {
+    const lvlText = LEVEL_LABELS[activeLevel] || 'Junior';
     if (score >= 4) {
       return (
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
           <Award className="w-4 h-4" />
-          Score {score}/5 - Nivel Consultor Senior
+          Score {score}/5 - Nivel {lvlText} Sólido
         </span>
       );
     }
@@ -275,14 +281,14 @@ export function SoftSkillTrainer({ initialTopic }) {
       return (
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/30">
           <AlertTriangle className="w-4 h-4" />
-          Score 3/5 - Argumentación Aceptable con Brechas
+          Score 3/5 - Nivel {lvlText} Aceptable con Oportunidades
         </span>
       );
     }
     return (
       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold bg-rose-500/20 text-rose-400 border border-rose-500/30">
         <AlertTriangle className="w-4 h-4" />
-        Score {score}/5 - Defensa Débil / Requiere Práctica
+        Score {score}/5 - Requiere Más Práctica
       </span>
     );
   };
@@ -301,9 +307,21 @@ export function SoftSkillTrainer({ initialTopic }) {
               <h2 className="text-xl font-bold text-white tracking-tight">
                 Módulo Soft Skills: Sparring por Voz & Consultoría
               </h2>
+              <span
+                id="dynamic-level-badge-soft-skills"
+                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold tracking-wide uppercase border ${
+                  activeLevel === 'senior'
+                    ? 'bg-purple-500/20 text-purple-300 border-purple-500/40 shadow-sm shadow-purple-500/20'
+                    : activeLevel === 'mid'
+                    ? 'bg-blue-500/20 text-blue-300 border-blue-500/40 shadow-sm shadow-blue-500/20'
+                    : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-sm shadow-emerald-500/20'
+                }`}
+              >
+                NIVEL {LEVEL_LABELS[activeLevel]?.toUpperCase() || 'JUNIOR'}
+              </span>
             </div>
             <p className="text-xs text-slate-400">
-              Simulador interactivo de 3 turnos: defiende decisiones técnicas ante Tech Leads y Stakeholders exigentes.
+              Simulador interactivo de 3 turnos: entrena Dailies, Code Reviews, negociación y defensa ante stakeholders según tu nivel.
             </p>
           </div>
 
@@ -417,6 +435,18 @@ export function SoftSkillTrainer({ initialTopic }) {
                 <span className="text-xs font-semibold uppercase tracking-wider text-purple-400">
                   Interlocutor Activo
                 </span>
+                <span
+                  id="client-role-level-badge"
+                  className={`text-xs px-2 py-0.5 rounded-full font-bold uppercase border ${
+                    activeLevel === 'senior'
+                      ? 'bg-purple-500/20 text-purple-300 border-purple-500/40'
+                      : activeLevel === 'mid'
+                      ? 'bg-blue-500/20 text-blue-300 border-blue-500/40'
+                      : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+                  }`}
+                >
+                  NIVEL {LEVEL_LABELS[activeLevel]?.toUpperCase() || 'JUNIOR'}
+                </span>
                 <span className="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
                   Turno {userTurnCount + 1} de 3
                 </span>
@@ -424,7 +454,12 @@ export function SoftSkillTrainer({ initialTopic }) {
               <h3 id="client-role-name" className="text-base font-bold text-white">
                 {roleData.role}
               </h3>
-              <p className="text-xs text-slate-400 mt-0.5 max-w-xl">
+              {roleData.roleDescription && (
+                <p id="client-role-description" className="text-xs text-purple-300 font-medium mt-0.5">
+                  Rol: {roleData.roleDescription}
+                </p>
+              )}
+              <p id="client-scenario-text" className="text-xs text-slate-400 mt-0.5 max-w-xl">
                 {roleData.scenario}
               </p>
             </div>

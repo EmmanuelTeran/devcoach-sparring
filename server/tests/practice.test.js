@@ -3,27 +3,32 @@ import request from 'supertest';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 
+// Variable compartida para inspeccionar llamadas y systemInstruction enviados a Gemini
+export const geminiCallHistory = [];
+
 // Mockeamos @google/genai usando vi.mock para ejecución offline determinista
 vi.mock('@google/genai', () => {
   return {
     GoogleGenAI: vi.fn().mockImplementation(() => ({
       models: {
         generateContent: vi.fn().mockImplementation(async ({ contents, config }) => {
+          geminiCallHistory.push({ contents, config });
+
           // Si el systemInstruction pide evaluar y retornar JSON:
           if (config?.responseMimeType === 'application/json' || (config?.systemInstruction && config.systemInstruction.includes('Evaluador'))) {
             return {
               text: JSON.stringify({
                 score: 5,
-                feedback: 'Excelente dominio del Event Loop de Node.js, fases de libuv y microtask queue.',
-                missingTradeoffs: ['Impacto marginal en garbage collection'],
-                strengths: ['Diferenciación exacta entre process.nextTick y setImmediate', 'Manejo de I/O starvation'],
+                feedback: 'Excelente dominio conceptual adaptado al nivel evaluado.',
+                missingTradeoffs: ['Casos de borde menores'],
+                strengths: ['Sintaxis limpia y comprensión de los fundamentos'],
               }),
             };
           }
 
           // En caso de generación de desafío:
           return {
-            text: '¿Cómo previene Node.js el thread starvation en la fase de poll cuando existen callbacks continuos de process.nextTick? Explica el impacto en timers y setImmediate.',
+            text: 'Desafío generado para ' + (contents || ''),
           };
         }),
       },
@@ -54,6 +59,7 @@ describe('Practice Hard Skills API Integration Tests', () => {
   });
 
   beforeEach(async () => {
+    geminiCallHistory.length = 0;
     await Topic.deleteMany({});
     await SessionLog.deleteMany({});
   });
@@ -79,6 +85,7 @@ describe('Practice Hard Skills API Integration Tests', () => {
         title: 'Node.js Event Loop & Concurrency',
         category: 'hard_skill',
         type: 'theory',
+        level: 'senior',
       });
 
       const res = await request(app)
@@ -88,8 +95,56 @@ describe('Practice Hard Skills API Integration Tests', () => {
       expect(res.status).toBe(200);
       expect(res.body.topicId).toBe(topic._id.toString());
       expect(res.body.title).toBe(topic.title);
-      expect(res.body.challenge).toContain('Node.js');
-      expect(res.body.challenge.length).toBeGreaterThan(15);
+      expect(res.body.level).toBe('senior');
+      expect(res.body.challenge).toBeDefined();
+    });
+
+    it('AC-1: en nivel Junior genera retos pedagógicos enfocados en sintaxis/bases y sin exigencias de Senior', async () => {
+      const juniorTopic = await Topic.create({
+        title: 'Métodos de Arrays en JS (map, filter, reduce)',
+        category: 'hard_skill',
+        type: 'theory',
+        level: 'junior',
+      });
+
+      const res = await request(app)
+        .post('/api/practice/hard-skill/generate')
+        .send({ topicId: juniorTopic._id });
+
+      expect(res.status).toBe(200);
+      expect(res.body.level).toBe('junior');
+
+      // Validar las instrucciones del sistema enviadas a Gemini
+      const lastCall = geminiCallHistory[geminiCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+
+      expect(sysInstruction).toContain('Fullstack Junior');
+      expect(sysInstruction).toContain('bases cotidianas');
+      expect(sysInstruction).toContain('NO hagas preguntas sobre bajo nivel, internals de V8, libuv, concurrencia masiva');
+      expect(sysInstruction).not.toContain('entrevistador técnico implacable para roles Fullstack Senior');
+    });
+
+    it('AC-1: en nivel Senior genera retos con rigor de arquitectura interna y trade-offs', async () => {
+      const seniorTopic = await Topic.create({
+        title: 'Libuv Event Loop & Thread Pool Starvation',
+        category: 'hard_skill',
+        type: 'theory',
+        level: 'senior',
+      });
+
+      const res = await request(app)
+        .post('/api/practice/hard-skill/generate')
+        .send({ topicId: seniorTopic._id });
+
+      expect(res.status).toBe(200);
+      expect(res.body.level).toBe('senior');
+
+      const lastCall = geminiCallHistory[geminiCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+
+      expect(sysInstruction).toContain('roles Fullstack Senior');
+      expect(sysInstruction).toContain('arquitectura interna');
+      expect(sysInstruction).toContain('análisis crítico de trade-offs');
     });
   });
 
@@ -114,11 +169,42 @@ describe('Practice Hard Skills API Integration Tests', () => {
       expect(res.status).toBe(404);
     });
 
+    it('AC-1: evalúa con éxito a un perfil Junior sin penalizar por falta de trade-offs de alta concurrencia', async () => {
+      const topic = await Topic.create({
+        title: 'Async/Await vs Callbacks y Manejo de Errores',
+        category: 'hard_skill',
+        type: 'theory',
+        level: 'junior',
+        srsStage: 0,
+        easeFactor: 2.5,
+        intervalDays: 0,
+      });
+
+      const res = await request(app)
+        .post('/api/practice/hard-skill/evaluate')
+        .send({
+          topicId: topic._id,
+          challenge: 'Explica cómo usar try/catch con async/await para manejar errores.',
+          userSolution: 'Usamos try/catch alrededor de la llamada con await para atrapar la promesa rechazada de forma legible.',
+        });
+
+      expect(res.status).toBe(200);
+      expect(res.body.score).toBe(5);
+
+      const lastCall = geminiCallHistory[geminiCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+
+      expect(sysInstruction).toContain('NIVEL JUNIOR');
+      expect(sysInstruction).toContain('NO penalices por falta de análisis de arquitectura interna de bajo nivel');
+      expect(sysInstruction).not.toContain('nivel Staff/Principal Engineer');
+    });
+
     it('evalúa con éxito la solución, actualiza Topic en Mongo con srsCalculator y guarda SessionLog', async () => {
       const topic = await Topic.create({
         title: 'React Concurrent Mode & Fiber',
         category: 'hard_skill',
         type: 'practice',
+        level: 'senior',
         srsStage: 0,
         easeFactor: 2.5,
         intervalDays: 0,
@@ -155,7 +241,6 @@ describe('Practice Hard Skills API Integration Tests', () => {
       expect(sessionLog).not.toBeNull();
       expect(sessionLog.topicId.toString()).toBe(topic._id.toString());
       expect(sessionLog.score).toBe(5);
-      expect(sessionLog.feedback).toContain('Event Loop');
     });
   });
 });

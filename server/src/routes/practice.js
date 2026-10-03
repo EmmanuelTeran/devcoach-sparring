@@ -31,6 +31,7 @@ practiceRouter.post('/hard-skill/generate', async (req, res) => {
       title: topic.title,
       type: topic.type,
       category: topic.category,
+      level: topic.level || 'junior',
       challenge,
     });
   } catch (error) {

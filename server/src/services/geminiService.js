@@ -11,40 +11,90 @@ function getClient() {
 }
 
 /**
- * Genera un desafío técnico de active recall según el tema y su tipo.
+ * Genera un desafío técnico de active recall según el tema, su tipo y su nivel de progresión.
  *
  * @param {Object} topic
  * @param {string} topic.title - Nombre del tema (ej. 'Node.js Event Loop', 'React Re-renders')
  * @param {string} topic.type - 'theory' o 'practice'
+ * @param {string} [topic.level='junior'] - 'junior' | 'mid' | 'senior'
  * @param {string} [topic.category='hard_skill']
  * @returns {Promise<string>} Texto del desafío técnico
  */
 export async function generateHardSkillChallenge(topic) {
   const isTheory = topic.type === 'theory';
+  const level = topic.level || 'junior';
 
-  const systemInstruction = isTheory
-    ? `Eres un Staff Software Engineer y entrevistador técnico implacable para roles Fullstack Senior.
+  let systemInstruction = '';
+
+  if (level === 'junior') {
+    systemInstruction = isTheory
+      ? `Eres un Tech Lead pedagógico y mentor de ingeniería evaluando a un desarrollador Fullstack Junior.
+Tu objetivo es formular un reto de Active Recall conceptual accesible sobre "${topic.title}".
+REGLAS ESTRICTAS:
+- Enfócate en bases cotidianas, sintaxis, inmutabilidad, depuración de errores comunes y cómo se usa en el trabajo diario.
+- NO hagas preguntas sobre bajo nivel, internals de V8, libuv, concurrencia masiva ni optimizaciones prematuras complejas.
+- Plantea una pregunta clara sobre el comportamiento de la sintaxis/concepto, por qué se usa y qué error común previene.
+- Sé conciso, directo y pedagógico (máximo 2 párrafos).`
+      : `Eres un Tech Lead pedagógico y mentor de ingeniería evaluando a un desarrollador Fullstack Junior.
+Tu objetivo es plantear un escenario práctico cotidiano y formativo sobre "${topic.title}".
+REGLAS ESTRICTAS:
+- Enfócate en sintaxis limpia, inmutabilidad, manejo de datos y lógica funcional básica.
+- NO plantees problemas de concurrencia masiva, internals de Node/Mongo ni optimizaciones de bajo nivel.
+- Plantea un caso de uso común (ej. transformar un array, manejar estado sin mutar, crear una ruta o controlador básico).
+- Exige que el candidato escriba o explique la solución con código limpio y legible.
+- Sé claro, específico y pedagógico (máximo 2 párrafos).`;
+  } else if (level === 'mid') {
+    systemInstruction = isTheory
+      ? `Eres un Senior Software Engineer evaluando a un desarrollador Fullstack Mid-level.
+Tu objetivo es formular un reto de Active Recall sobre patrones, modularización y clean code en "${topic.title}".
+REGLAS ESTRICTAS:
+- Formula una pregunta sobre modularidad, separación de responsabilidades, ciclo de vida o manejo de asincronía.
+- Pide comparar enfoques alternativos comunes o explicar cómo evitar el acoplamiento.
+- Sé conciso y profesional (máximo 2 párrafos).`
+      : `Eres un Senior Software Engineer evaluando a un desarrollador Fullstack Mid-level.
+Tu objetivo es plantear un escenario de refactorización o diseño modular sobre "${topic.title}".
+REGLAS ESTRICTAS:
+- Plantea un escenario de aplicación real: modularizar un hook/servicio, manejo robusto de errores o diseño de interfaces limpias.
+- Exige clean code, modularidad y consideraciones de mantenibilidad.
+- Sé directo y profesional (máximo 2 párrafos).`;
+  } else {
+    // Senior
+    systemInstruction = isTheory
+      ? `Eres un Staff Software Engineer y entrevistador técnico implacable para roles Fullstack Senior.
 Tu objetivo es formular un reto de Active Recall conceptual profundo sobre "${topic.title}".
 REGLAS ESTRICTAS:
 - NO hagas preguntas de memoria básica, definiciones de diccionario ni sintaxis trivial.
 - Formula una pregunta incisiva sobre arquitectura interna, protocolos, concurrencia, gestión de memoria, orden de fases de ejecución o análisis crítico de trade-offs.
 - Plantea un dilema técnico que obligue al candidato a justificar el "por qué" y explicar qué sucede bajo el capó.
 - Sé conciso, directo y desafiante (máximo 2 párrafos).`
-    : `Eres un Staff Software Engineer y entrevistador técnico implacable para roles Fullstack Senior.
+      : `Eres un Staff Software Engineer y entrevistador técnico implacable para roles Fullstack Senior.
 Tu objetivo es plantear un escenario de ingeniería realista y desafiante sobre "${topic.title}".
 REGLAS ESTRICTAS:
 - NO plantees un ejercicio de algoritmos de juguete ni sintaxis de tutorial.
 - Plantea un escenario real de producción: cuello de botella de rendimiento, diseño de arquitectura de componentes React, optimización de queries/índices en MongoDB, o gestión de flujos asíncronos y backpressure en Node.js.
 - Exige que el candidato plantee o escriba la solución técnica explicando sus trade-offs (latencia vs memoria, legibilidad vs complejidad, consistencia vs disponibilidad).
 - Sé directo, específico y desafiante (máximo 2 o 3 párrafos).`;
+  }
 
   const prompt = `Tema: ${topic.title}
 Tipo: ${topic.type}
+Nivel: ${level}
 Genera el desafío técnico ahora:`;
 
   const client = getClient();
   if (!client) {
-    // Modo offline / fallback determinista en ausencia de API Key
+    // Modo offline / fallback determinista en ausencia de API Key estratificado por nivel
+    if (level === 'junior') {
+      return isTheory
+        ? `[Desafío Teórico Junior - ${topic.title}]: Explica cómo funciona "${topic.title}", para qué se utiliza en el desarrollo diario y cuál es un error común que cometen los desarrolladores al usarlo. Da un ejemplo conceptual claro.`
+        : `[Desafío Práctico Junior - ${topic.title}]: Escribe una solución clara y funcional para un caso de uso común de "${topic.title}". Asegúrate de manejar la sintaxis correctamente y evitar mutaciones directas.`;
+    }
+    if (level === 'mid') {
+      return isTheory
+        ? `[Desafío Teórico Mid - ${topic.title}]: Analiza las ventajas y desventajas de los patrones más comunes asociados a "${topic.title}". ¿Cómo impacta en la modularidad y mantenibilidad del código?`
+        : `[Desafío Práctico Mid - ${topic.title}]: Diseña una implementación modular y robusta de "${topic.title}" que maneje errores adecuadamente y aplique buenas prácticas de clean code.`;
+    }
+    // Senior fallback
     return isTheory
       ? `[Desafío Teórico - ${topic.title}]: Explica detalladamente los trade-offs de arquitectura interna, concurrencia y comportamiento bajo alta carga asociados a "${topic.title}". ¿Qué sucede bajo el capó y qué consecuencias tiene en producción tomar la decisión equivocada? Justifica tu razonamiento.`
       : `[Desafío Práctico - ${topic.title}]: En un sistema con alto tráfico que experimenta degradación de rendimiento y consumo excesivo de recursos con "${topic.title}", ¿cómo diseñarías o refactorizarías la solución para resolver el cuello de botella? Especifica código o arquitectura y analiza los trade-offs involucrados.`;
@@ -63,7 +113,7 @@ Genera el desafío técnico ahora:`;
 }
 
 /**
- * Evalúa la solución técnica del usuario con criterio de Senior Evaluator.
+ * Evalúa la solución técnica del usuario con criterio estratificado por nivel de progresión.
  *
  * @param {Object} params
  * @param {Object} params.topic - Objeto del tópico
@@ -81,7 +131,53 @@ export async function evaluateHardSkillSolution({ topic, challenge, userSolution
     };
   }
 
-  const systemInstruction = `Eres un Evaluador Técnico Principal / Staff Engineer evaluando a un aspirante Fullstack Senior.
+  const level = topic?.level || 'junior';
+
+  let systemInstruction = '';
+
+  if (level === 'junior') {
+    systemInstruction = `Eres un Mentor Técnico y Tech Lead evaluando a un desarrollador Fullstack Junior.
+Tu tono es constructivo, formativo, riguroso pero accesible y sin condescendencia.
+
+CRITERIOS DE CALIFICACIÓN (Escala 1 a 5) PARA NIVEL JUNIOR:
+- Score 1: Respuesta incorrecta, errores graves de sintaxis o confusión básica de conceptos.
+- Score 2: Respuesta incompleta, muta el estado indebidamente o contiene errores lógicos notables en la funcionalidad básica.
+- Score 3: Respuesta funcional correcta básica con sintaxis adecuada, aunque omita buenas prácticas menores o casos de borde sencillos.
+- Score 4: Respuesta sólida: código limpio o explicación clara, respetando inmutabilidad, convenciones y lógica cotidiana.
+- Score 5: Respuesta sobresaliente para nivel Junior: código funcional impecable, explicación concisa y clara, sin errores y sin sobreingeniería.
+
+REGLAS CRÍTICAS DE EVALUACIÓN:
+- NO penalices por falta de análisis de arquitectura interna de bajo nivel, internals de V8, libuv ni trade-offs de escalabilidad masiva.
+- Evalúa la corrección funcional, sintaxis, legibilidad, inmutabilidad y buenas prácticas cotidianas.
+
+DEBES RESPONDER EXCLUSIVAMENTE CON UN OBJETO JSON VÁLIDO (sin bloques de markdown adicionales ni texto previo o posterior) con la siguiente estructura exacta:
+{
+  "score": <número entero entre 1 y 5>,
+  "feedback": "<análisis técnico directo y formativo explicando aciertos y oportunidades>",
+  "missingTradeoffs": ["<buena práctica o caso de borde no considerado>", "<otro si aplica>"],
+  "strengths": ["<fortaleza de sintaxis o lógica identificada>", "<otra si aplica>"]
+}`;
+  } else if (level === 'mid') {
+    systemInstruction = `Eres un Senior Software Engineer evaluando a un aspirante Fullstack Mid-level.
+Tu tono es técnico, profesional y enfocado en clean code, modularización y robustez.
+
+CRITERIOS DE CALIFICACIÓN (Escala 1 a 5) PARA NIVEL MID:
+- Score 1: Código acoplado, mala gestión de errores o conceptos confusos.
+- Score 2: Funciona parcialmente pero tiene deuda técnica evidente, efectos secundarios o mal manejo de asincronía.
+- Score 3: Solución funcional correcta con modularidad básica, pero falta robustez o manejo defensivo de errores.
+- Score 4: Solución sólida, modular, clean code, manejo correcto de asincronía y contratos de API.
+- Score 5: Excelente diseño modular, patrones limpios, desacoplamiento y consideraciones de mantenibilidad.
+
+DEBES RESPONDER EXCLUSIVAMENTE CON UN OBJETO JSON VÁLIDO (sin bloques de markdown adicionales) con la siguiente estructura exacta:
+{
+  "score": <número entero entre 1 y 5>,
+  "feedback": "<análisis técnico directo y conciso>",
+  "missingTradeoffs": ["<aspecto de modularidad o caso de borde>", "<otro si aplica>"],
+  "strengths": ["<fortaleza técnica destacable>", "<otra si aplica>"]
+}`;
+  } else {
+    // Senior
+    systemInstruction = `Eres un Evaluador Técnico Principal / Staff Engineer evaluando a un aspirante Fullstack Senior.
 Tu tono es directo, profesional, riguroso y sin condescendencia.
 
 CRITERIOS DE CALIFICACIÓN (Escala 1 a 5):
@@ -98,9 +194,11 @@ DEBES RESPONDER EXCLUSIVAMENTE CON UN OBJETO JSON VÁLIDO (sin bloques de markdo
   "missingTradeoffs": ["<tradeoff o punto ciego no considerado>", "<otro si aplica>"],
   "strengths": ["<fortaleza técnica destacable identificada>", "<otra si aplica>"]
 }`;
+  }
 
   const prompt = `TEMA: ${topic?.title || 'General'}
 TIPO: ${topic?.type || 'practice'}
+NIVEL: ${level}
 DESAFÍO PLANTEADO:
 ${challenge}
 
@@ -113,6 +211,40 @@ Evalúa la respuesta y devuelve el JSON estricto:`;
   if (!client) {
     // Fallback heurístico offline para entornos sin GEMINI_API_KEY
     const wordCount = userSolution.trim().split(/\s+/).length;
+
+    if (level === 'junior') {
+      let score = 3;
+      if (wordCount < 8) {
+        score = 2;
+      } else if (wordCount >= 20) {
+        score = 4;
+      }
+      return {
+        score,
+        feedback: score >= 4
+          ? 'Solución funcional clara que demuestra comprensión de las bases y sintaxis correcta.'
+          : 'Respuesta básica adecuada, aunque puedes detallar más el manejo de casos comunes.',
+        missingTradeoffs: score < 4 ? ['Considerar casos de borde cotidianos o validación básica'] : [],
+        strengths: ['Sintaxis legible y solución directa sin sobreingeniería'],
+      };
+    }
+
+    if (level === 'mid') {
+      const hasModularPatterns = /modular|patrón|hook|servicio|limpio|clean|async|error|mantenib/i.test(userSolution);
+      let score = 3;
+      if (wordCount < 10) score = 2;
+      else if (hasModularPatterns && wordCount >= 30) score = 4;
+      return {
+        score,
+        feedback: hasModularPatterns
+          ? 'Solución modular que aplica buenas prácticas de clean code y desacoplamiento.'
+          : 'Respuesta funcionalmente correcta pero podría modularizarse mejor y pulir el manejo defensivo.',
+        missingTradeoffs: hasModularPatterns ? [] : ['Modularización y manejo defensivo de errores'],
+        strengths: ['Comprensión adecuada de la arquitectura del componente/servicio'],
+      };
+    }
+
+    // Senior offline fallback
     const hasTradeoffs = /trade-off|tradeoff|desventaja|ventaja|latencia|memoria|rendimiento|concurrencia|escalab/i.test(userSolution);
 
     let score = 3;

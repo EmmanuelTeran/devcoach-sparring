@@ -3,42 +3,51 @@ import request from 'supertest';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 
+export const geminiSoftSkillCallHistory = [];
+
 // Mockeamos @google/genai usando vi.mock para ejecución offline y determinista
 vi.mock('@google/genai', () => {
   return {
     GoogleGenAI: vi.fn().mockImplementation(() => ({
       models: {
         generateContent: vi.fn().mockImplementation(async ({ contents, config }) => {
+          geminiSoftSkillCallHistory.push({ contents, config });
           const sys = config?.systemInstruction || '';
 
-          // 1. Escenario inicial (start)
-          if (sys.includes('actor de rol simulando a un stakeholder')) {
+          // 1. Veredicto final (evaluación)
+          if (sys.includes('Evaluador')) {
             return {
               text: JSON.stringify({
-                scenario: 'El cliente quiere recortar costos y eliminar la capa de redundancia.',
-                initialQuestion: '¿Por qué necesitamos invertir tanto tiempo y dinero en alta disponibilidad si nuestro tráfico actual es bajo?',
+                score: 4,
+                feedback: sys.includes('Junior') || sys.includes('Pedagógico')
+                  ? 'Excelente comunicación en la interacción cotidiana de equipo. Estructuraste tu mensaje con claridad.'
+                  : 'Buena articulación del balance entre costo de inactividad vs inversión en arquitectura resiliente.',
+                businessClarity: 'Tradujo efectivamente el concepto a términos claros.',
+                tradeOffDefense: 'Defendió correctamente su postura técnica.',
+                assertivenessScore: 4,
+                missingTradeoffs: ['No mencionó opciones intermedias.'],
+                strengths: ['Excelente actitud colaborativa.', 'Enfoque centrado en la solución.'],
               }),
             };
           }
 
-          // 2. Veredicto final (3er turno)
-          if (sys.includes('Evaluador Senior de Habilidades de Consultoría Técnica')) {
+          // 2. Escenario inicial (start)
+          if (sys.includes('actor de rol') || sys.includes('stakeholder')) {
             return {
               text: JSON.stringify({
-                score: 4,
-                feedback: 'Buena articulación del balance entre costo de inactividad vs inversión en arquitectura resiliente.',
-                businessClarity: 'Tradujo efectivamente el concepto de SLA y downtime a pérdidas financieras cuantificables.',
-                tradeOffDefense: 'Defendió correctamente el trade-off de costo inicial frente a riesgo operacional.',
-                assertivenessScore: 4,
-                missingTradeoffs: ['No mencionó opciones intermedias como degradación elegante progresiva.'],
-                strengths: ['Excelente manejo de objeciones sin perder la compostura.', 'Enfoque centrado en el cliente.'],
+                scenario: sys.includes('cotidiana')
+                  ? 'En la daily matutina, el equipo necesita saber tu progreso en el ticket.'
+                  : 'El cliente quiere recortar costos y eliminar la capa de redundancia.',
+                initialQuestion: sys.includes('cotidiana')
+                  ? 'Hola! ¿Podrías darme un resumen claro de tu estado, qué investigaste y si tienes algún bloqueo?'
+                  : '¿Por qué necesitamos invertir tanto tiempo y dinero en alta disponibilidad si nuestro tráfico actual es bajo?',
               }),
             };
           }
 
           // 3. Réplica intermedia escéptica
           return {
-            text: 'Eso suena razonable en teoría, pero nuestro presupuesto mensual está al límite. ¿Qué alternativa más barata me propones para no comprometer el lanzamiento?',
+            text: 'Eso suena razonable, pero ¿cómo planeas verificar que esta solución no genere efectos secundarios?',
           };
         }),
       },
@@ -69,6 +78,7 @@ describe('Soft Skill Sparring API Integration Tests', () => {
   });
 
   beforeEach(async () => {
+    geminiSoftSkillCallHistory.length = 0;
     await Topic.deleteMany({});
     await SessionLog.deleteMany({});
   });
@@ -89,11 +99,12 @@ describe('Soft Skill Sparring API Integration Tests', () => {
       expect(res.body.error).toBe('Topic not found');
     });
 
-    it('inicia el escenario de consultoría y retorna el rol del cliente y la pregunta inicial', async () => {
+    it('AC-2: inicia escenario para Junior con rol cercano (peer/PM) y prompt sin exigencias Senior de C-Level/ROI', async () => {
       const topic = await Topic.create({
-        title: 'Microservicios vs Monolito Modular',
+        title: 'Daily Standup: Estructura Qué Hice, Qué Haré y Bloqueos',
         category: 'soft_skill',
-        type: 'theory',
+        type: 'practice',
+        level: 'junior',
       });
 
       const res = await request(app)
@@ -102,10 +113,43 @@ describe('Soft Skill Sparring API Integration Tests', () => {
 
       expect(res.status).toBe(200);
       expect(res.body.topicId).toBe(topic._id.toString());
+      expect(res.body.level).toBe('junior');
       expect(res.body.role).toBeDefined();
+      expect(res.body.roleDescription).toBeDefined();
       expect(res.body.avatar).toBeDefined();
-      expect(res.body.scenario).toContain('El cliente quiere');
-      expect(res.body.initialQuestion).toContain('¿Por qué');
+      expect(res.body.scenario).toBeDefined();
+      expect(res.body.initialQuestion).toBeDefined();
+
+      const lastCall = geminiSoftSkillCallHistory[geminiSoftSkillCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+
+      expect(sysInstruction).toContain('cotidiana de equipo');
+      expect(sysInstruction).toContain('nivel Junior');
+      expect(sysInstruction).toContain('NO exijas visión estratégica de negocio, métricas financieras de ROI');
+      expect(sysInstruction).not.toContain('stakeholder ejecutivo o cliente corporativo');
+    });
+
+    it('AC-2: inicia escenario para Senior con rol C-Level/Corporativo y exigencia de arquitectura/costos', async () => {
+      const topic = await Topic.create({
+        title: 'Defensa de Trade-Offs ante Stakeholders en Arquitectura de Microservicios',
+        category: 'soft_skill',
+        type: 'practice',
+        level: 'senior',
+      });
+
+      const res = await request(app)
+        .post('/api/practice/soft-skill/start')
+        .send({ topicId: topic._id });
+
+      expect(res.status).toBe(200);
+      expect(res.body.level).toBe('senior');
+      expect(res.body.roleDescription).toBeDefined();
+
+      const lastCall = geminiSoftSkillCallHistory[geminiSoftSkillCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+
+      expect(sysInstruction).toContain('stakeholder ejecutivo o cliente corporativo');
+      expect(sysInstruction).toContain('arquitectura, costos o resiliencia');
     });
   });
 
@@ -118,36 +162,88 @@ describe('Soft Skill Sparring API Integration Tests', () => {
       expect(res.body.error).toContain('required');
     });
 
-    it('maneja el turno intermedio (1 o 2) devolviendo la réplica escéptica del stakeholder', async () => {
+    it('AC-2: maneja turno intermedio para Junior con tono constructivo sin exigir ROI empresarial', async () => {
       const topic = await Topic.create({
-        title: 'Estrategia de Caching y Consistencia en Redis',
+        title: 'Pedir Ayuda: Formular Dudas con Hipótesis Previas',
         category: 'soft_skill',
         type: 'practice',
+        level: 'junior',
       });
 
       const res = await request(app)
         .post('/api/practice/soft-skill/reply')
         .send({
           topicId: topic._id,
-          role: 'Tech Lead Escéptico',
+          role: 'Compañero Senior de Equipo',
+          roleDescription: 'Tu compañero Senior en una sesión de 1:1 o revisión de código',
           conversationHistory: [
-            { speaker: 'ai', text: '¿Por qué agregar Redis si PostgreSQL ya tiene cache de buffers?' },
+            { speaker: 'ai', text: '¿Podrías decirme qué investigaste antes de trabarte?' },
           ],
-          userAudioTranscript: 'Redis nos permite desacoplar consultas pesadas de analytics y proteger la base de datos primaria.',
+          userAudioTranscript: 'Revisé la documentación de Mongoose y probé populate(), pero sigue retornando null.',
         });
 
       expect(res.status).toBe(200);
       expect(res.body.isFinalTurn).toBe(false);
-      expect(res.body.role).toBe('Tech Lead Escéptico');
       expect(res.body.reply).toBeDefined();
-      expect(res.body.reply.length).toBeGreaterThan(10);
+
+      const lastCall = geminiSoftSkillCallHistory[geminiSoftSkillCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+
+      expect(sysInstruction).toContain('Desarrollador Junior');
+      expect(sysInstruction).toContain('NO exijas métricas financieras de ROI empresarial');
     });
 
-    it('maneja el turno final (turno 3 de usuario): emite veredicto formal, actualiza SRS y persiste en SessionLog', async () => {
+    it('AC-2: maneja turno final para Junior evaluando estructura, síntesis y proactividad sin exigir liderazgo Senior', async () => {
+      const topic = await Topic.create({
+        title: 'Daily Standup: Estructura Qué Hice, Qué Haré y Bloqueos',
+        category: 'soft_skill',
+        type: 'practice',
+        level: 'junior',
+        srsStage: 0,
+        easeFactor: 2.5,
+        intervalDays: 0,
+      });
+
+      const conversationHistory = [
+        { speaker: 'ai', text: 'Hola, ¿cuál es tu estatus hoy?' },
+        { speaker: 'user', text: 'Ayer terminé el schema de Topic. Hoy haré las rutas de Express.' },
+        { speaker: 'ai', text: '¿Tienes algún bloqueo?' },
+        { speaker: 'user', text: 'Ninguno por ahora, las pruebas unitarias pasan en verde.' },
+        { speaker: 'ai', text: 'Perfecto, ¿algo más para el equipo?' },
+      ];
+
+      const res = await request(app)
+        .post('/api/practice/soft-skill/reply')
+        .send({
+          topicId: topic._id,
+          role: 'Scrum Master / PM de Equipo',
+          roleDescription: 'Scrum Master / PM en el Daily Standup matutino',
+          conversationHistory,
+          userAudioTranscript: 'Solo confirmar si alguien necesita apoyo con la integración de MongoDB.',
+        });
+
+      expect(res.status).toBe(200);
+      expect(res.body.isFinalTurn).toBe(true);
+      expect(res.body.level).toBe('junior');
+      expect(res.body.score).toBe(4);
+      expect(res.body.feedback).toBeDefined();
+
+      const lastCall = geminiSoftSkillCallHistory[geminiSoftSkillCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+
+      expect(sysInstruction).toContain('ADAPTADAS A NIVEL JUNIOR');
+      expect(sysInstruction).toContain('Estructura y Claridad');
+      expect(sysInstruction).toContain('Capacidad de Síntesis');
+      expect(sysInstruction).toContain('Proactividad y Disposición al Feedback');
+      expect(sysInstruction).toContain('NO exijas métricas financieras, ROI empresarial ni visión estratégica de Staff/Principal Engineer');
+    });
+
+    it('maneja el turno final de Senior: emite veredicto formal con criterios de consultoría y persiste en SessionLog', async () => {
       const topic = await Topic.create({
         title: 'Defensa de Trade-Offs en Migración Cloud',
         category: 'soft_skill',
         type: 'practice',
+        level: 'senior',
         srsStage: 0,
         easeFactor: 2.5,
         intervalDays: 0,
@@ -165,7 +261,8 @@ describe('Soft Skill Sparring API Integration Tests', () => {
         .post('/api/practice/soft-skill/reply')
         .send({
           topicId: topic._id,
-          role: 'Product Manager',
+          role: 'Director de Negocio / Cliente Corporativo',
+          roleDescription: 'Director Corporativo evaluando ROI y plazos de entrega',
           conversationHistory,
           userAudioTranscript:
             'Usaremos un despliegue Blue/Green con DNS ponderado y rollback inmediato si los errores 5xx suben del 0.1%, asegurando cero interrupción para los clientes.',
@@ -173,6 +270,7 @@ describe('Soft Skill Sparring API Integration Tests', () => {
 
       expect(res.status).toBe(200);
       expect(res.body.isFinalTurn).toBe(true);
+      expect(res.body.level).toBe('senior');
       expect(res.body.score).toBe(4);
       expect(res.body.feedback).toBeDefined();
       expect(res.body.businessClarity).toBeDefined();
@@ -183,6 +281,10 @@ describe('Soft Skill Sparring API Integration Tests', () => {
       expect(res.body.srsStage).toBe(1);
       expect(res.body.intervalDays).toBe(1);
       expect(res.body.sessionLogId).toBeDefined();
+
+      const lastCall = geminiSoftSkillCallHistory[geminiSoftSkillCallHistory.length - 1];
+      const sysInstruction = lastCall?.config?.systemInstruction || '';
+      expect(sysInstruction).toContain('Consultoría Técnica, Comunicación y Liderazgo de Ingeniería');
 
       // Verificar persistencia en Topic
       const updatedTopic = await Topic.findById(topic._id);
@@ -196,8 +298,7 @@ describe('Soft Skill Sparring API Integration Tests', () => {
       expect(log.topicId.toString()).toBe(topic._id.toString());
       expect(log.score).toBe(4);
       expect(log.assertivenessScore).toBe(4);
-      expect(log.businessClarity).toContain('SLA');
-      expect(log.conversationHistory.length).toBe(6); // 5 previos + 1 final de usuario
+      expect(log.conversationHistory.length).toBe(6);
     });
   });
 });

@@ -34,7 +34,9 @@ softSkillPracticeRouter.post('/soft-skill/start', async (req, res) => {
       title: topic.title,
       type: topic.type,
       category: topic.category,
+      level: topic.level || 'junior',
       role: scenarioData.role,
+      roleDescription: scenarioData.roleDescription,
       avatar: scenarioData.avatar,
       scenario: scenarioData.scenario,
       initialQuestion: scenarioData.initialQuestion,
@@ -47,13 +49,13 @@ softSkillPracticeRouter.post('/soft-skill/start', async (req, res) => {
 
 /**
  * POST /api/practice/soft-skill/reply
- * Body: { topicId, conversationHistory, userAudioTranscript, role }
+ * Body: { topicId, conversationHistory, userAudioTranscript, role, roleDescription }
  * Si es turno intermedio: devuelve la réplica escéptica del stakeholder.
  * Si es turno final (3er turno de usuario): evalúa el desempeño, aplica srsCalculator y guarda el SessionLog.
  */
 softSkillPracticeRouter.post('/soft-skill/reply', async (req, res) => {
   try {
-    const { topicId, conversationHistory = [], userAudioTranscript, role } = req.body;
+    const { topicId, conversationHistory = [], userAudioTranscript, role, roleDescription } = req.body;
 
     if (!topicId || !userAudioTranscript || !userAudioTranscript.trim()) {
       return res.status(400).json({
@@ -71,6 +73,7 @@ softSkillPracticeRouter.post('/soft-skill/reply', async (req, res) => {
       conversationHistory,
       userAudioTranscript,
       role,
+      roleDescription,
     });
 
     if (!sparringResult.isFinalTurn) {
@@ -78,6 +81,7 @@ softSkillPracticeRouter.post('/soft-skill/reply', async (req, res) => {
       return res.status(200).json({
         isFinalTurn: false,
         role: sparringResult.role || role,
+        roleDescription: sparringResult.roleDescription || roleDescription,
         reply: sparringResult.reply,
       });
     }
@@ -134,6 +138,8 @@ softSkillPracticeRouter.post('/soft-skill/reply', async (req, res) => {
     return res.status(200).json({
       isFinalTurn: true,
       role: sparringResult.role || role,
+      roleDescription: sparringResult.roleDescription || roleDescription,
+      level: topic.level || 'junior',
       score: evaluation.score,
       feedback: evaluation.feedback,
       businessClarity: evaluation.businessClarity,
