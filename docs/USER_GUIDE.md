@@ -362,4 +362,55 @@ Toda la aplicación está conectada con el filtro de nivel activo:
 - **Soft Skills:** El selector de nivel filtra el menú desplegable de escenarios, mostrando de inmediato los temas relevantes del nivel (por ejemplo, al pulsar "Junior", el combo ofrece Dailies, Code Review y Demos).
 - **Sembrado y Actualización Idempotente:** El script `npm run seed` ejecuta operaciones `Topic.bulkWrite` con `upsert: true` y `$set: { level, category, type }`, asegurando que cualquier base de datos preexistente actualice sus niveles de inmediato sin perder historial ni métricas SRS previas.
 
+---
+
+## 12. Estratificación Integral de Prompts de IA y Badges Dinámicos en UI (US-09)
+
+En **DevCoach Sparring**, la IA adapta de forma estricta sus roles, nivel de exigencia, criterios de evaluación y personalidad pedagógica al nivel de progresión (`level: 'junior' | 'mid' | 'senior'`) del tema entrenado, tanto en los retos técnicos de código como en las simulaciones de voz.
+
+### 12.1 Estratificación en Hard Skills: Del Código Limpio a la Arquitectura Masiva
+
+El servicio de generación y evaluación (`geminiService.js`) utiliza instrucciones especializadas para cada seniority:
+
+| Nivel | Rol del Generador / Evaluador | Enfoque del Desafío | Criterios de Calificación (Score 5/5) |
+| :--- | :--- | :--- | :--- |
+| **Junior** | Tech Lead Pedagógico y Mentor | Sintaxis cotidiana, inmutabilidad, depuración de errores comunes, lógica funcional sin bajo nivel. | Código limpio, inmutabilidad respetada, sin errores sintácticos y con explicación clara. **Cero penalización** por falta de internals de V8, libuv o trade-offs de alta concurrencia. |
+| **Mid** | Senior Software Engineer | Modularización, patrones de diseño, separación de responsabilidades, clean code y contratos de API. | Desacoplamiento, refactorizaciones mantenibles, manejo defensivo de errores y asincronía robusta. |
+| **Senior** | Staff / Principal Engineer Implacable | Arquitectura interna, fases de libuv, concurrencia masiva, índices compuestos, resiliencia y trade-offs. | Análisis cuantitativo/cualitativo de trade-offs bajo alta carga, latencia vs memoria, consistencia vs disponibilidad y justificación del comportamiento en producción. |
+
+### 12.2 Estratificación en Soft Skills y Sparring de Voz
+
+Las sesiones de sparring por voz (`softSkillSparringService.js`) ya no imponen exigencias de director corporativo cuando estás en nivel Junior:
+
+- **Junior — Interacciones Cotidianas de Equipo:**
+  - **Interlocutores:** *Compañero Senior de Equipo* (en 1:1 o revisión de código), *Scrum Master / PM Accesible* (en Daily Standup), o *Revisor de Pull Request*.
+  - **Tono:** Accesible, formativo y constructivo. Exige que el junior estructure sus ideas, comunique qué investigó antes de pedir ayuda y evite tomar el feedback de forma personal.
+  - **Criterios del Veredicto:**
+    1. *Estructura y Claridad (Structure & Clarity):* Explica el contexto (qué, por qué o cuál es la duda) con orden.
+    2. *Capacidad de Síntesis (Conciseness):* Va al grano sin abrumar con detalles innecesarios.
+    3. *Proactividad y Disposición al Feedback (Proactivity):* Demuestra intentos previos y actitud constructiva de equipo.
+    4. *Cero Exigencia de ROI Empresarial:* No se demandan métricas financieras de millones de dólares ni SLAs corporativos en nivel Junior.
+- **Mid — Negociación de Sprint y Deuda Técnica:**
+  - **Interlocutores:** *Tech Lead Pragmático*, *Product Manager con Fechas Ajustadas*, *Líder de QA*.
+  - **Tono:** Enfoque en balancear la velocidad de entrega del sprint con la calidad del código y la cobertura de pruebas.
+- **Senior — Consultoría Ejecutiva y Resiliencia:**
+  - **Interlocutores:** *CTO Escéptico*, *Director de Negocio Corporativo*, *Auditor de Seguridad*.
+  - **Tono:** Exigente, escéptico y desafiante; exige traducción directa a ROI, riesgos operacionales y planes de contingencia.
+
+### 12.3 Badges Dinámicos y Claridad Visual en Frontend
+
+La interfaz gráfica (`HardSkillTrainer.jsx` y `SoftSkillTrainer.jsx`) proporciona retroalimentación visual inmediata sobre el contexto del entrenamiento:
+
+1. **Badge de Nivel en Cabecera (`#dynamic-level-badge-...`):**
+   - Muestra permanentemente `NIVEL JUNIOR` (esmeralda), `NIVEL MID` (azul) o `NIVEL SENIOR` (púrpura) según el nivel del tópico seleccionado.
+2. **Tarjeta de Desafío en Hard Skills (`#challenge-card`):**
+   - Título adaptado dinámicamente: *Desafío Teórico Junior*, *Escenario Práctico Mid*, etc., junto a su badge de nivel contextual (`#challenge-level-badge`).
+3. **Tarjeta de Interlocutor Activo en Soft Skills (`#client-role-banner`):**
+   - Muestra el avatar y nombre del personaje (`#client-role-name`).
+   - Muestra un badge de nivel (`#client-role-level-badge`).
+   - Presenta la descripción explícita del rol (`#client-role-description`), por ejemplo: `Rol: Tu compañero Senior en una sesión de 1:1 o revisión de código`.
+4. **Badges de Calificación Contextuales:**
+   - La retroalimentación de evaluación muestra calificaciones como `Score 5/5 - Nivel Junior Sólido` evitando mostrar etiquetas de nivel Senior en retos formativos de Junior.
+
+
 
