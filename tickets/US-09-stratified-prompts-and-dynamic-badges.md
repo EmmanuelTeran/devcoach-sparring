@@ -1,6 +1,6 @@
 # [US-09] Prompts de IA Estratificados por Nivel y UI Badges Dinámicos
 
-- **Estado:** Verificado
+- **Estado:** Done
 - **Rama:** `feature/US-09-stratified-prompts-and-dynamic-badges`
 - **Fecha de Inicio:** 2026-10-02
 - **Fecha de Cierre:** 2026-10-02
@@ -103,4 +103,4 @@ Running 16 tests using 2 workers
 
 ## 5. Commit de Cierre en dev
 
-`Pendiente`
+`02e7d5a (feat/docs/chore merged to dev)`
