@@ -4,6 +4,30 @@
   "graph": {},
   "nodes": [
     {
+      "id": "server_src_controllers_dashboardcontroller_aretopicsrelated",
+      "label": "areTopicsRelated()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "aretopicsrelated()",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L25"
+    },
+    {
+      "id": "server_src_controllers_dashboardcontroller_extractkeywords",
+      "label": "extractKeywords()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "extractkeywords()",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L9"
+    },
+    {
       "id": "server_src_db_connectdb",
       "label": "connectDB()",
       "_callable": true,
@@ -124,36 +148,12 @@
       "source_location": "L7"
     },
     {
-      "id": "server_src_controllers_dashboardcontroller_aretopicsrelated",
-      "label": "areTopicsRelated()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
-      "file_type": "code",
-      "norm_label": "aretopicsrelated()",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L25"
-    },
-    {
-      "id": "server_src_controllers_dashboardcontroller_extractkeywords",
-      "label": "extractKeywords()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
-      "file_type": "code",
-      "norm_label": "extractkeywords()",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L9"
-    },
-    {
       "id": "server_src_controllers_dashboardcontroller_getdashboardsummary",
       "label": "getDashboardSummary()",
       "_callable": true,
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 18,
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "getdashboardsummary()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -164,8 +164,8 @@
       "label": "getLastScore()",
       "_callable": true,
       "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
+      "community": 18,
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "getlastscore()",
       "source_file": "server/src/controllers/dashboardController.js",
@@ -849,6 +849,17 @@
       "norm_label": "app",
       "source_file": "server/src/app.js",
       "source_location": "L9"
+    },
+    {
+      "id": "server_src_controllers_dashboardcontroller",
+      "label": "dashboardController.js",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Topic.js",
+      "file_type": "code",
+      "norm_label": "dashboardcontroller.js",
+      "source_file": "server/src/controllers/dashboardController.js",
+      "source_location": "L1"
     },
     {
       "id": "server_src_db",
@@ -2676,6 +2687,18 @@
       "source_location": "L22"
     },
     {
+      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
+      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "App.jsx",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. subgrafo afectado (identificado con graphify)",
+      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
+      "source_location": "L29"
+    },
+    {
       "id": "docs_architecture",
       "label": "ARCHITECTURE.md",
       "_origin": "ast",
@@ -3036,6 +3059,17 @@
       "source_location": "L1"
     },
     {
+      "id": "tailwindcss",
+      "label": "tailwindcss",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "tailwind.config.js",
+      "confidence": "EXTRACTED",
+      "file_type": "code",
+      "norm_label": "tailwindcss",
+      "source_file": "tailwindcss"
+    },
+    {
       "id": "client_tailwind_config",
       "label": "tailwind.config.js",
       "_origin": "ast",
@@ -3358,22 +3392,11 @@
       "source_location": "L1"
     },
     {
-      "id": "server_src_controllers_dashboardcontroller",
-      "label": "dashboardController.js",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
-      "file_type": "code",
-      "norm_label": "dashboardcontroller.js",
-      "source_file": "server/src/controllers/dashboardController.js",
-      "source_location": "L1"
-    },
-    {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync",
       "label": "US-08-multilevel-catalog-and-ui-sync.md",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "us-08-multilevel-catalog-and-ui-sync.md",
@@ -3385,7 +3408,7 @@
       "label": "1. Descripci\u00f3n",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. descripcion",
@@ -3397,7 +3420,7 @@
       "label": "2. Criterios de Aceptaci\u00f3n (AC)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. criterios de aceptacion (ac)",
@@ -3405,23 +3428,11 @@
       "source_location": "L12"
     },
     {
-      "id": "tickets_us_08_multilevel_catalog_and_ui_sync_3_subgrafo_afectado_identificado_con_graphify",
-      "label": "3. Subgrafo Afectado (Identificado con Graphify)",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "dashboardController.js",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. subgrafo afectado (identificado con graphify)",
-      "source_file": "tickets/US-08-multilevel-catalog-and-ui-sync.md",
-      "source_location": "L29"
-    },
-    {
       "id": "tickets_us_08_multilevel_catalog_and_ui_sync_4_evidencia_de_pruebas_completado_por_verify_user_story",
       "label": "4. Evidencia de Pruebas (Completado por verify-user-story)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. evidencia de pruebas (completado por verify-user-story)",
@@ -3433,7 +3444,7 @@
       "label": "5. Commit de Cierre en dev",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. commit de cierre en dev",
@@ -3445,7 +3456,7 @@
       "label": "Tests E2E (Playwright)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tests e2e (playwright)",
@@ -3457,7 +3468,7 @@
       "label": "Tests Unitarios e Integraci\u00f3n (Vitest / Supertest)",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "tests unitarios e integracion (vitest / supertest)",
@@ -3469,7 +3480,7 @@
       "label": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "_origin": "ast",
       "community": 25,
-      "community_name": "dashboardController.js",
+      "community_name": "[US-08] Cat\u00e1logo Completo Multinivel (Junior/Mid/Senior) y Sincronizaci\u00f3n UI",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "[us-08] catalogo completo multinivel (junior/mid/senior) y sincronizacion ui",
@@ -10115,6 +10126,15 @@
       "weight": 1.0
     },
     {
+      "source": "client_tailwind_config",
+      "target": "tailwindcss",
+      "relation": "dynamic_import",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/tailwind.config.js"
+    },
+    {
       "source": "server_src_routes_dashboard",
       "target": "server_src_controllers_dashboardcontroller_getdashboardsummary",
       "relation": "indirect_call",
@@ -10356,5 +10376,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "46a018a76e9f97e4302d086273bf248bca101cc1"
+  "built_at_commit": "5f3449d00504861b45b944c4267e3b55eb010acd"
 }
